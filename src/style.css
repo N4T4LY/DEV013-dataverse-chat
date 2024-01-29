@@ -32,3 +32,16 @@
     --color-dark-green: #33A021;
     --font-family: "JetBrains Mono", monospace;
   }
+    /*Welcome view*/
+    #welcoming {
+        background-color: var(--color-dark-blue);
+        /* border: solid 1px white; */
+        display: flex;
+        flex-direction: row; 
+        height: auto;
+        justify-content: space-between;
+      }
+      
+      #welcoming .image {
+        position: relative;
+      }
