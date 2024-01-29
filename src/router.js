@@ -19,3 +19,10 @@ export const setRoutes = (routes) => {
   } 
 
 }
+const queryStringToObject = (queryString) => {
+  // convert query string to URLSearchParams
+  const params = new URLSearchParams (queryString);
+  // convert URLSearchParams to an object
+
+  // return the object
+}
