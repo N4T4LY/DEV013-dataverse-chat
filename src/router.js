@@ -43,3 +43,12 @@ root.appendChild(view());
 
 
 }
+
+//una función que recibe una ruta, envía un nuevo estado histórico y representa la nueva vista.
+export const navigateTo = (pathname, props = {}) => {
+  // update window history with pushState
+  window.history.pushState()
+  // render the view with the pathname and props
+  renderView(pathname, props = {})
+}
+
