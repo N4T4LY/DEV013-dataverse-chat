@@ -43,3 +43,23 @@ describe("SORTDATA", () => {
     expect(sortData(TEST_SORT, sortBy, sortOrder)).toBeFalsy();
   });
 });
+
+describe("FILTERDATA", () => {
+  it("FILTERDATA EXISTS", () => {
+    expect(typeof filterData).toBe("function");
+  });
+
+  it("FILTERDATA FOR POKEMONS", () => {
+    const TEST_FILTER = [
+      { name: "Bulsaur", type: { typeName: ["Poison", "Grass"] } },
+      { name: "Abra", type: { typeName: ["Psychic"] } },
+      { name: "Ivysaur", type: { typeName: ["Poison", "Grass"] } },
+    ];
+    const filterBy = "typeName";
+    const value = "Grass";
+    expect(filterData(TEST_FILTER, filterBy, value)).toEqual([
+      { name: "Bulsaur", type: { typeName: ["Poison", "Grass"] } },
+      { name: "Ivysaur", type: { typeName: ["Poison", "Grass"] } },
+    ]);
+  });
+});
