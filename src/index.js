@@ -33,3 +33,11 @@ const root=document.getElementById("root");
 //    console.log("root",setRootEl(root));
 
 // });
+
+document.addEventListener("DOMContentLoaded", (e)=>{
+    console.log(e.currentTarget.location);   
+    setRootEl(root);
+    onURLChange(e.currentTarget.location);
+   
+
+});
