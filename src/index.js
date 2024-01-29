@@ -5,8 +5,6 @@ import {DetailCard} from './views/DetailCard.js';
 import {Error} from './views/Error.js';
 import { setRoutes, setRootEl , onURLChange , renderView} from './router.js';
 
-
-
 /*
 TODO:
 1.- Definir rutas en router.
@@ -20,10 +18,11 @@ const routes = {
     "/error":Error
 
 }
+
+
 setRoutes(routes);
-console.log(setRoutes(routes));
 const root=document.getElementById("root");
-renderView(routes,"hola");
+
 
 //DOMContentLoaded no espera a que las hojas de estilo se carguen, sin embargo los scripts diferidos sí esperan hojas de estilo, y el DOMContentLoadedevento está hecho cola después de guiones diferidos. También, guiones que no se aplazan o se sincronizado (por ejemplo. <script>) esperará a que las hojas de estilo ya parladadas se carguen.
 // window.addEventListener("DOMContentLoaded", ()=>{
@@ -34,17 +33,15 @@ renderView(routes,"hola");
 //    console.log("root",setRootEl(root));
 
 // });
-document.addEventListener("DOMContentLoaded", ()=>{
-    console.log(setRootEl(root));
-    
-    onURLChange();
-    
-   console.log("root",setRootEl(root));
+
+document.addEventListener("DOMContentLoaded", (e)=>{
+    console.log(e.currentTarget.location);   
+    setRootEl(root);
+    onURLChange(e.currentTarget.location);
+   
 
 });
+
+
 // POPSATE
-window.addEventListener("popstate",()=>{
-
- });
-
-
+window.onpopstate= onURLChange;

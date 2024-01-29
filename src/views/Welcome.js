@@ -1,9 +1,11 @@
-export const Welcome = ()=>{
-    // let html='';
-    // return(html+=`<h1>BIENVENIDA</h1>`);
-//     const el = document.createElement("h1");
-//    el.innerHTML = "I'm the Welcome Page";
-//   return el;
-return document.getElementById("root").innerHTML=`<h1>BIENVENIDA</h1>`;
+export const Welcome = () => {
+  const main = document.createElement("main");
+  const containerLeft = document.createElement("section");
+  const containerRight = document.createElement("section");
+
+  main.setAttribute("id", "welcoming");
+  main.innerHTML = "I'm the Welcome Page";
+  return main;
+  //return document.getElementById("root").innerHTML=`<h1>BIENVENIDA</h1>`;
 
 }
