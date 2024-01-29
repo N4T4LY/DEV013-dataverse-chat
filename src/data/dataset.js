@@ -412,6 +412,8 @@ export default [
   {
     id: "56",
     name: "Mankey",
+    description:
+      "Un Pokémon simio de color blanco y marrón con una nariz rosada. Es muy ágil y tiene una personalidad traviesa.",
     type: {
       typeName: ["Fighting"],
       typeImage: ["./assets/pokemones/lucha.png"],
@@ -435,10 +437,16 @@ export default [
     category: "Pig Monkey",
     ability: "Vital Spirit",
     weight: "28.0",
+    evolutions: {
+      evolutionName: ["Mankey","Primeape", "Annihilape"],
+      evolutionImage: ["./assets/pokemones/Mankey.png","./assets/pokemones/Primeape.png","./assets/pokemones/Annihilape.png"],
+    },
   },
   {
     id: "62",
     name: "Poliwrath",
+    description:
+      "Un Pokémon anfibio con apariencia de rana grande. Tiene una piel azul y una barriga blanca. Es poderoso en combate cuerpo a cuerpo.",
     type: {
       typeName: ["Water", "Fighting"],
       typeImage: [
@@ -467,10 +475,16 @@ export default [
     category: "Tadpole",
     ability: "Water Absorb",
     weight: "54.0",
+    evolutions: {
+      evolutionName: ["Poliwag","Poliwhirl", "Poliwrath", "Politoed"],
+      evolutionImage: ["./assets/pokemones/Poliwag.png","./assets/pokemones/Poliwhirl.png","./assets/pokemones/Poliwrath.png","./assets/pokemones/Politoed.png"],
+    },
   },
   {
     id: "63",
     name: "Abra",
+    description:
+      "Abra es un Pokémon pequeño y amarillo con orejas puntiagudas. Tiene poderes psíquicos y puede teletransportarse.",
     type: {
       typeName: ["Psychic"],
       typeImage: ["./assets/pokemones/psiquico.png"],
@@ -494,6 +508,10 @@ export default [
     category: "Psi",
     ability: "Synchronize",
     weight: "19.5",
+    evolutions: {
+      evolutionName: ["Abra","Kadabra","Alakazam"],
+      evolutionImage: ["./assets/pokemones/Abra.png","./assets/pokemones/Kadabra.png","./assets/pokemones/Alakazam.png"],
+    },
   },
   {
     id: "66",
@@ -521,10 +539,16 @@ export default [
     category: "Superpower",
     ability: "Guts",
     weight: "19.5",
+    evolutions: {
+      evolutionName: ["Machop","Machoke","Machamp"],
+      evolutionImage: ["./assets/pokemones/Machop.png","./assets/pokemones/Machoke.png", "./assets/pokemones/Machamp.png"],
+    },
   },
   {
     id: "79",
     name: "Slowpoke",
+    description:
+      "Slowpoke es un Pokémon de color rosa pálido con una expresión facial relajada. Es conocido por ser extremadamente lento y por su aparente falta de reacción ante situaciones peligrosas.",
     type: {
       typeName: ["Water", "Psychic"],
       typeImage: [
@@ -552,10 +576,16 @@ export default [
     category: "Dopey",
     ability: "Oblivious",
     weight: "36.0",
+    evolutions: {
+      evolutionName: ["Slowbro"],
+      evolutionImage: ["./assets/pokemones/Slowbro.png"],
+    },
   },
   {
     id: "16",
     name: "Pidgey",
+    description:
+      "Pidgey es un Pokémon pequeño y común de color marrón claro con un pico corto y ancho. Es conocido por ser un excelente volador, capaz de moverse rápidamente en el aire.",
     type: {
       typeName: ["Normal", "Flying"],
       typeImage: [
@@ -581,10 +611,20 @@ export default [
     category: "Tiny Bird",
     ability: "Keen Eye",
     weight: "1.8",
+    evolutions: {
+      evolutionName: ["Pidgey","Pidgeotto", "Pidgeot"],
+      evolutionImage: [
+        "./assets/pokemones/Pidgey.png",
+        "./assets/pokemones/Pidgeotto.png",
+        "./assets/pokemones/Pidgeot.png",
+      ],
+    },
   },
   {
     id: "2",
     name: "Ivysaur",
+    description:
+      "Ivysaur es la evolución intermedia de Bulbasaur. Tiene un cuerpo más grande y una flor en su espalda que está en proceso de crecimiento. Esta flor emite un aroma dulce y agradable.",
     type: {
       typeName: ["Grass", "Poison"],
       typeImage: [
@@ -612,10 +652,16 @@ export default [
     category: "Seed",
     ability: "Overgrow",
     weight: "13.0",
+    evolutions: {
+      evolutionName: ["Bulbasaur","Ivysaur","Venusaur"],
+      evolutionImage: ["./assets/pokemones/Bulbasaur.png","./assets/pokemones/Ivysaur.png","./assets/pokemones/Venusaur.png"],
+    },
   },
   {
     id: "94",
     name: "Gengar",
+    description:
+      "Gengar es la evolución final de Gastly. Es un Pokémon de tipo Fantasma y Veneno. Se dice que Gengar se esconde en las sombras, esperando el momento adecuado para asustar a sus víctimas.",
     type: {
       typeName: ["Ghost", "Poison"],
       typeImage: [
@@ -642,10 +688,16 @@ export default [
     category: "Shadow",
     ability: "Levitate",
     weight: "40.5",
+    evolutions: {
+      evolutionName: ["Gastly","Haunter","Gengar"],
+      evolutionImage: ["./assets/pokemones/Gastly.png","./assets/pokemones/Haunter.png","./assets/pokemones/Gengar.png"],
+    },
   },
   {
     id: "92",
     name: "Gastly",
+    description:
+      "Gastly es un Pokémon de tipo Fantasma y Veneno. Se le conoce por su habilidad para aparecer y desaparecer a voluntad. A menudo se le ve flotando en lugares oscuros.",
     type: {
       typeName: ["Ghost", "Poison"],
       typeImage: [
@@ -673,10 +725,16 @@ export default [
     category: "Gas",
     ability: "Levitate",
     weight: "0.1",
+    evolutions: {
+      evolutionName: ["Gastly","Haunter","Gengar"],
+      evolutionImage: ["./assets/pokemones/Gastly.png","./assets/pokemones/Haunter.png","./assets/pokemones/Gengar.png"],
+    },
   },
   {
     id: "48",
     name: "Venonat",
+    description:
+      "Venonat es un Pokémon de tipo Bicho y Veneno. Este Pokémon tiene grandes ojos que le permiten ver en la oscuridad. Se alimenta de hojas cercanas a la luz de la luna.",
     type: {
       typeName: ["Bug", "Poison"],
       typeImage: [
@@ -704,10 +762,16 @@ export default [
     category: "Insect",
     ability: "Compound Eyes",
     weight: "30.0",
+    evolutions: {
+      evolutionName: ["Venonat","Venomoth"],
+      evolutionImage: ["./assets/pokemones/Venonat.png","./assets/pokemones/Venomoth.png"],
+    },
   },
   {
     id: "104",
     name: "Cubone",
+    description:
+      "Cubone es un Pokémon de tipo Tierra. Este Pokémon lleva siempre consigo un cráneo que una vez perteneció a su madre. Se dice que llora en solitario durante la noche por la pérdida de su progenitora.",
     type: {
       typeName: ["Ground"],
       typeImage: ["./assets/pokemones/tierra.png"],
@@ -731,10 +795,16 @@ export default [
     category: "Lonely",
     ability: "Rock Head",
     weight: "6.5",
+    evolutions: {
+      evolutionName: ["Cubone","Marowak"],
+      evolutionImage: ["./assets/pokemones/Cubone.png","./assets/pokemones/Marowak.png"],
+    },
   },
   {
     id: "113",
     name: "Chansey",
+    description:
+      "Chansey es un Pokémon de tipo Normal. Se dice que trae felicidad a quien se encuentra con ella, ya que siempre lleva un huevo en su bolsa y comparte este con aquellos que están enfermos o heridos.",
     type: {
       typeName: ["Normal"],
       typeImage: ["./assets/pokemones/normal.png"],
@@ -754,10 +824,16 @@ export default [
     category: "Egg",
     ability: "Natural Cure",
     weight: "34.6",
+    evolutions: {
+      evolutionName: ["Happiny","Chansey","Blissey"],
+      evolutionImage: ["./assets/pokemones/Happiny.png","./assets/pokemones/Chansey.png","./assets/pokemones/Blissey.png"],
+    },
   },
   {
     id: "123",
     name: "Scyther",
+    description:
+      "Scyther es un Pokémon de tipo Bicho/Volador. Es conocido por su velocidad y habilidades en el combate. Tiene afiladas guadañas en lugar de manos y es capaz de volar a gran velocidad para atacar a sus oponentes.",
     type: {
       typeName: ["Bug", "Flying"],
       typeImage: [
@@ -784,10 +860,16 @@ export default [
     category: "Mantis",
     ability: "Swarm",
     weight: "56.0",
+    evolutions: {
+      evolutionName: ["Scyther","Scizor","Kleavor"],
+      evolutionImage: ["./assets/pokemones/Scyther.png","./assets/pokemones/Scizor.png","./assets/pokemones/Kleavor.png"],
+    },
   },
   {
     id: "135",
     name: "Jolteon",
+    description:
+      "Jolteon es un Pokémon de tipo Eléctrico. Su cuerpo está cubierto de puntas afiladas cargadas de electricidad, las cuales utiliza para defenderse y atacar. Es extremadamente rápido y ágil.",
     type: {
       typeName: ["Electric"],
       typeImage: ["./assets/pokemones/electrico.png"],
@@ -807,10 +889,16 @@ export default [
     category: "Lightning",
     ability: "Volt Absorb",
     weight: "24.5",
+    evolutions: {
+      evolutionName: ["Eevee","Jolteon","Espeon"],
+      evolutionImage: ["./assets/pokemones/Eevee.png","./assets/pokemones/Jolteon.png","./assets/pokemones/Espeon.png"],
+    },
   },
   {
     id: "173",
     name: "Cleffa",
+    description:
+      "Cleffa es un Pokémon de tipo Hada. Tiene forma de estrella y es conocido por su ternura y suaves movimientos. Se dice que ver a Cleffa en la noche estrellada trae buena fortuna.",
     type: {
       typeName: ["Fairy"],
       typeImage: ["./assets/pokemones/hada.png"],
@@ -833,10 +921,16 @@ export default [
     category: "Star Shape",
     ability: "Cute Charm",
     weight: "3.0",
+    evolutions: {
+      evolutionName: ["Cleffa","Clefairy","Clefable"],
+      evolutionImage: ["./assets/pokemones/Cleffa.png","./assets/pokemones/Clefairy.png",,"./assets/pokemones/Clefable.png"],
+    },
   },
   {
     id: "175",
     name: "Togepi",
+    description:
+      "Togepi es un Pokémon de tipo Hada. Tiene forma de huevo con espinas en su cáscara. Se dice que aquellos que lo abrazan con cariño serán bendecidos con felicidad y buena suerte.",
     type: {
       typeName: ["Fairy"],
       typeImage: ["./assets/pokemones/hada.png"],
@@ -859,10 +953,16 @@ export default [
     category: "Spike Ball",
     ability: "Serene Grace",
     weight: "1.5",
+    evolutions: {
+      evolutionName: ["Togepi","Togetic","Togekiss"],
+      evolutionImage: ["./assets/pokemones/Togepi.png","./assets/pokemones/Togetic.png","./assets/pokemones/Togekiss.png"],
+    },
   },
   {
     id: "246",
     name: "Larvitar",
+    description:
+      "Larvitar es un Pokémon de tipo Roca/Tierra. Tiene la piel dura y áspera y vive en montañas y cuevas. Pasa la mayor parte de su vida cavando y comiendo minerales.",
     type: {
       typeName: ["Stone", "Ground"],
       typeImage: [
@@ -892,5 +992,9 @@ export default [
     category: "Rock Skin",
     ability: "Guts",
     weight: "72.0",
+    evolutions: {
+      evolutionName: ["Larvitar","Pupitar","Tyanitar"],
+      evolutionImage: ["./assets/pokemones/Larvitar.png","./assets/pokemones/Pupitar.png","./assets/pokemones/Tyanitar.png"],
+    },
   },
 ];
