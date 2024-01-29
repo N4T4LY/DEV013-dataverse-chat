@@ -19,3 +19,17 @@ const routes = {
 
 }
 
+
+setRoutes(routes);
+const root=document.getElementById("root");
+
+
+//DOMContentLoaded no espera a que las hojas de estilo se carguen, sin embargo los scripts diferidos sí esperan hojas de estilo, y el DOMContentLoadedevento está hecho cola después de guiones diferidos. También, guiones que no se aplazan o se sincronizado (por ejemplo. <script>) esperará a que las hojas de estilo ya parladadas se carguen.
+// window.addEventListener("DOMContentLoaded", ()=>{
+//     console.log(setRootEl());
+    
+//     onURLChange();
+    
+//    console.log("root",setRootEl(root));
+
+// });
