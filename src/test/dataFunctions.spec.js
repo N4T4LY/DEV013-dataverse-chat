@@ -1,0 +1,1 @@
+import { filterData, sortData, computeStats } from '../src/dataFunctions.js';
