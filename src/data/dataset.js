@@ -2,6 +2,8 @@ export default [
   {
     id: "1",
     name: "Bulbasaur",
+    description:
+      "Bulbasaur es un Pokémon de tipo dual Hierba/Veneno. Tiene un bulbo vegetal en la espalda que crece hasta convertirse en una gran flor a medida que evoluciona.",
     type: {
       typeName: ["Grass", "Poison"],
       typeImage: [
@@ -29,10 +31,16 @@ export default [
     category: "Seed",
     ability: "Overgrow",
     weight: "6.9", // en kilogramos
+    evolutions: {
+      evolutionName: ["Ivysaur", "Venusaur"],
+      evolutionImage: ["./assets/Ivysaur.png", "./assets/Venusaur.png"],
+    },
   },
   {
     id: "4",
     name: "Charmander",
+    description:
+      "Charmander es un Pokémon de tipo Fuego. Tiene una llama en la cola que se vuelve más brillante a medida que evoluciona.",
     type: {
       typeName: ["Fire"],
       typeImage: ["./assets/pokemones/fuego.png"],
@@ -56,10 +64,20 @@ export default [
     category: "Lizard",
     ability: "Blaze",
     weight: "8.5",
+    evolutions: {
+      evolutionName: ["Charmander", "Charmeleon", "Charizard"],
+      evolutionImage: [
+        "./assets/Charmander.png",
+        "./assets/Charmeleon.png",
+        "./assets/Charizard.png",
+      ],
+    },
   },
   {
     id: "5",
     name: "Charmeleon",
+    description:
+      "Charmeleon es un Pokémon de tipo Fuego. Tiene una llama más desarrollada en la cola y es más agresivo que Charmander.",
     type: {
       typeName: ["Fire"],
       typeImage: ["./assets/pokemones/fuego.png"],
@@ -82,10 +100,20 @@ export default [
     category: "Flame",
     ability: "Blaze",
     weight: "19.0",
+    evolutions: {
+      evolutionName: ["Charmander", "Charmeleon", "Charizard"],
+      evolutionImage: [
+        "./assets/Charmander.png",
+        "./assets/Charmeleon.png",
+        "./assets/Charizard.png",
+      ],
+    },
   },
   {
     id: "6",
     name: "Charizard",
+    description:
+      "Charizard es un Pokémon de tipo Fuego/Volador. Es la evolución final de Charmander y es conocido por sus poderosos ataques de fuego.",
     type: {
       typeName: ["Fire", "Flying"],
       typeImage: [
@@ -112,10 +140,20 @@ export default [
     category: "Flame",
     ability: "Blaze",
     weight: "90.5",
+    evolutions: {
+      evolutioneName: ["Charmander", "Charmeleon", "Charizard"],
+      evolutionImage: [
+        "./assets/Charmander.png",
+        "./assets/Charmeleon.png",
+        "./assets/Charizard.png",
+      ],
+    },
   },
   {
     id: "7",
     name: "Squirtle",
+    description:
+      "Squirtle es un Pokémon de tipo Agua. Es un Pokémon pequeño, con forma de tortuga y caparazón azul.",
     type: {
       typeName: ["Water"],
       typeImage: ["./assets/pokemones/agua.png"],
@@ -138,10 +176,20 @@ export default [
     category: "Tiny Turtle",
     ability: "Torrent",
     weight: "9.0",
+    evolutions: {
+      evolutionName: ["Squirtle", "Wartortle", "Blastoise"],
+      evolutionImage: [
+        "./assets/Squirtle.png",
+        "./assets/Wartortle.png",
+        "./assets/Blastoise.png",
+      ],
+    }
   },
   {
     id: "8",
     name: "Wartortle",
+    description:
+      "Wartortle es un Pokémon de tipo Agua. Evoluciona de Squirtle y es la segunda etapa de su línea evolutiva.",
     type: {
       typeName: ["Water"],
       typeImage: ["./assets/pokemones/agua.png"],
@@ -164,10 +212,20 @@ export default [
     category: "Turtle",
     ability: "Torrent",
     weight: "22.5",
+    evolutions: {
+      evolutionName: ["Squirtle", "Wartortle", "Blastoise"],
+      evolutionImage: [
+        "./assets/Squirtle.png",
+        "./assets/Wartortle.png",
+        "./assets/Blastoise.png",
+      ],
+    }
   },
   {
     id: "10",
     name: "Caterpie",
+    description:
+      "Caterpie es un Pokémon de tipo Bicho. Es la primera etapa de su línea evolutiva y es conocido por su voraz apetito por las hojas.",
     type: {
       typeName: ["Bug"],
       typeImage: ["./assets/pokemones/bicho.png"],
@@ -191,10 +249,16 @@ export default [
     category: "Worm",
     ability: "Shield Dust",
     weight: "2.9",
+    evolutions: {
+      evolutionName: ["Caterpie","Metapod", "Butterfree"],
+      evolutionImage: ["./assets/Caterpie.png","./assets/Metapod.png", "./assets/Butterfree.png"],
+    },
   },
   {
     id: "35",
     name: "Clefairy",
+    description:
+      "Clefairy es un Pokémon de tipo Hada. Es conocido por su aspecto adorable y su asociación con la luna.",
     type: {
       typeName: ["Fairy"],
       typeImage: ["./assets/pokemones/hada.png"],
@@ -217,10 +281,16 @@ export default [
     category: "Fairy",
     ability: "Cute Charm",
     weight: "7.5",
+    evolutions: {
+      evolutionName: ["Cleffa","Clefairy","Clefable"],
+      evolutionImage: ["./assets/Cleffa.png","./assets/Clefairy.png","./assets/Clefable.png"],
+    },
   },
   {
     id: "25",
     name: "Pikachu",
+    description:
+      "Pikachu es un Pokémon de tipo Eléctrico. Es la forma evolucionada de Pichu y evoluciona a Raichu cuando se expone a una Piedra Trueno.",
     type: {
       typeName: ["Electric"],
       typeImage: ["./assets/pokemones/electrico.png"],
@@ -240,10 +310,16 @@ export default [
     category: "Mouse",
     ability: "Static",
     weight: "6.0",
+    evolutions: {
+      evolutionName: ["Pichu","Pikachu","Raichu"],
+      evolutionImage: ["./assets/Pichu.png","./assets/Pikachu.png","./assets/Raichu.png"],
+    },
   },
   {
     id: "50",
     name: "Diglett",
+    description:
+      "Diglett es un Pokémon de tipo Tierra. Es conocido por su capacidad para excavar túneles subterráneos y por las tres protuberancias redondeadas que tiene en la cabeza.",
     type: {
       typeName: ["Ground"],
       typeImage: ["./assets/pokemones/tierra.png"],
@@ -267,10 +343,16 @@ export default [
     category: "Mole",
     ability: "Sand Veil",
     weight: "0.8",
+    evolutions: {
+      evolutionName: ["Diglett","Dugtrio"],
+      evolutionImage: ["./assets/Diglett.png","./assets/Dugtrio.png"],
+    },
   },
   {
     id: "23",
     name: "Ekans",
+    description:
+      "Ekans es un Pokémon de tipo Veneno. Es conocido por su habilidad para acercarse sigilosamente a su presa y por su particular sonido de cascabel.",
     type: {
       typeName: ["Poison"],
       typeImage: ["./assets/pokemones/veneno.png"],
@@ -293,10 +375,16 @@ export default [
     category: "Snake",
     ability: "Intimidate",
     weight: "6.9",
+    evolutions: {
+      evolutionName: ["Ekans","Arbok"],
+      evolutionImage: ["./assets/Ekans.png","./assets/Arbok.png"],
+    },
   },
   {
     id: "26",
     name: "Raichu",
+    description:
+      "Raichu es un Pokémon de tipo Eléctrico. Es la forma evolucionada de Pikachu y es conocido por sus poderes eléctricos mejorados.",
     type: {
       typeName: ["Electric"],
       typeImage: ["./assets/pokemones/electrico.png"],
@@ -316,6 +404,10 @@ export default [
     category: "Mouse",
     ability: "Static",
     weight: "30.0",
+    evolutions: {
+      evolutionName: ["Pichu","Pikachu","Raichu"],
+      evolutionImage: ["./assets/Pichu.png","./assets/Pikachu.png","./assets/Raichu.png"],
+    },
   },
   {
     id: "56",
