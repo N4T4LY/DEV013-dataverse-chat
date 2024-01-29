@@ -26,3 +26,20 @@ const queryStringToObject = (queryString) => {
 
   // return the object
 }
+
+//Una función que renderiza una vista en el elemento root especificado. Tiene dos parametros, pathname que es el parte de window.location y props que es un objeto de datos que podemos pasar a la vista. La función renderView borra el contenido existente, encuentra la función de view para el pathname dado y llama a esa función de vista pasando props como argumento . Luego agrega el elemento devuelto por la función de vista al elemento root.
+export const renderView = (pathname, props = {}) => {
+  const root= rootEl;
+  let view;
+  root.innerHTML = '';
+  console.log(pathname);
+  if(ROUTES[pathname]){
+    view=ROUTES[pathname]
+  }else{
+    view=ROUTES["/error"]
+  }
+  console.log(view);
+root.appendChild(view());
+
+
+}
