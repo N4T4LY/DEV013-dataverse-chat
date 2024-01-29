@@ -9,4 +9,26 @@
     font-family: var(--font-family);
   }
   
-  
+  :root {
+    --color-dark-blue: #0b1321;
+    --color-white: white;
+    --color-light-blue: hsl(203, 42%, 14%);
+    --color-light-sky: #0b2b2e;
+    --color-sky: #8cefe9;
+    --color-black: #020202;
+    --color-gray: #7b8595;
+    --color-purple: #7d3ea4;
+    --color-purple2: #9e55b8;
+    --color-green: #55b870;
+    --color-red: #c33030;
+    --color-dark-blue2: #5594b8;
+    --color-pink: #b85567;
+    --color-yellow: #aab855;
+    --color-brown: #b89055;
+    --color-orange: #db9731;
+    --color-sky2: #30a3c7;
+    --color-gray2: #cbbba3;
+    --color-dark-purple: #3b0b46;
+    --color-dark-green: #33A021;
+    --font-family: "JetBrains Mono", monospace;
+  }
