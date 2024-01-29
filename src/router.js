@@ -52,3 +52,12 @@ export const navigateTo = (pathname, props = {}) => {
   renderView(pathname, props = {})
 }
 
+
+export const onURLChange = (location) => {
+  // parse the location for the pathname and search params
+  // convert the search params to an object
+  // render the view with the pathname and object
+  console.log(location.pathname);
+  renderView(location.pathname);
+
+}
