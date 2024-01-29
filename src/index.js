@@ -41,3 +41,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
    
 
 });
+
+
+// POPSATE
+window.onpopstate= onURLChange;
