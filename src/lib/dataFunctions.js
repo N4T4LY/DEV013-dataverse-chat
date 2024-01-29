@@ -20,3 +20,9 @@ export const sortData = (data, sortBy, sortOrder) => {
 
   return sortedData;
 };
+
+
+export const filterData = (data, filterBy, value) => {
+    const result = data.filter((type) => type.type[filterBy].includes(value));
+    return result;
+  };
