@@ -20,6 +20,19 @@ export const Home = () => {
 
 
   // filter
+  const filterType = newContainer.querySelector(
+    "select[data-testid='select-filter']"
+  );;
+
+  filterType.addEventListener("change", () => {
+    const selectedFilter = filterType.value;
+    console.log(selectedFilter);
+    currentData = filterData(data, "typeName", selectedFilter);
+    currentData = sortData(currentData, "name", sortOrderSelect.value);
+    console.log(currentData);
+    newContainer.replaceChild(Cards(currentData),newContainer.children[2])
+  });
+  
 
 
 
