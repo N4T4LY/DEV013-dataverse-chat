@@ -13,7 +13,7 @@ export const Welcome = () => {
   main.setAttribute("id", "welcoming");
   containerLeft.setAttribute("class","image");
   polygon.setAttribute("class","polygon")
-  img.setAttribute("src","./assets/pokemons-welcome.png")
+  img.setAttribute("src","./assets/pokemones/pokemons-welcome.png")
   containerRight.setAttribute("class","text");
   button.setAttribute("id","close-welcoming");
   footer.setAttribute("class","footer");
