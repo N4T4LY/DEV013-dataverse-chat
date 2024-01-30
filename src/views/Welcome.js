@@ -34,10 +34,9 @@ export const Welcome = () => {
 
   main.appendChild(containerLeft);
   main.appendChild(containerRight);
-  
-  //return document.getElementById("root").innerHTML=`<h1>BIENVENIDA</h1>`;
+ 
   button.addEventListener("click",()=>{
     navigateTo("/home",{});
-    })
+    }) 
 return main;
 }
