@@ -42,7 +42,7 @@ body {
   flex-direction: row; 
   justify-content: space-between;
 }
-
+/* ----------------------------------------Welcome-----------------------------------------------------*/
 #welcoming .image {
   position: relative;
 
