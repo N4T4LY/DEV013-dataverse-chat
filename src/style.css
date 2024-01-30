@@ -303,6 +303,80 @@ footer p {
   text-align: center;
 }
 
+/* Responsive */
+@media (max-width: 1213px) {
+  .modal-content {
+    height: 55%;
+  }
+  .container-modal {
+    left: 380px;
+  }
+}
+
+@media (max-width: 992px) {
+  button[type="reset"] {
+    width: 500px;
+  }
+  .modal-content {
+    left: 250px;
+    height: 45%;
+  }
+  .container-modal {
+    left: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  form {
+    justify-content: center;
+    height: 350px;
+  }
+  .filters {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  #myBtn {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  button[type="reset"] {
+    margin-top: 10px;
+  }
+  .modal-content {
+    left: 200px;
+    height: 40%;
+  }
+  .container-modal {
+    left: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    justify-content: center;
+  }
+  .filters {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  #myBtn {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  button[type="reset"] {
+    margin-top: 10px;
+    width: 250px;
+  }
+  .modal-content {
+    left: 74px;
+    height: 39%;
+    width: 70%;
+  }
+  .container-modal {
+    left: 30px;
+  }
+}
+
 /* --------------------------------------- details ------------------------------------------------------*/
 
 .infoPokemon {
