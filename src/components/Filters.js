@@ -9,7 +9,7 @@ export const Filters = () => {
     filters.setAttribute("class", "filters");
     stadistic.setAttribute("id", "myBtn");
     stadistic.setAttribute("class", "modal");
-    search.innerHTML = `<img src="assets/pokemones/pokebola.png" alt="" /><input autocomplete="off" type="text"
+    search.innerHTML = `<img src="assets/pokebola.png" alt="" /><input autocomplete="off" type="text"
     placeholder="Buscar Pokémon"
       />
     `;
