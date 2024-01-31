@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+ 
 }
 
 body {
@@ -7,6 +8,7 @@ body {
   background-color: var(--color-dark-blue);
   color: var(--color-sky);
   font-family: var(--font-family);
+  
 }
 
 :root {
@@ -42,6 +44,7 @@ body {
   height: 100vh;
   flex-direction: row;
   justify-content: space-between;
+  
 }
 
 #welcoming .image {
@@ -55,12 +58,12 @@ body {
 } */
 
 .image img {
-  width: 100%;
+  width: 100vh;
   height: auto;
   object-fit: cover;
   position: relative;
   z-index: 2;
-  margin: 20px;
+  margin-left: 20px;
 }
 
 .image .polygon {
@@ -75,7 +78,6 @@ body {
 }
 
 #welcoming .text {
-  /* border: solid 1px rgb(228, 24, 24); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,6 +109,7 @@ body {
   font-family: var(--font-family);
   font-weight: bold;
   font-size: 1.3rem;
+  cursor: pointer;
 }
 
 .text .footer {
@@ -140,6 +143,7 @@ body {
 }
 
 /* --------------------------------------- Home ------------------------------------------------------*/
+
 /* Header */
 header {
   text-align: center;
@@ -224,14 +228,16 @@ button[type="reset"] {
 }
 
 /* Cards*/
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+   flex-wrap: wrap; 
   gap: 40px;
   justify-content: space-around;
+  
 }
 
 li[itemtype="pokemons"] {
@@ -302,6 +308,7 @@ h3 {
 footer p {
   text-align: center;
 }
+
 
 /* Responsive */
 @media (max-width: 1213px) {
