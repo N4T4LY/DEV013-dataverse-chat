@@ -11,10 +11,13 @@ export const Filters = () => {
     form.setAttribute("id", "formFilters");
     filters.setAttribute("class", "filters");
     stadistic.setAttribute("id", "myBtn");
+
     modal.setAttribute("class","modal-content");
     overlay.setAttribute("class","overlay")
 
-    search.innerHTML = `<img src="assets/pokebola.png" alt="" /><input autocomplete="off" type="text"
+   
+    search.innerHTML = `<img src="assets/pokemones/pokebola.png" alt="" /><input autocomplete="off" type="text"
+
     placeholder="Buscar Pokémon"
       />
     `;
