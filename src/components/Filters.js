@@ -5,11 +5,16 @@ export const Filters = () => {
     const filters = document.createElement("section");
     const resetFilters = document.createElement("section");
     const stadistic = document.createElement("section");
+    const overlay=document.createElement("section");
+    const modal=document.createElement("section");
+    
     form.setAttribute("id", "formFilters");
     filters.setAttribute("class", "filters");
     stadistic.setAttribute("id", "myBtn");
-    stadistic.setAttribute("class", "modal");
+    modal.setAttribute("class","modal-content");
+    overlay.setAttribute("class","overlay")
     search.innerHTML = `<img src="assets/pokemones/pokebola.png" alt="" /><input autocomplete="off" type="text"
+
     placeholder="Buscar Pokémon"
       />
     `;
@@ -40,10 +45,20 @@ export const Filters = () => {
     Resetear Filtros
   </button>`;
     stadistic.innerHTML = `<i class="fa-solid fa-chart-simple"></i>`;
+    modal.innerHTML=`<i class="fa-solid fa-xmark"></i>
+    <h2>Estadisticas</h2>
+    <canvas id="myChart" name="myChart"></canvas>`;
+    overlay.innerHTML=``;
+
+
     form.appendChild(search);
     form.appendChild(filters);
     form.appendChild(resetFilters);
     form.appendChild(stadistic);
+    
+    main.appendChild(overlay);
+    main.appendChild(modal)
     main.appendChild(form);
+   
     return main;
   };

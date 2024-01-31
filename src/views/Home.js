@@ -15,6 +15,21 @@ export const Home = () => {
   newContainer.appendChild(Filters());
   newContainer.appendChild(Cards(data));
   newContainer.appendChild(Footer());
+  
+  //modal
+  const modal = newContainer.querySelector("#myBtn");
+  const modalContent=newContainer.querySelector(".modal-content");
+  const overlay = newContainer.querySelector(".overlay");
+  const close = newContainer.querySelector(".fa-xmark");
+
+  modal.addEventListener("click", () => {
+    modalContent.classList.toggle("modal-active");
+    overlay.classList.toggle("overlay-active");
+  });
+  close.addEventListener("click", () => {
+    modalContent.classList.toggle("modal-active");
+    overlay.classList.toggle("overlay-active");
+  });
 
   //search
   const searchPokemons = newContainer.querySelector("input[type='text']");
@@ -78,6 +93,44 @@ export const Home = () => {
     currentData = data;
     newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
   });
+
+  //stadistic
+  const stadistic = newContainer.querySelector("canvas[name='myChart']");
+  console.log(stadistic);
+  const updateChart = (names, nroPokemons) => {
+    // eslint-disable-next-line no-undef
+    new Chart(stadistic, {
+      type: "bar",
+      data: {
+        labels: names,
+        datasets: [
+          {
+            label: "# of Pokemons for type",
+            data: nroPokemons,
+            borderWidth: 1,
+            backgroundColor: "#9BD0F5",
+            font: {
+              size: 14,
+              weight: "bolder",
+            },
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  };
+  
+  const resultchart = computeStats(data);
+  const names = resultchart.names;
+  
+  const nroPokemons = resultchart.nroPokemons;
+  updateChart(names, nroPokemons);
 
   return newContainer;
 };
