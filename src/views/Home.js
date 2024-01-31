@@ -65,5 +65,43 @@ export const Home = () => {
   });
 
 
+  //stadistic
+  const stadistic = newContainer.querySelector("canvas[name='myChart']");
+  console.log(stadistic);
+  const updateChart = (names, nroPokemons) => {
+    // eslint-disable-next-line no-undef
+    new Chart(stadistic, {
+      type: "bar",
+      data: {
+        labels: names,
+        datasets: [
+          {
+            label: "# of Pokemons for type",
+            data: nroPokemons,
+            borderWidth: 1,
+            backgroundColor: "#9BD0F5",
+            font: {
+              size: 14,
+              weight: "bolder",
+            },
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  };
+  
+  const resultchart = computeStats(data);
+  const names = resultchart.names;
+  
+  const nroPokemons = resultchart.nroPokemons;
+  updateChart(names, nroPokemons);
+
   return newContainer;
 };
