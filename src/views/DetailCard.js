@@ -9,7 +9,7 @@ export const DetailCard = () => {
   polygon.setAttribute("class", "poligon");
   containerLeft.setAttribute("class", "containerLeft");
   containerRight.setAttribute("class", "containerRight");
-  containerLeft.innerHTML = `<img src="./assets/pokemones/Bulbasaur.png" alt="">`;
+  containerLeft.innerHTML = `<img src="./assets/pokemones/Poliwrath.png" alt="">`;
   containerRight.innerHTML = `<h1>Bulbasaur</h1>
     <p>Este Pokémon nace con una semilla en el lomo, que brota 
         con el paso del tiempo.
