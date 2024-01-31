@@ -257,6 +257,7 @@ button[type="reset"] {
   position: relative;
   bottom: 180px;
   left: 10px;
+  cursor: pointer;
 }
 .container-active {
   display: block;
