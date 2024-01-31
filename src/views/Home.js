@@ -14,6 +14,21 @@ export const Home = () => {
   newContainer.appendChild(Filters());
   newContainer.appendChild(Cards(data));
   newContainer.appendChild(Footer());
+  
+  //modal
+  const modal = newContainer.querySelector("#myBtn");
+  const modalContent=newContainer.querySelector(".modal-content");
+  const overlay = newContainer.querySelector(".overlay");
+  const close = newContainer.querySelector(".fa-xmark");
+
+  modal.addEventListener("click", () => {
+    modalContent.classList.toggle("modal-active");
+    overlay.classList.toggle("overlay-active");
+  });
+  close.addEventListener("click", () => {
+    modalContent.classList.toggle("modal-active");
+    overlay.classList.toggle("overlay-active");
+  });
 
   //search
 
