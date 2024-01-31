@@ -17,12 +17,10 @@ export const Home = () => {
 
   //search
 
-
-
   // filter
   const filterType = newContainer.querySelector(
     "select[data-testid='select-filter']"
-  );;
+  );
 
   filterType.addEventListener("change", () => {
     const selectedFilter = filterType.value;
@@ -30,11 +28,8 @@ export const Home = () => {
     currentData = filterData(data, "typeName", selectedFilter);
     currentData = sortData(currentData, "name", sortOrderSelect.value);
     console.log(currentData);
-    newContainer.replaceChild(Cards(currentData),newContainer.children[2])
+    newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
   });
-  
-
-
 
   // sort
   const sortOrderSelect = newContainer.querySelector(
@@ -43,12 +38,18 @@ export const Home = () => {
   console.log(sortOrderSelect);
   sortOrderSelect.addEventListener("change", () => {
     const sortOrder = sortOrderSelect.value;
-    console.log(sortOrder)
+    console.log(sortOrder);
     currentData = sortData(currentData, "name", sortOrder);
-    console.log(currentData,newContainer.children[2])
-    newContainer.replaceChild(Cards(currentData),newContainer.children[2])
+    console.log(currentData, newContainer.children[2]);
+    newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
   });
 
+  //reset
+  const resetbutton = newContainer.querySelector('[type="reset"]');
+  resetbutton.addEventListener("click", () => {
+    currentData = data;
+    newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
+  });
 
   return newContainer;
 };
