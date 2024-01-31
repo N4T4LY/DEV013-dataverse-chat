@@ -82,7 +82,7 @@ export default [
       typeName: ["Fire"],
       typeImage: ["./assets/pokemones/fuego.png"],
     },
-    image: "./assets/pokemones/Charmaleon.png",
+    image: "./assets/pokemones/Charmeleon.png",
     weaknesses: {
       weaknessesName: ["Water", "Rock", "Ground"],
       weaknessesImage: [
@@ -158,7 +158,7 @@ export default [
       typeName: ["Water"],
       typeImage: ["./assets/pokemones/agua.png"],
     },
-    image: "./assets/pokemones/Squirtle_2.png",
+    image: "./assets/pokemones/Squirtle.png",
     weaknesses: {
       weaknessesName: ["Electric", "Grass"],
       weaknessesImage: [
@@ -263,7 +263,7 @@ export default [
       typeName: ["Fairy"],
       typeImage: ["./assets/pokemones/hada.png"],
     },
-    image: "./assets/pokemones/Clefairy2.png",
+    image: "./assets/pokemones/Clefairy.png",
     weaknesses: {
       weaknessesName: ["Steel", "Poison"],
       weaknessesImage: [
