@@ -95,20 +95,53 @@ body {
   margin-bottom: 60px;
 }
 
-.text button {
-  background-color: transparent;
+#close-welcoming {
+  background: none;
   border-radius: 20px;
   border: 4px solid var(--color-white);
   color: var(--color-white);
-  width: 150px;
-  height: 50px;
-  padding-bottom: 4px;
+  width: 185px;
+  height: auto;
   text-align: center;
   font-family: var(--font-family);
   font-weight: bold;
   font-size: 1.3rem;
   cursor: pointer;
+  padding: 15px 20px;
+  /*animacion*/
+  transition: 1.2s;
+  position: relative;
+  overflow: hidden;  
 }
+
+#close-welcoming:hover {
+  color: var(--color-white);/*opcion1*/
+  /*color: var(--color-dark-blue); opcion2*/
+  /* border: none; */
+   z-index: 1; 
+
+}
+
+#close-welcoming::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #0C575E;/*opcion1*/
+  /*background: var(--color-sky2);opcion2*/
+  z-index: -1;
+  transition: 1.2s;
+  bottom: 0;
+  border-radius: 50% 50% 0 0; 
+
+}
+
+#close-welcoming:hover::before {
+  height: 180%;
+  
+}
+
 
 .text .footer {
   color: var(--color-sky);
