@@ -475,7 +475,7 @@ footer p {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  border: solid 2px red;
+  /* border: solid 2px red; */
   margin: 0;
 }
 .infoPokemon .poligon {
@@ -484,13 +484,13 @@ footer p {
   background-color: var(--color-sky);
   width: 450px;
   z-index: 1;
-  border: solid 6px green;
-  margin:0;
+  /* border: solid 6px green;
+  margin:0; */
 }
 .containerLeft {
   z-index: 2;
   width: 50%;
-  border: solid 6px green;
+  /* border: solid 6px green; */
   margin-left: -450px;
   display: flex;
   justify-content: center;
@@ -503,14 +503,14 @@ footer p {
    margin-right: -30px;
   /* margin-top: 50px; */
   z-index: 1;
-  border: solid 6px green;
+  /* border: solid 6px green; */
   /* margin-left: -600px;
   margin-top: -70px; */
 }
 .containerRight {
   width: 50%;
   /* overflow: auto; */
-  border: solid 2px white;
+  /* border: solid 2px white; */
   padding: 20px;
   margin: 0;
 }
@@ -599,7 +599,7 @@ td {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   /* gap: 150px; */
   justify-content: space-between;
   align-items: center;
@@ -614,7 +614,7 @@ td {
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 .evolutionImage > img {
   border: 3px solid var(--color-white);
