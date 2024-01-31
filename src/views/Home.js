@@ -46,13 +46,13 @@ export const Home = () => {
     } else {
       const container = document.createElement("section");
       container.classList.add("container-modal");
-      // overlay.classList.toggle("overlay-active");
+      overlay.classList.toggle("overlay-active");
       container.innerHTML = `<i class="fa-solid fa-xmark"></i>
                               <img src="./assets/pokemones/icono-cerrar.png" alt="Error"/>
                               <p>Pokemon no encontrado</p>`;
       container.querySelector(".fa-xmark").addEventListener("click", () => {
         container.remove();
-        // overlay.classList.toggle("overlay-active");
+        overlay.classList.toggle("overlay-active");
       });
       console.log(container)
       newContainer.appendChild(container);
