@@ -4,6 +4,7 @@ import { Header } from "../components/Header.js";
 import { Filters } from "../components/Filters.js";
 import { Footer } from "../components/Footer.js";
 import { sortData, filterData, computeStats } from "../lib/dataFunctions.js";
+import { navigateTo }  from "../router.js";
 
 export const Home = () => {
   const newContainer = document.createElement("section");
@@ -125,12 +126,23 @@ export const Home = () => {
       },
     });
   };
+
   
   const resultchart = computeStats(data);
   const names = resultchart.names;
   
   const nroPokemons = resultchart.nroPokemons;
   updateChart(names, nroPokemons);
+  
+  // 
+  const imagePokemon = newContainer.querySelectorAll(".imageBtn")
+  imagePokemon.forEach((pokemon) =>{
+
+    pokemon.addEventListener("click",() =>{
+      navigateTo("/detailCard",{});
+    })
+  })
+
 
   return newContainer;
 };
