@@ -1,3 +1,4 @@
+import { navigateTo } from "../router.js";
 export const DetailCard = () => {
   // let html='';
   // return(html+=`<h1>BIENVENIDA</h1>`);
@@ -9,8 +10,17 @@ export const DetailCard = () => {
   polygon.setAttribute("class", "poligon");
   containerLeft.setAttribute("class", "containerLeft");
   containerRight.setAttribute("class", "containerRight");
-  containerLeft.innerHTML = `<img src="./assets/pokemones/Poliwrath.png" alt="">`;
-  containerRight.innerHTML = `<h1>Bulbasaur</h1>
+  containerLeft.innerHTML = `
+    <div class="chatPersonal">
+        <i class="fa-brands fa-rocketchat"></i>
+    </div>
+    <img src="./assets/pokemones/Poliwrath.png" alt="">
+    <div class="baseStats">
+        <i class="fa-solid fa-chart-simple"></i>
+    </div>`;
+  containerRight.innerHTML = `
+  <div class="recoilArrow"><i class="fa-solid fa-arrow-left"></i></div>
+  <h1>Bulbasaur</h1>
     <p>Este Pokémon nace con una semilla en el lomo, que brota 
         con el paso del tiempo.
     </p>
@@ -59,5 +69,11 @@ export const DetailCard = () => {
   main.appendChild(polygon);
   main.appendChild(containerLeft);
   main.appendChild(containerRight);
+
+  const recoilArrow = main.querySelector(".recoilArrow");
+  console.log(recoilArrow);
+  recoilArrow.addEventListener("click", () => {
+    navigateTo("/home", {});
+  });
   return main;
 };
