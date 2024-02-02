@@ -77,7 +77,7 @@ export const Cards = (data) => {
         ${type}
       </div>
       <div itemprop="image" class="image">
-        <img class="imageBtn" src=${pokemon.image} alt=${pokemon.name}/>
+      <img class="imageBtn" src=${pokemon.image} alt=${pokemon.name}/>
       </div>
       <h1 itemprop="name" class="name">${pokemon.name}</h1>
       <h3>Debilidades</h3>
