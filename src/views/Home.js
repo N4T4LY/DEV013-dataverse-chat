@@ -1,14 +1,28 @@
 import data from "../data/dataset.js";
-import { Cards } from "../components/Cards.js";
-import { Header } from "../components/Header.js";
-import { Filters } from "../components/Filters.js";
-import { Footer } from "../components/Footer.js";
-import { sortData, filterData, computeStats } from "../lib/dataFunctions.js";
-import { navigateTo }  from "../router.js";
+import {
+  Cards
+} from "../components/Cards.js";
+import {
+  Header
+} from "../components/Header.js";
+import {
+  Filters
+} from "../components/Filters.js";
+import {
+  Footer
+} from "../components/Footer.js";
+import {
+  sortData,
+  filterData,
+  computeStats
+} from "../lib/dataFunctions.js";
+import {
+  navigateTo
+} from "../router.js";
 
 export const Home = () => {
   const newContainer = document.createElement("section");
-  newContainer.setAttribute("class","newContainer")
+  newContainer.setAttribute("class", "newContainer")
   let currentData = [...data];
   // appenChild -> un solo elemento
   // append -> varios elementos
@@ -16,10 +30,10 @@ export const Home = () => {
   newContainer.appendChild(Filters());
   newContainer.appendChild(Cards(data));
   newContainer.appendChild(Footer());
-  
+
   //modal
   const modal = newContainer.querySelector("#myBtn");
-  const modalContent=newContainer.querySelector(".modal-content");
+  const modalContent = newContainer.querySelector(".modal-content");
   const overlay = newContainer.querySelector(".overlay");
   const close = newContainer.querySelector(".fa-xmark");
 
@@ -104,18 +118,16 @@ export const Home = () => {
       type: "bar",
       data: {
         labels: names,
-        datasets: [
-          {
-            label: "# of Pokemons for type",
-            data: nroPokemons,
-            borderWidth: 1,
-            backgroundColor: "#9BD0F5",
-            font: {
-              size: 14,
-              weight: "bolder",
-            },
+        datasets: [{
+          label: "# of Pokemons for type",
+          data: nroPokemons,
+          borderWidth: 1,
+          backgroundColor: "#9BD0F5",
+          font: {
+            size: 14,
+            weight: "bolder",
           },
-        ],
+        }, ],
       },
       options: {
         scales: {
@@ -127,21 +139,28 @@ export const Home = () => {
     });
   };
 
-  
+
   const resultchart = computeStats(data);
   const names = resultchart.names;
-  
+
   const nroPokemons = resultchart.nroPokemons;
   updateChart(names, nroPokemons);
-  
-  // 
-  const imagePokemon = newContainer.querySelectorAll(".imageBtn")
-  imagePokemon.forEach((pokemon) =>{
 
-    pokemon.addEventListener("click",() =>{
-      navigateTo("/detailCard",{});
-    })
-  })
+  // 
+  //Navigate  to next page
+  const imagePokemon = newContainer.querySelectorAll(".imageBtn");
+  imagePokemon.forEach((pokemon) => {
+    pokemon.addEventListener("click", () => {
+      //console.log(pokemon.getAttribute('alt').slice(0,-1));
+      const obj = currentData.find(
+        (item) => item.name === pokemon.getAttribute("alt").slice(0, -1)
+      );
+      navigateTo(
+        `/detailCard?${pokemon.getAttribute("alt").slice(0, -1)}`,
+        obj
+      );
+    });
+  });
 
 
   return newContainer;
