@@ -32,12 +32,8 @@ export default [
     ability: "Espesura",
     weight: "6.9", // en kilogramos
     evolutions: {
-      evolutionName: ["Bulbasaur", "Ivysaur", "Venusaur"],
-      evolutionImage: [
-        "./assets/pokemones/Bulbasaur.png",
-        "./assets/pokemones/Ivysaur.png",
-        "./assets/pokemones/Venusaur.png",
-      ],
+      evolutionName: ["Bulbasaur","Ivysaur", "Venusaur"],
+      evolutionImage: ["./assets/pokemones/Bulbasaur.png","./assets/pokemones/Ivysaur.png", "./assets/pokemones/Venusaur.png"],
     },
   },
   {
@@ -145,7 +141,7 @@ export default [
     ability: "Mar de Llamas",
     weight: "90.5",
     evolutions: {
-      evolutioneName: ["Charmander", "Charmeleon", "Charizard"],
+      evolutionName: ["Charmander", "Charmeleon", "Charizard"],
       evolutionImage: [
         "./assets/pokemones/Charmander.png",
         "./assets/pokemones/Charmeleon.png",
@@ -254,12 +250,8 @@ export default [
     ability: "Polvo Escudo",
     weight: "2.9",
     evolutions: {
-      evolutionName: ["Caterpie", "Metapod", "Butterfree"],
-      evolutionImage: [
-        "./assets/pokemones/Caterpie.png",
-        "./assets/pokemones/Metapod.png",
-        "./assets/pokemones/Butterfree.png",
-      ],
+      evolutionName: ["Caterpie","Metapod", "Butterfree"],
+      evolutionImage: ["./assets/pokemones/Caterpie.png","./assets/pokemones/Metapod.png", "./assets/pokemones/Butterfree.png"],
     },
   },
   {
@@ -290,12 +282,8 @@ export default [
     ability: "Gran Encanto",
     weight: "7.5",
     evolutions: {
-      evolutionName: ["Cleffa", "Clefairy", "Clefable"],
-      evolutionImage: [
-        "./assets/pokemones/Cleffa.png",
-        "./assets/pokemones/Clefairy.png",
-        "./assets/pokemones/Clefable.png",
-      ],
+      evolutionName: ["Cleffa","Clefairy","Clefable"],
+      evolutionImage: ["./assets/pokemones/Cleffa.png","./assets/pokemones/Clefairy.png","./assets/pokemones/Clefable.png"],
     },
   },
   {
@@ -323,12 +311,8 @@ export default [
     ability: "Estática",
     weight: "6.0",
     evolutions: {
-      evolutionName: ["Pichu", "Pikachu", "Raichu"],
-      evolutionImage: [
-        "./assets/pokemones/Pichu.png",
-        "./assets/pokemones/Pikachu.png",
-        "./assets/pokemones/Raichu.png",
-      ],
+      evolutionName: ["Pichu","Pikachu","Raichu"],
+      evolutionImage: ["./assets/pokemones/Pichu.png","./assets/pokemones/Pikachu2.png","./assets/pokemones/Raichu.png"],
     },
   },
   {
@@ -360,8 +344,8 @@ export default [
     ability: "Velo Arena",
     weight: "0.8",
     evolutions: {
-      evolutionName: ["Diglett", "Dugtrio"],
-      evolutionImage: ["./assets/pokemones/Diglett.png", "./assets/pokemones/Dugtrio.png"],
+      evolutionName: ["Diglett","Dugtrio"],
+      evolutionImage: ["./assets/pokemones/Diglett.png","./assets/pokemones/Dugtrio.png"],
     },
   },
   {
@@ -392,8 +376,8 @@ export default [
     ability: "Intimidación",
     weight: "6.9",
     evolutions: {
-      evolutionName: ["Ekans", "Arbok"],
-      evolutionImage: ["./assets/pokemones/Ekans.png", "./assets/pokemones/Arbok.png"],
+      evolutionName: ["Ekans","Arbok"],
+      evolutionImage: ["./assets/pokemones/Ekans.png","./assets/pokemones/Arbok.png"],
     },
   },
   {
@@ -421,12 +405,8 @@ export default [
     ability: "Estática",
     weight: "30.0",
     evolutions: {
-      evolutionName: ["Pichu", "Pikachu", "Raichu"],
-      evolutionImage: [
-        "./assets/pokemones/Pichu.png",
-        "./assets/pokemones/Pikachu.png",
-        "./assets/pokemones/Raichu.png",
-      ],
+      evolutionName: ["Pichu","Pikachu","Raichu"],
+      evolutionImage: ["./assets/pokemones/Pichu.png","./assets/pokemones/Pikachu2.png","./assets/pokemones/Raichu.png"],
     },
   },
   {
@@ -993,13 +973,8 @@ export default [
     ability: "Gran Encanto",
     weight: "3.0",
     evolutions: {
-      evolutionName: ["Cleffa", "Clefairy", "Clefable"],
-      evolutionImage: [
-        "./assets/pokemones/Cleffa.png",
-        "./assets/pokemones/Clefairy.png",
-        ,
-        "./assets/pokemones/Clefable.png",
-      ],
+      evolutionName: ["Cleffa","Clefairy","Clefable"],
+      evolutionImage: ["./assets/pokemones/Cleffa.png","./assets/pokemones/Clefairy.png","./assets/pokemones/Clefable.png"],
     },
   },
   {

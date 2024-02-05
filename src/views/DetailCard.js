@@ -1,7 +1,6 @@
 import { navigateTo } from "../router.js";
-import data from "../data/dataset.js"
+import data from "../data/dataset.js";
 export const DetailCard = (pokemon) => {
-    
   const main = document.createElement("main");
   const polygon = document.createElement("div");
   const containerLeft = document.createElement("section");
@@ -10,6 +9,20 @@ export const DetailCard = (pokemon) => {
   polygon.setAttribute("class", "poligon");
   containerLeft.setAttribute("class", "containerLeft");
   containerRight.setAttribute("class", "containerRight");
+
+  let weaknesses = "";
+  let evolutions = "";
+ 
+      //Agrega imagenes de las debilidades de cada pokemón
+      for (let i = 0; i < pokemon.weaknesses.weaknessesName.length; i++) {
+        weaknesses += `<img src="${pokemon.weaknesses.weaknessesImage[i]}" alt="${pokemon.weaknesses.weaknessesName[i]}"/>`;
+      }
+   console.log("debilidades",weaknesses);
+
+  // Agrega imagenes de las evoluciones de cada pokemón
+   for (let i = 0; i < pokemon.evolutions.evolutionName.length; i++) {
+     evolutions += `<img src=${pokemon.evolutions.evolutionImage[i]} alt=${pokemon.evolutions.evolutionName[i]}/>`;
+  }
 
   containerLeft.innerHTML = `
     <div class="chatPersonal">
@@ -27,7 +40,7 @@ export const DetailCard = (pokemon) => {
         <table>
             <tr>
                 <th class="altura">Altura</th>
-                <td class="datoP">${pokemon.heigth} M</td>
+                <td class="datoP">${pokemon.height} M</td>
             </tr>
             <tr>
                 <th class="peso">Peso</th>
@@ -50,18 +63,13 @@ export const DetailCard = (pokemon) => {
     <div class="debilidadesDetails">
         <h3>Debilidades</h3>
         <div class="debilidadesImages">
-            <img src="./assets/pokemones/psiquico.png" alt="">
-            <img src="./assets/pokemones/fuego.png" alt="">
-            <img src="./assets/pokemones/volador.png" alt="">
-            <img src="./assets/pokemones/hielo.png" alt="">
+        ${weaknesses}
         </div>
     </div>
     <div class="evolution">
         <h3>Evoluciones</h3>
         <div class="evolutionImage">
-            <img src="./assets/pokemones/Bulbasaur.png" alt="">
-            <img src="./assets/pokemones/Ivysaur.png" alt="">
-            <img src="./assets/pokemones/Venosaur.png" alt="">
+        ${evolutions}
         </div>
     </div>
 `;
