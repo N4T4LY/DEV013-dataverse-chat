@@ -32,8 +32,12 @@ export default [
     ability: "Espesura",
     weight: "6.9", // en kilogramos
     evolutions: {
-      evolutionName: ["Ivysaur", "Venusaur"],
-      evolutionImage: ["./assets/Ivysaur.png", "./assets/Venusaur.png"],
+      evolutionName: ["Bulbasaur", "Ivysaur", "Venusaur"],
+      evolutionImage: [
+        "./assets/pokemones/Bulbasaur.png",
+        "./assets/pokemones/Ivysaur.png",
+        "./assets/pokemones/Venusaur.png",
+      ],
     },
   },
   {
@@ -67,9 +71,9 @@ export default [
     evolutions: {
       evolutionName: ["Charmander", "Charmeleon", "Charizard"],
       evolutionImage: [
-        "./assets/Charmander.png",
-        "./assets/Charmeleon.png",
-        "./assets/Charizard.png",
+        "./assets/pokemones/Charmander.png",
+        "./assets/pokemones/Charmeleon.png",
+        "./assets/pokemones/Charizard.png",
       ],
     },
   },
@@ -103,9 +107,9 @@ export default [
     evolutions: {
       evolutionName: ["Charmander", "Charmeleon", "Charizard"],
       evolutionImage: [
-        "./assets/Charmander.png",
-        "./assets/Charmeleon.png",
-        "./assets/Charizard.png",
+        "./assets/pokemones/Charmander.png",
+        "./assets/pokemones/Charmeleon.png",
+        "./assets/pokemones/Charizard.png",
       ],
     },
   },
@@ -143,9 +147,9 @@ export default [
     evolutions: {
       evolutioneName: ["Charmander", "Charmeleon", "Charizard"],
       evolutionImage: [
-        "./assets/Charmander.png",
-        "./assets/Charmeleon.png",
-        "./assets/Charizard.png",
+        "./assets/pokemones/Charmander.png",
+        "./assets/pokemones/Charmeleon.png",
+        "./assets/pokemones/Charizard.png",
       ],
     },
   },
@@ -179,11 +183,11 @@ export default [
     evolutions: {
       evolutionName: ["Squirtle", "Wartortle", "Blastoise"],
       evolutionImage: [
-        "./assets/Squirtle.png",
-        "./assets/Wartortle.png",
-        "./assets/Blastoise.png",
+        "./assets/pokemones/Squirtle.png",
+        "./assets/pokemones/Wartortle.png",
+        "./assets/pokemones/Blastoise.png",
       ],
-    }
+    },
   },
   {
     id: "8",
@@ -215,11 +219,11 @@ export default [
     evolutions: {
       evolutionName: ["Squirtle", "Wartortle", "Blastoise"],
       evolutionImage: [
-        "./assets/Squirtle.png",
-        "./assets/Wartortle.png",
-        "./assets/Blastoise.png",
+        "./assets/pokemones/Squirtle.png",
+        "./assets/pokemones/Wartortle.png",
+        "./assets/pokemones/Blastoise.png",
       ],
-    }
+    },
   },
   {
     id: "10",
@@ -250,8 +254,12 @@ export default [
     ability: "Polvo Escudo",
     weight: "2.9",
     evolutions: {
-      evolutionName: ["Caterpie","Metapod", "Butterfree"],
-      evolutionImage: ["./assets/Caterpie.png","./assets/Metapod.png", "./assets/Butterfree.png"],
+      evolutionName: ["Caterpie", "Metapod", "Butterfree"],
+      evolutionImage: [
+        "./assets/pokemones/Caterpie.png",
+        "./assets/pokemones/Metapod.png",
+        "./assets/pokemones/Butterfree.png",
+      ],
     },
   },
   {
@@ -282,8 +290,12 @@ export default [
     ability: "Gran Encanto",
     weight: "7.5",
     evolutions: {
-      evolutionName: ["Cleffa","Clefairy","Clefable"],
-      evolutionImage: ["./assets/Cleffa.png","./assets/Clefairy.png","./assets/Clefable.png"],
+      evolutionName: ["Cleffa", "Clefairy", "Clefable"],
+      evolutionImage: [
+        "./assets/pokemones/Cleffa.png",
+        "./assets/pokemones/Clefairy.png",
+        "./assets/pokemones/Clefable.png",
+      ],
     },
   },
   {
@@ -295,7 +307,7 @@ export default [
       typeName: ["Electric"],
       typeImage: ["./assets/pokemones/electrico.png"],
     },
-    image: "./assets/pokemones/Pikachu2.png",
+    image: "./assets/pokemones/Pikachu.png",
     weaknesses: {
       weaknessesName: ["Ground"],
       weaknessesImage: ["./assets/pokemones/tierra.png"],
@@ -311,8 +323,12 @@ export default [
     ability: "Estática",
     weight: "6.0",
     evolutions: {
-      evolutionName: ["Pichu","Pikachu","Raichu"],
-      evolutionImage: ["./assets/Pichu.png","./assets/Pikachu.png","./assets/Raichu.png"],
+      evolutionName: ["Pichu", "Pikachu", "Raichu"],
+      evolutionImage: [
+        "./assets/pokemones/Pichu.png",
+        "./assets/pokemones/Pikachu.png",
+        "./assets/pokemones/Raichu.png",
+      ],
     },
   },
   {
@@ -328,9 +344,9 @@ export default [
     weaknesses: {
       weaknessesName: ["Water", "Grass", "Ice"],
       weaknessesImage: [
-        "./assets/pokemones/agua.png",
-        "./assets/pokemones/planta.png",
-        "./assets/pokemones/hielo.png",
+        "./assets/pokemones/pokemones/agua.png",
+        "./assets/pokemones/pokemones/planta.png",
+        "./assets/pokemones/pokemones/hielo.png",
       ],
     },
     baseStats: {
@@ -344,8 +360,8 @@ export default [
     ability: "Velo Arena",
     weight: "0.8",
     evolutions: {
-      evolutionName: ["Diglett","Dugtrio"],
-      evolutionImage: ["./assets/Diglett.png","./assets/Dugtrio.png"],
+      evolutionName: ["Diglett", "Dugtrio"],
+      evolutionImage: ["./assets/pokemones/Diglett.png", "./assets/pokemones/Dugtrio.png"],
     },
   },
   {
@@ -376,8 +392,8 @@ export default [
     ability: "Intimidación",
     weight: "6.9",
     evolutions: {
-      evolutionName: ["Ekans","Arbok"],
-      evolutionImage: ["./assets/Ekans.png","./assets/Arbok.png"],
+      evolutionName: ["Ekans", "Arbok"],
+      evolutionImage: ["./assets/pokemones/Ekans.png", "./assets/pokemones/Arbok.png"],
     },
   },
   {
@@ -405,8 +421,12 @@ export default [
     ability: "Estática",
     weight: "30.0",
     evolutions: {
-      evolutionName: ["Pichu","Pikachu","Raichu"],
-      evolutionImage: ["./assets/Pichu.png","./assets/Pikachu.png","./assets/Raichu.png"],
+      evolutionName: ["Pichu", "Pikachu", "Raichu"],
+      evolutionImage: [
+        "./assets/pokemones/Pichu.png",
+        "./assets/pokemones/Pikachu.png",
+        "./assets/pokemones/Raichu.png",
+      ],
     },
   },
   {
@@ -422,9 +442,9 @@ export default [
     weaknesses: {
       weaknessesName: ["Flying", "Psychic", "Fairy"],
       weaknessesImage: [
-        "./assets/pokemones/volador.png",
-        "./assets/pokemones/psiquico.png",
-        "./assets/pokemones/hada.png",
+        "./assets/pokemones/pokemones/volador.png",
+        "./assets/pokemones/pokemones/psiquico.png",
+        "./assets/pokemones/pokemones/hada.png",
       ],
     },
     baseStats: {
@@ -438,8 +458,12 @@ export default [
     ability: "Espíritu Vital",
     weight: "28.0",
     evolutions: {
-      evolutionName: ["Mankey","Primeape", "Annihilape"],
-      evolutionImage: ["./assets/pokemones/Mankey.png","./assets/pokemones/Primeape.png","./assets/pokemones/Annihilape.png"],
+      evolutionName: ["Mankey", "Primeape", "Annihilape"],
+      evolutionImage: [
+        "./assets/pokemones/Mankey.png",
+        "./assets/pokemones/Primeape.png",
+        "./assets/pokemones/Annihilape.png",
+      ],
     },
   },
   {
@@ -476,8 +500,13 @@ export default [
     ability: "Absorbe Agua",
     weight: "54.0",
     evolutions: {
-      evolutionName: ["Poliwag","Poliwhirl", "Poliwrath", "Politoed"],
-      evolutionImage: ["./assets/pokemones/Poliwag.png","./assets/pokemones/Poliwhirl.png","./assets/pokemones/Poliwrath.png","./assets/pokemones/Politoed.png"],
+      evolutionName: ["Poliwag", "Poliwhirl", "Poliwrath", "Politoed"],
+      evolutionImage: [
+        "./assets/pokemones/Poliwag.png",
+        "./assets/pokemones/Poliwhirl.png",
+        "./assets/pokemones/Poliwrath.png",
+        "./assets/pokemones/Politoed.png",
+      ],
     },
   },
   {
@@ -509,8 +538,12 @@ export default [
     ability: "Sincronía",
     weight: "19.5",
     evolutions: {
-      evolutionName: ["Abra","Kadabra","Alakazam"],
-      evolutionImage: ["./assets/pokemones/Abra.png","./assets/pokemones/Kadabra.png","./assets/pokemones/Alakazam.png"],
+      evolutionName: ["Abra", "Kadabra", "Alakazam"],
+      evolutionImage: [
+        "./assets/pokemones/Abra.png",
+        "./assets/pokemones/Kadabra.png",
+        "./assets/pokemones/Alakazam.png",
+      ],
     },
   },
   {
@@ -540,8 +573,12 @@ export default [
     ability: "Agallas",
     weight: "19.5",
     evolutions: {
-      evolutionName: ["Machop","Machoke","Machamp"],
-      evolutionImage: ["./assets/pokemones/Machop.png","./assets/pokemones/Machoke.png", "./assets/pokemones/Machamp.png"],
+      evolutionName: ["Machop", "Machoke", "Machamp"],
+      evolutionImage: [
+        "./assets/pokemones/Machop.png",
+        "./assets/pokemones/Machoke.png",
+        "./assets/pokemones/Machamp.png",
+      ],
     },
   },
   {
@@ -577,8 +614,12 @@ export default [
     ability: "Inadvertido",
     weight: "36.0",
     evolutions: {
-      evolutionName: ["Slowpoke","Slowbro","Slowking"],
-      evolutionImage: ["./assets/pokemones/Slowpoke.png","./assets/pokemones/Slowbro.png","./assets/pokemones/Slowking.png"],
+      evolutionName: ["Slowpoke", "Slowbro", "Slowking"],
+      evolutionImage: [
+        "./assets/pokemones/Slowpoke.png",
+        "./assets/pokemones/Slowbro.png",
+        "./assets/pokemones/Slowking.png",
+      ],
     },
   },
   {
@@ -612,7 +653,7 @@ export default [
     ability: "Vista Lince",
     weight: "1.8",
     evolutions: {
-      evolutionName: ["Pidgey","Pidgeotto", "Pidgeot"],
+      evolutionName: ["Pidgey", "Pidgeotto", "Pidgeot"],
       evolutionImage: [
         "./assets/pokemones/Pidgey.png",
         "./assets/pokemones/Pidgeotto.png",
@@ -653,8 +694,12 @@ export default [
     ability: "Espesura",
     weight: "13.0",
     evolutions: {
-      evolutionName: ["Bulbasaur","Ivysaur","Venusaur"],
-      evolutionImage: ["./assets/pokemones/Bulbasaur.png","./assets/pokemones/Ivysaur.png","./assets/pokemones/Venusaur.png"],
+      evolutionName: ["Bulbasaur", "Ivysaur", "Venusaur"],
+      evolutionImage: [
+        "./assets/pokemones/Bulbasaur.png",
+        "./assets/pokemones/Ivysaur.png",
+        "./assets/pokemones/Venusaur.png",
+      ],
     },
   },
   {
@@ -689,8 +734,12 @@ export default [
     ability: "Cuerpo Maldito",
     weight: "40.5",
     evolutions: {
-      evolutionName: ["Gastly","Haunter","Gengar"],
-      evolutionImage: ["./assets/pokemones/Gastly.png","./assets/pokemones/Haunter.png","./assets/pokemones/Gengar.png"],
+      evolutionName: ["Gastly", "Haunter", "Gengar"],
+      evolutionImage: [
+        "./assets/pokemones/Gastly.png",
+        "./assets/pokemones/Haunter.png",
+        "./assets/pokemones/Gengar.png",
+      ],
     },
   },
   {
@@ -726,8 +775,12 @@ export default [
     ability: "Levitación",
     weight: "0.1",
     evolutions: {
-      evolutionName: ["Gastly","Haunter","Gengar"],
-      evolutionImage: ["./assets/pokemones/Gastly.png","./assets/pokemones/Haunter.png","./assets/pokemones/Gengar.png"],
+      evolutionName: ["Gastly", "Haunter", "Gengar"],
+      evolutionImage: [
+        "./assets/pokemones/Gastly.png",
+        "./assets/pokemones/Haunter.png",
+        "./assets/pokemones/Gengar.png",
+      ],
     },
   },
   {
@@ -763,8 +816,11 @@ export default [
     ability: "Ojo Compuesto",
     weight: "30.0",
     evolutions: {
-      evolutionName: ["Venonat","Venomoth"],
-      evolutionImage: ["./assets/pokemones/Venonat.png","./assets/pokemones/Venomoth.png"],
+      evolutionName: ["Venonat", "Venomoth"],
+      evolutionImage: [
+        "./assets/pokemones/Venonat.png",
+        "./assets/pokemones/Venomoth.png",
+      ],
     },
   },
   {
@@ -796,8 +852,11 @@ export default [
     ability: "Cabeza Roca",
     weight: "6.5",
     evolutions: {
-      evolutionName: ["Cubone","Marowak"],
-      evolutionImage: ["./assets/pokemones/Cubone.png","./assets/pokemones/Marowak.png"],
+      evolutionName: ["Cubone", "Marowak"],
+      evolutionImage: [
+        "./assets/pokemones/Cubone.png",
+        "./assets/pokemones/Marowak.png",
+      ],
     },
   },
   {
@@ -825,8 +884,12 @@ export default [
     ability: "Cura Natural",
     weight: "34.6",
     evolutions: {
-      evolutionName: ["Happiny","Chansey","Blissey"],
-      evolutionImage: ["./assets/pokemones/Happiny.png","./assets/pokemones/Chansey.png","./assets/pokemones/Blissey.png"],
+      evolutionName: ["Happiny", "Chansey", "Blissey"],
+      evolutionImage: [
+        "./assets/pokemones/Happiny.png",
+        "./assets/pokemones/Chansey.png",
+        "./assets/pokemones/Blissey.png",
+      ],
     },
   },
   {
@@ -861,8 +924,12 @@ export default [
     ability: "Emjambre",
     weight: "56.0",
     evolutions: {
-      evolutionName: ["Scyther","Scizor","Kleavor"],
-      evolutionImage: ["./assets/pokemones/Scyther.png","./assets/pokemones/Scizor.png","./assets/pokemones/Kleavor.png"],
+      evolutionName: ["Scyther", "Scizor", "Kleavor"],
+      evolutionImage: [
+        "./assets/pokemones/Scyther.png",
+        "./assets/pokemones/Scizor.png",
+        "./assets/pokemones/Kleavor.png",
+      ],
     },
   },
   {
@@ -890,8 +957,12 @@ export default [
     ability: "Estática",
     weight: "30.0",
     evolutions: {
-      evolutionName: ["Elekid","Electabuzz","Electivire"],
-      evolutionImage: ["./assets/pokemones/Elekid.png","./assets/pokemones/Electabuzz.png","./assets/pokemones/Electivire.png"],
+      evolutionName: ["Elekid", "Electabuzz", "Electivire"],
+      evolutionImage: [
+        "./assets/pokemones/Elekid.png",
+        "./assets/pokemones/Electabuzz.png",
+        "./assets/pokemones/Electivire.png",
+      ],
     },
   },
   {
@@ -922,8 +993,13 @@ export default [
     ability: "Gran Encanto",
     weight: "3.0",
     evolutions: {
-      evolutionName: ["Cleffa","Clefairy","Clefable"],
-      evolutionImage: ["./assets/pokemones/Cleffa.png","./assets/pokemones/Clefairy.png",,"./assets/pokemones/Clefable.png"],
+      evolutionName: ["Cleffa", "Clefairy", "Clefable"],
+      evolutionImage: [
+        "./assets/pokemones/Cleffa.png",
+        "./assets/pokemones/Clefairy.png",
+        ,
+        "./assets/pokemones/Clefable.png",
+      ],
     },
   },
   {
@@ -954,8 +1030,12 @@ export default [
     ability: "Gracia Serena",
     weight: "1.5",
     evolutions: {
-      evolutionName: ["Togepi","Togetic","Togekiss"],
-      evolutionImage: ["./assets/pokemones/Togepi.png","./assets/pokemones/Togetic.png","./assets/pokemones/Togekiss.png"],
+      evolutionName: ["Togepi", "Togetic", "Togekiss"],
+      evolutionImage: [
+        "./assets/pokemones/Togepi.png",
+        "./assets/pokemones/Togetic.png",
+        "./assets/pokemones/Togekiss.png",
+      ],
     },
   },
   {
@@ -993,8 +1073,12 @@ export default [
     ability: "Agallas",
     weight: "72.0",
     evolutions: {
-      evolutionName: ["Larvitar","Pupitar","Tyanitar"],
-      evolutionImage: ["./assets/pokemones/Larvitar.png","./assets/pokemones/Pupitar.png","./assets/pokemones/Tyanitar.png"],
+      evolutionName: ["Larvitar", "Pupitar", "Tyanitar"],
+      evolutionImage: [
+        "./assets/pokemones/Larvitar.png",
+        "./assets/pokemones/Pupitar.png",
+        "./assets/pokemones/Tyanitar.png",
+      ],
     },
   },
 ];
