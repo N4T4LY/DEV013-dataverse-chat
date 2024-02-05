@@ -32,8 +32,8 @@ export default [
     ability: "Espesura",
     weight: "6.9", // en kilogramos
     evolutions: {
-      evolutionName: ["Ivysaur", "Venusaur"],
-      evolutionImage: ["./assets/Ivysaur.png", "./assets/Venusaur.png"],
+      evolutionName: ["Bulbasaur","Ivysaur", "Venusaur"],
+      evolutionImage: ["./assets/pokemones/Bulbasaur.png","./assets/pokemones/Ivysaur.png", "./assets/pokemones/Venusaur.png"],
     },
   },
   {
@@ -67,9 +67,9 @@ export default [
     evolutions: {
       evolutionName: ["Charmander", "Charmeleon", "Charizard"],
       evolutionImage: [
-        "./assets/Charmander.png",
-        "./assets/Charmeleon.png",
-        "./assets/Charizard.png",
+        "./assets/pokemones/Charmander.png",
+        "./assets/pokemones/Charmeleon.png",
+        "./assets/pokemones/Charizard.png",
       ],
     },
   },
@@ -103,9 +103,9 @@ export default [
     evolutions: {
       evolutionName: ["Charmander", "Charmeleon", "Charizard"],
       evolutionImage: [
-        "./assets/Charmander.png",
-        "./assets/Charmeleon.png",
-        "./assets/Charizard.png",
+        "./assets/pokemones/Charmander.png",
+        "./assets/pokemones/Charmeleon.png",
+        "./assets/pokemones/Charizard.png",
       ],
     },
   },
@@ -141,11 +141,11 @@ export default [
     ability: "Mar de Llamas",
     weight: "90.5",
     evolutions: {
-      evolutioneName: ["Charmander", "Charmeleon", "Charizard"],
+      evolutionName: ["Charmander", "Charmeleon", "Charizard"],
       evolutionImage: [
-        "./assets/Charmander.png",
-        "./assets/Charmeleon.png",
-        "./assets/Charizard.png",
+        "./assets/pokemones/Charmander.png",
+        "./assets/pokemones/Charmeleon.png",
+        "./assets/pokemones/Charizard.png",
       ],
     },
   },
@@ -179,9 +179,9 @@ export default [
     evolutions: {
       evolutionName: ["Squirtle", "Wartortle", "Blastoise"],
       evolutionImage: [
-        "./assets/Squirtle.png",
-        "./assets/Wartortle.png",
-        "./assets/Blastoise.png",
+        "./assets/pokemones/Squirtle.png",
+        "./assets/pokemones/Wartortle.png",
+        "./assets/pokemones/Blastoise.png",
       ],
     }
   },
@@ -215,9 +215,9 @@ export default [
     evolutions: {
       evolutionName: ["Squirtle", "Wartortle", "Blastoise"],
       evolutionImage: [
-        "./assets/Squirtle.png",
-        "./assets/Wartortle.png",
-        "./assets/Blastoise.png",
+        "./assets/pokemones/Squirtle.png",
+        "./assets/pokemones/Wartortle.png",
+        "./assets/pokemones/Blastoise.png",
       ],
     }
   },
@@ -251,7 +251,7 @@ export default [
     weight: "2.9",
     evolutions: {
       evolutionName: ["Caterpie","Metapod", "Butterfree"],
-      evolutionImage: ["./assets/Caterpie.png","./assets/Metapod.png", "./assets/Butterfree.png"],
+      evolutionImage: ["./assets/pokemones/Caterpie.png","./assets/pokemones/Metapod.png", "./assets/pokemones/Butterfree.png"],
     },
   },
   {
@@ -283,7 +283,7 @@ export default [
     weight: "7.5",
     evolutions: {
       evolutionName: ["Cleffa","Clefairy","Clefable"],
-      evolutionImage: ["./assets/Cleffa.png","./assets/Clefairy.png","./assets/Clefable.png"],
+      evolutionImage: ["./assets/pokemones/Cleffa.png","./assets/pokemones/Clefairy.png","./assets/pokemones/Clefable.png"],
     },
   },
   {
@@ -312,7 +312,7 @@ export default [
     weight: "6.0",
     evolutions: {
       evolutionName: ["Pichu","Pikachu","Raichu"],
-      evolutionImage: ["./assets/Pichu.png","./assets/Pikachu.png","./assets/Raichu.png"],
+      evolutionImage: ["./assets/pokemones/Pichu.png","./assets/pokemones/Pikachu2.png","./assets/pokemones/Raichu.png"],
     },
   },
   {
@@ -345,7 +345,7 @@ export default [
     weight: "0.8",
     evolutions: {
       evolutionName: ["Diglett","Dugtrio"],
-      evolutionImage: ["./assets/Diglett.png","./assets/Dugtrio.png"],
+      evolutionImage: ["./assets/pokemones/Diglett.png","./assets/pokemones/Dugtrio.png"],
     },
   },
   {
@@ -377,7 +377,7 @@ export default [
     weight: "6.9",
     evolutions: {
       evolutionName: ["Ekans","Arbok"],
-      evolutionImage: ["./assets/Ekans.png","./assets/Arbok.png"],
+      evolutionImage: ["./assets/pokemones/Ekans.png","./assets/pokemones/Arbok.png"],
     },
   },
   {
@@ -406,7 +406,7 @@ export default [
     weight: "30.0",
     evolutions: {
       evolutionName: ["Pichu","Pikachu","Raichu"],
-      evolutionImage: ["./assets/Pichu.png","./assets/Pikachu.png","./assets/Raichu.png"],
+      evolutionImage: ["./assets/pokemones/Pichu.png","./assets/pokemones/Pikachu2.png","./assets/pokemones/Raichu.png"],
     },
   },
   {
@@ -923,7 +923,7 @@ export default [
     weight: "3.0",
     evolutions: {
       evolutionName: ["Cleffa","Clefairy","Clefable"],
-      evolutionImage: ["./assets/pokemones/Cleffa.png","./assets/pokemones/Clefairy.png",,"./assets/pokemones/Clefable.png"],
+      evolutionImage: ["./assets/pokemones/Cleffa.png","./assets/pokemones/Clefairy.png","./assets/pokemones/Clefable.png"],
     },
   },
   {
