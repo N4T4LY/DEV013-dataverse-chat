@@ -111,15 +111,14 @@ body {
   /*animacion*/
   transition: 1.2s;
   position: relative;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
 #close-welcoming:hover {
-  color: var(--color-white);/*opcion1*/
+  color: var(--color-white); /*opcion1*/
   /*color: var(--color-dark-blue); opcion2*/
   /* border: none; */
-   z-index: 1; 
-
+  z-index: 1;
 }
 
 #close-welcoming::before {
@@ -128,20 +127,17 @@ body {
   left: 0;
   width: 100%;
   height: 0%;
-  background: #0C575E;/*opcion1*/
+  background: #0c575e; /*opcion1*/
   /*background: var(--color-sky2);opcion2*/
   z-index: -1;
   transition: 1.2s;
   bottom: 0;
-  border-radius: 50% 50% 0 0; 
-
+  border-radius: 50% 50% 0 0;
 }
 
 #close-welcoming:hover::before {
   height: 180%;
-  
 }
-
 
 .text .footer {
   color: var(--color-sky);
@@ -262,12 +258,12 @@ button[type="reset"] {
   cursor: pointer;
 }
 
-/* modal - container */
+/* modal Product not found - container */
 .container-modal {
   width: 400px;
   height: 300px;
   position: fixed;
-  z-index: 20;
+  z-index: 10;
   background-color: var(--color-light-sky);
   border-radius: 20px;
   top: 400px;
@@ -393,7 +389,6 @@ footer p {
   position: fixed;
   left: 350px;
   top: 200px;
-  z-index: 1;
   background-color: var(--color-light-sky);
   width: 50%;
   height: 65%;
@@ -508,7 +503,9 @@ footer p {
 .infoPokemon {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
+  height: 100vh;
   /* border: solid 2px red; */
   margin: 0;
 }
@@ -523,7 +520,7 @@ footer p {
 }
 .containerLeft {
   z-index: 2;
-  width: 55%;
+  width: 50%;
   /* border: solid 6px green; */
   margin-left: -450px;
   display: flex;
@@ -534,39 +531,40 @@ footer p {
 }
 .containerLeft > img {
   width: 650px;
-  /* height: 650px; */
-   margin-right: -30px;
+  height: 650px;
+  margin-right: -30px;
   /* margin-top: 50px; */
   z-index: 1;
   /* border: solid 6px green; */
+  overflow: hidden;
   /* margin-left: -600px;
   margin-top: -70px; */
 }
-.chatPersonal{
+.chatPersonal {
   width: 95%;
   display: flex;
   justify-content: flex-end;
   position: relative;
   top: 130px;
-  right:115px;
+  right: 115px;
   cursor: pointer;
-
 }
-.chatPersonal > .fa-rocketchat{
-  background-color: #124E53;  
+.chatPersonal > .fa-rocketchat {
+  background-color: var(--color-dark-sky);
   border-radius: 50%;
   padding: 15px;
   color: white;
   cursor: pointer;
-} 
-.baseStats{
+  z-index: 2;
+}
+.baseStats {
   width: 95%;
   display: flex;
   justify-content: flex-start;
   /* border: solid 2px green; */
 }
-.baseStats > .fa-chart-simple{
-  background-color: #124E53;
+.baseStats > .fa-chart-simple {
+  background-color: var(--color-dark-sky);
   border-radius: 50%;
   padding: 21px;
   display: flex;
@@ -582,7 +580,7 @@ footer p {
 }
 .recoilArrow > .fa-arrow-left {
   background-color: var(--color-sky);
-  color:black;
+  color: black;
   border-radius: 50%;
   padding: 20px;
   width: 40px;
@@ -592,8 +590,31 @@ footer p {
   align-items: center;
   cursor: pointer;
 }
+
+/* statistics modal of each pokemon  */
+.modalBase{
+  background-color: var(--color-light-sky);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  z-index: 20;
+  padding: 10px;
+  width: 600px;
+}
+.closeEstadistic{
+  width: 100%;
+  /* border: 2px solid white; */
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+/* ----------------------------------- */
+
 .containerRight {
-  width: 45%;
+  width: 50%;
   /* overflow: auto; */
   /* border: solid 2px white; */
   padding: 16px;
@@ -602,10 +623,11 @@ footer p {
 .containerRight > h1 {
   text-align: center;
   font-size: 5rem;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 2px;
+  margin-bottom: 10px;
 }
 .containerRight > p {
+  /* width: 89%; */
   text-align: justify;
 }
 
@@ -651,11 +673,12 @@ td {
 .debilidadesDetails {
   background-color: var(--color-dark-sky);
   border-radius: 30px;
-  height: 115px;
-  padding: 5px;
+  /* 115px */
+  height: 100px;
+  padding: 10px;
   margin-bottom: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   /* gap: 50px; */
   /* margin: 0; */
@@ -668,28 +691,26 @@ td {
 .debilidadesImages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 30px;
   margin-left: 70px;
   /* margin-left: 200px; */
   height: 70px;
+  overflow: hidden;
 }
 .debilidadesImages > img {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   /* margin: 0; */
 }
 .evolution {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  /* border: 2px solid white; */
-  /* gap: 150px; */
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; 
   max-width: 100%;
+  gap: 15px;
 }
 .evolution > h3 {
   width: 95%;
@@ -698,16 +719,21 @@ td {
 }
 .evolutionImage {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-  /* border: 2px solid green; */
+  border: 2px solid green;
   width: 100%;
 }
-.evolutionImage > img {
-  border: 3px solid var(--color-white);
+.evolutionImage > .borderEvolution {
+  border: 2px solid var(--color-white);
   border-radius: 50%;
-  padding: 10px;
   width: 135px;
+  height: 135px;
+  overflow: hidden;
+}
+.borderEvolution > img {
+  padding: 10px;
+  /* width: 105px; */
 }
