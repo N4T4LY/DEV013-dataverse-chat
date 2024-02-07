@@ -30,11 +30,14 @@ export const Home = () => {
   newContainer.appendChild(Filters());
   newContainer.appendChild(Cards(data));
   newContainer.appendChild(Footer());
-
+  
   //modal
   const modal = newContainer.querySelector("#myBtn");
   const modalContent = newContainer.querySelector(".modal-content");
   const overlay = newContainer.querySelector(".overlay");
+  const sortOrderSelect = newContainer.querySelector(
+    "select[data-testid='select-sort']"
+  );
   const close = newContainer.querySelector(".fa-xmark");
 
   modal.addEventListener("click", () => {
@@ -69,7 +72,6 @@ export const Home = () => {
         container.remove();
         overlay.classList.toggle("overlay-active");
       });
-      console.log(container)
       newContainer.appendChild(container);
       searchPokemons.value = "";
     }
@@ -82,23 +84,16 @@ export const Home = () => {
 
   filterType.addEventListener("change", () => {
     const selectedFilter = filterType.value;
-    console.log(selectedFilter);
     currentData = filterData(data, "typeName", selectedFilter);
     currentData = sortData(currentData, "name", sortOrderSelect.value);
-    console.log(currentData);
     newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
   });
 
   // sort
-  const sortOrderSelect = newContainer.querySelector(
-    "select[data-testid='select-sort']"
-  );
-  console.log(sortOrderSelect);
+
   sortOrderSelect.addEventListener("change", () => {
     const sortOrder = sortOrderSelect.value;
-    console.log(sortOrder);
     currentData = sortData(currentData, "name", sortOrder);
-    console.log(currentData, newContainer.children[2]);
     newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
   });
 
@@ -111,7 +106,6 @@ export const Home = () => {
 
   //stadistic
   const stadistic = newContainer.querySelector("canvas[name='myChart']");
-  console.log(stadistic);
   const updateChart = (names, nroPokemons) => {
     // eslint-disable-next-line no-undef
     new Chart(stadistic, {
@@ -146,18 +140,13 @@ export const Home = () => {
   const nroPokemons = resultchart.nroPokemons;
   updateChart(names, nroPokemons);
 
-  // 
   //Navigate  to next page
   const imagePokemon = newContainer.querySelectorAll(".imageBtn");
   imagePokemon.forEach((pokemon) => {
     pokemon.addEventListener("click", () => {
-      //console.log(pokemon.getAttribute('alt').slice(0,-1));
-      const obj = currentData.find(
-        (item) => item.name === pokemon.getAttribute("alt").slice(0, -1)
-      );
+      // console.log("valor",pokemon.getAttribute('alt').slice(0,-1));
       navigateTo(
-        `/detailCard?${pokemon.getAttribute("alt").slice(0, -1)}`,
-        obj
+        `/detailCard?name=${pokemon.getAttribute("alt").slice(0, -1)}`
       );
     });
   });

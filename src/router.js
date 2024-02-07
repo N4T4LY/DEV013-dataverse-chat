@@ -6,11 +6,13 @@ export const setRootEl = (el) => {
   rootEl = el;
 };
 //Esta función asigna el valor del parámetro routes al objeto ROUTES
-export const setRoutes = (routes) => {
+export const setRoutes = (newRoutes) => {
   //verificamos que routes sea una objeto y en caso que no sea, manda un error
-  if (typeof routes === "object") {
-    ROUTES = routes;
-    console.log("routes", ROUTES);
+  if (typeof newRoutes === "object") {
+    if (newRoutes["/error"]) {
+      ROUTES = newRoutes;
+      console.log("routes", ROUTES);
+    }
   }
 };
 export const queryStringToObject = (queryString) => {
@@ -26,28 +28,29 @@ export const renderView = (pathname, props = {}) => {
   const root = rootEl;
   let view;
   root.innerHTML = "";
-  console.log(pathname);
   if (ROUTES[pathname]) {
     view = ROUTES[pathname](props);
   } else {
     view = ROUTES["/error"](props);
   }
-  console.log(view);
   root.appendChild(view);
 };
 //  Actualizar nuestro historial de nuestro navegador a partir de la url
 export const navigateTo = (pathname, props = {}) => {
   // update window history with pushState
   const URLvisited = window.location.origin + pathname;
+  console.log("guarda", window.location.origin + pathname);
   history.pushState({}, "", URLvisited);
   // render the view with the pathname and props
   renderView(pathname, props);
 };
-export const onURLChange = (location) => {
+
+export const onURLChange = (location, props = {}) => {
   // parse the location for the pathname and search params
+
   // convert the search params to an object
-  
+  props = queryStringToObject(window.location.search);
   // render the view with the pathname and object
-  console.log("location", location);
-  renderView(location.pathname);
+  console.log("location", window.location);
+  renderView(location.pathname,props);
 };
