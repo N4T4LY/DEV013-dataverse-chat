@@ -737,3 +737,25 @@ td {
   padding: 10px;
   /* width: 105px; */
 }
+
+/* --------------------------------------- error ------------------------------------------------------*/
+.containerError{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* color: white; */
+ }
+ .buttonBack{
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  color: var(--color-white);
+  font-weight: bolder;
+  border-radius: 30px;
+  border: none;
+  background:linear-gradient(var(--color-dark-sky),var(--color-light-sky));
+ }
