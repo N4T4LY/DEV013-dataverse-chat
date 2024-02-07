@@ -750,6 +750,10 @@ td {
   align-items: center;
   /* color: white; */
  }
+ .titleNotFound{
+  margin-top: -50px;
+  color: var(--color-white);
+ }
  .buttonBack{
   cursor: pointer;
   width: 150px;
@@ -759,4 +763,19 @@ td {
   border-radius: 30px;
   border: none;
   background:linear-gradient(var(--color-dark-sky),var(--color-light-sky));
+ }
+ .title404{
+  font-weight: bold;
+  font-size: 25rem;
+  margin: 0;
+  letter-spacing: 0px;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .error404{
+  width: 450px;
+  height: 450px;
+  margin-top: -20px;
  }
