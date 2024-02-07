@@ -46,9 +46,9 @@ export const Filters = () => {
   </button>`;
     stadistic.innerHTML = `<i class="fa-solid fa-chart-simple"></i>`;
     modal.innerHTML=`<i class="fa-solid fa-xmark"></i>
-    <h2>Estadisticas</h2>
+    <h2>Estadisticas Por Tipo</h2>
     <canvas id="myChart" name="myChart"></canvas>`;
-    overlay.innerHTML=``;
+    // overlay.innerHTML=``;
 
 
     form.appendChild(search);
