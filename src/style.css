@@ -561,6 +561,7 @@ footer p {
   width: 95%;
   display: flex;
   justify-content: flex-start;
+  /* margin: 0; */
   /* border: solid 2px green; */
 }
 .baseStats > .fa-chart-simple {
@@ -623,7 +624,7 @@ footer p {
 .containerRight > h1 {
   text-align: center;
   font-size: 5rem;
-  margin-top: 2px;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 .containerRight > p {
@@ -723,7 +724,7 @@ td {
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 100%;
 }
 .evolutionImage > .borderEvolution {
@@ -734,6 +735,47 @@ td {
   overflow: hidden;
 }
 .borderEvolution > img {
-  padding: 10px;
+  padding: 15px;
   /* width: 105px; */
 }
+
+/* --------------------------------------- error ------------------------------------------------------*/
+.containerError{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* color: white; */
+ }
+ .titleNotFound{
+  margin-top: -50px;
+  color: var(--color-white);
+ }
+ .buttonBack{
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  color: var(--color-white);
+  font-weight: bolder;
+  border-radius: 30px;
+  border: none;
+  background:linear-gradient(var(--color-dark-sky),var(--color-light-sky));
+ }
+ .title404{
+  font-weight: bold;
+  font-size: 25rem;
+  margin: 0;
+  letter-spacing: 0px;
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .error404{
+  width: 450px;
+  height: 450px;
+  margin-top: -20px;
+ }
