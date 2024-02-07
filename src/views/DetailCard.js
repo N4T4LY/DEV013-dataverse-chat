@@ -21,7 +21,6 @@ export const DetailCard = (pokemon) => {
   for (let i = 0; i < pokemon1.weaknesses.weaknessesName.length; i++) {
     weaknesses += `<img src="${pokemon1.weaknesses.weaknessesImage[i]}" alt="${pokemon1.weaknesses.weaknessesName[i]}"/>`;
   }
-  console.log("debilidades", weaknesses);
 
   // Agrega imagenes de las evoluciones de cada pokemón
   for (let i = 0; i < pokemon1.evolutions.evolutionName.length; i++) {
@@ -92,7 +91,6 @@ export const DetailCard = (pokemon) => {
 
   const recoilArrow = main.querySelector(".recoilArrow");
   const baseStats = main.querySelector(".baseStatsChart");
-  console.log(baseStats);
   recoilArrow.addEventListener("click", () => {
     navigateTo("/home", {});
   });
@@ -126,7 +124,7 @@ export const DetailCard = (pokemon) => {
         labels: propertyBase,
         datasets: [
           {
-            label: "# of Pokemons for type",
+            label: "# of pokemon1s for type",
             data: resultBase,
             maxBarThickness: 50,
             borderWidth: 1,
