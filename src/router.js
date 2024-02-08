@@ -28,6 +28,8 @@ export const renderView = (pathname, props = {}) => {
   const root = rootEl;
   let view;
   root.innerHTML = "";
+  console.log("PATH",pathname)
+  console.log("ROUTER",ROUTES[pathname])
   if (ROUTES[pathname]) {
     view = ROUTES[pathname](props);
   } else {
@@ -37,11 +39,22 @@ export const renderView = (pathname, props = {}) => {
 };
 //  Actualizar nuestro historial de nuestro navegador a partir de la url
 export const navigateTo = (pathname, props = {}) => {
+  const searchParams = new URLSearchParams(window.location.search);
+  console.log("xyz",props)
+  Object.entries(props).forEach(([key,value])=>{
+    searchParams.set(key,value)
+  })
+  const queryString=searchParams.toString()
   // update window history with pushState
-  const URLvisited = window.location.origin + pathname;
+  //URLvisited = window.location.origin + pathname;
+ 
+   const URLvisited =`${pathname}${queryString ? `?${queryString}` : ''}`;
+ 
+  
   console.log("guarda", window.location.origin + pathname);
-  history.pushState({}, "", URLvisited);
+  history.pushState({pathname,props}, "", URLvisited);
   // render the view with the pathname and props
+  console.log("NAVIGATE",pathname,props)
   renderView(pathname, props);
 };
 
