@@ -16,12 +16,7 @@ const routes = {
     "/home": Home,
     "/detailCard":DetailCard,
     "/error":Error
-
 }
-
-// data.forEach((elem) => {
-//     routes[`/detailCard?${elem.name}`] = DetailCard;
-//   });
 
 setRoutes(routes);
 const root=document.getElementById("root");
@@ -36,7 +31,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
 
 // POPSATE
 window.addEventListener("popstate",(e) =>{
-    console.log("eventob",e.state);
-    onURLChange(window.location,e);
+    console.log("eventob",e);
+    onURLChange(window.location);
 });
 // window.onpopstate= onURLChange;

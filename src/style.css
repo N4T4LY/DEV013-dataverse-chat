@@ -370,6 +370,7 @@ h3 {
 
 /* Footer */
 footer p {
+  margin-top: 60px;
   text-align: center;
 }
 
