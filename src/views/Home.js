@@ -144,9 +144,9 @@ export const Home = () => {
   const imagePokemon = newContainer.querySelectorAll(".imageBtn");
   imagePokemon.forEach((pokemon) => {
     pokemon.addEventListener("click", () => {
-      // console.log("valor",pokemon.getAttribute('alt').slice(0,-1));
+     
       navigateTo(
-        `/detailCard?name=${pokemon.getAttribute("alt").slice(0, -1)}`
+        `/detailCard`,{name: pokemon.getAttribute("alt").slice(0, -1)}
       );
     });
   });
