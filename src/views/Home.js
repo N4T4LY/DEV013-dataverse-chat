@@ -1,36 +1,41 @@
 import data from "../data/dataset.js";
-import {
-  Cards
-} from "../components/Cards.js";
-import {
-  Header
-} from "../components/Header.js";
-import {
-  Filters
-} from "../components/Filters.js";
-import {
-  Footer
-} from "../components/Footer.js";
-import {
-  sortData,
-  filterData,
-  computeStats
-} from "../lib/dataFunctions.js";
-import {
-  navigateTo
-} from "../router.js";
+import { Cards } from "../components/Cards.js";
+import { Header } from "../components/Header.js";
+import { Filters } from "../components/Filters.js";
+import { Footer } from "../components/Footer.js";
+import { sortData, filterData, computeStats } from "../lib/dataFunctions.js";
+import { getApiKey } from "../lib/apiKey.js";
+import { navigateTo } from "../router.js";
 
 export const Home = () => {
   const newContainer = document.createElement("section");
-  newContainer.setAttribute("class", "newContainer")
+  newContainer.setAttribute("class", "newContainer");
+  const input = document.createElement("input");
+  const btn = document.createElement("button");
+  const p = document.createElement("p");
+  input.setAttribute("type", "text");
+  btn.textContent = "Hazme click!";
   let currentData = [...data];
   // appenChild -> un solo elemento
   // append -> varios elementos
+  newContainer.append(input, btn, p);
   newContainer.appendChild(Header());
   newContainer.appendChild(Filters());
   newContainer.appendChild(Cards(data));
   newContainer.appendChild(Footer());
-  
+  const btnP = newContainer.querySelector("button");
+  console.log(btnP)
+  const inputP = newContainer.querySelector("input"); 
+  const pP = newContainer.querySelector("p")
+
+  btnP.addEventListener("click", () => {
+    if (!inputP.value) return;
+    const prueba = getApiKey(inputP.value);
+    pP.innerHTML = prueba;
+    console.log(pP)
+  });
+  console.log(getApiKey("hola"))
+
   //modal
   const modal = newContainer.querySelector("#myBtn");
   const modalContent = newContainer.querySelector(".modal-content");
@@ -59,7 +64,7 @@ export const Home = () => {
     const findPokemons = data.find((data) => data.name.toLowerCase() === value);
     if (findPokemons) {
       currentData.push(findPokemons);
-      newContainer.replaceChild(Cards(currentData), newContainer.children[2])
+      newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
       searchPokemons.value = "";
     } else {
       const container = document.createElement("section");
@@ -112,16 +117,18 @@ export const Home = () => {
       type: "bar",
       data: {
         labels: names,
-        datasets: [{
-          label: "# of Pokemons for type",
-          data: nroPokemons,
-          borderWidth: 1,
-          backgroundColor: "#9BD0F5",
-          font: {
-            size: 14,
-            weight: "bolder",
+        datasets: [
+          {
+            label: "# of Pokemons for type",
+            data: nroPokemons,
+            borderWidth: 1,
+            backgroundColor: "#9BD0F5",
+            font: {
+              size: 14,
+              weight: "bolder",
+            },
           },
-        }, ],
+        ],
       },
       options: {
         scales: {
@@ -133,7 +140,6 @@ export const Home = () => {
     });
   };
 
-
   const resultchart = computeStats(data);
   const names = resultchart.names;
 
@@ -144,13 +150,11 @@ export const Home = () => {
   const imagePokemon = newContainer.querySelectorAll(".imageBtn");
   imagePokemon.forEach((pokemon) => {
     pokemon.addEventListener("click", () => {
-     
-      navigateTo(
-        `/detailCard`,{name: pokemon.getAttribute("alt").slice(0, -1)}
-      );
+      navigateTo(`/detailCard`, {
+        name: pokemon.getAttribute("alt").slice(0, -1),
+      });
     });
   });
-
 
   return newContainer;
 };
