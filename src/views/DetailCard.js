@@ -92,7 +92,8 @@ export const DetailCard = (pokemon) => {
   const recoilArrow = main.querySelector(".recoilArrow");
   const baseStats = main.querySelector(".baseStatsChart");
   recoilArrow.addEventListener("click", () => {
-    navigateTo("/home", {});
+    //navigateTo("/home", {});
+    history.back();
   });
 
   baseStats.addEventListener("click", () => {
@@ -124,7 +125,7 @@ export const DetailCard = (pokemon) => {
         labels: propertyBase,
         datasets: [
           {
-            label: "# of pokemon1s for type",
+            label: "Cantidad de caracteristicas",
             data: resultBase,
             maxBarThickness: 50,
             borderWidth: 1,
