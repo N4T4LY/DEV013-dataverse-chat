@@ -60,6 +60,7 @@ export const Home = () => {
       newContainer.appendChild(container);
       searchPokemons.value = "";
     }
+    addImageListeners();
   });
 
   // filter
@@ -72,6 +73,8 @@ export const Home = () => {
     currentData = filterData(data, "typeName", selectedFilter);
     currentData = sortData(currentData, "name", sortOrderSelect.value);
     newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
+
+    addImageListeners();
   });
 
   // sort
@@ -80,6 +83,8 @@ export const Home = () => {
     const sortOrder = sortOrderSelect.value;
     currentData = sortData(currentData, "name", sortOrder);
     newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
+
+    addImageListeners();
   });
 
   //reset
@@ -87,6 +92,8 @@ export const Home = () => {
   resetbutton.addEventListener("click", () => {
     currentData = data;
     newContainer.replaceChild(Cards(currentData), newContainer.children[2]);
+
+    addImageListeners();
   });
 
   //stadistic
@@ -127,7 +134,8 @@ export const Home = () => {
   updateChart(names, nroPokemons);
 
   //Navigate  to next page
-  const imagePokemon = newContainer.querySelectorAll(".imageBtn");
+  const addImageListeners=()=>{
+    const imagePokemon = newContainer.querySelectorAll(".imageBtn");
   imagePokemon.forEach((pokemon) => {
     pokemon.addEventListener("click", () => {
       navigateTo(`/detailCard`, {
@@ -135,6 +143,12 @@ export const Home = () => {
       });
     });
   });
+  };
+
+  addImageListeners();
+  
+
+ 
 
   return newContainer;
 };
