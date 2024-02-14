@@ -173,6 +173,7 @@ body {
 
 .newContainer {
   width: 100%;
+  position: relative;
 }
 
 /* Header */
@@ -257,6 +258,11 @@ button[type="reset"] {
   font-size: 1.5rem;
   cursor: pointer;
 }
+button[type="reset"]:hover {
+  background-color:  #68d2d4;
+  
+}
+
 
 /* modal Product not found - container */
 .container-modal {
@@ -343,6 +349,7 @@ div[itemprop="image"] > img {
 div[itemprop="image"] > img:hover {
   transform: scale(1) translate(15px);
   filter: drop-shadow(-30px 2px 10px rgba(0, 0, 0, 0.7));
+  cursor: pointer;
 }
 
 .name {
@@ -367,6 +374,8 @@ h3 {
 .weaknesses > img {
   width: 40px;
 }
+
+
 
 /* Footer */
 footer p {
@@ -580,6 +589,7 @@ footer p {
   display: flex;
   justify-content: flex-end;
 }
+
 .recoilArrow > .fa-arrow-left {
   background-color: var(--color-sky);
   color: black;
@@ -592,6 +602,10 @@ footer p {
   align-items: center;
   cursor: pointer;
 }
+.recoilArrow > .fa-arrow-left:hover {
+  background-color:  #68d2d4;
+}
+
 
 /* statistics modal of each pokemon  */
 .modalBase{
