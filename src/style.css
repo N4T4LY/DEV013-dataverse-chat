@@ -550,7 +550,7 @@ footer p {
   right: 115px;
   cursor: pointer;
 }
-.chatPersonal > .fa-rocketchat {
+.chatPersonal > .fa-comment {
   background-color: var(--color-dark-sky);
   border-radius: 50%;
   padding: 15px;
@@ -594,7 +594,7 @@ footer p {
 }
 
 /* statistics modal of each pokemon  */
-.modalBase{
+.modalBase {
   background-color: var(--color-light-sky);
   position: fixed;
   display: flex;
@@ -606,7 +606,7 @@ footer p {
   padding: 10px;
   width: 600px;
 }
-.closeEstadistic{
+.closeEstadistic {
   width: 100%;
   /* border: 2px solid white; */
   display: flex;
@@ -710,7 +710,7 @@ td {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: center;
   max-width: 100%;
   gap: 15px;
 }
@@ -741,7 +741,7 @@ td {
 }
 
 /* --------------------------------------- error ------------------------------------------------------*/
-.containerError{
+.containerError {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -750,12 +750,12 @@ td {
   justify-content: center;
   align-items: center;
   /* color: white; */
- }
- .titleNotFound{
+}
+.titleNotFound {
   margin-top: -50px;
   color: var(--color-white);
- }
- .buttonBack{
+}
+.buttonBack {
   cursor: pointer;
   width: 150px;
   height: 50px;
@@ -763,9 +763,9 @@ td {
   font-weight: bolder;
   border-radius: 30px;
   border: none;
-  background:linear-gradient(var(--color-dark-sky),var(--color-light-sky));
- }
- .title404{
+  background: linear-gradient(var(--color-dark-sky), var(--color-light-sky));
+}
+.title404 {
   font-weight: bold;
   font-size: 25rem;
   margin: 0;
@@ -774,9 +774,85 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
- }
- .error404{
+}
+.error404 {
   width: 450px;
   height: 450px;
   margin-top: -20px;
- }
+}
+
+/* Chat Individual */
+#panel-chatIndividual {
+  /* border: 2px solid white; */
+  position: fixed;
+  right: 0;
+  width: 740px;
+  height: 100vh;
+  background-color: #0b1321;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nameSection {
+  /* border: 2px solid white; */
+  background-color: #152834;
+  width: 738px;
+  height: 130px;
+  padding: 20px;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.chatTitle{
+  display: flex;
+  flex-direction: column;
+}
+.chatTitle > h2 {
+  font-size: 3rem;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.chatTitle > span {
+  font-style: oblique;
+  color: var(--color-white);
+  margin: 0;
+}
+.imageChat{
+  background-color: var(--color-dark-sky);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.inputChat[type="text"] {
+  width: 680px;
+  height: 80px;
+  margin: 20px;
+}
+#send-message{
+  background: transparent;
+  border: none;
+  position: absolute;
+  /* top: -9; */
+  right: 60px;
+  bottom: 40px;
+  cursor: pointer;
+}
+#send-message > img :hover{
+  color: var(--color-dark-blue2);
+}
+
+.fa-xmark{
+  cursor: pointer;
+}
