@@ -173,6 +173,7 @@ body {
 
 .newContainer {
   width: 100%;
+  position: relative;
 }
 
 /* Header */
@@ -257,6 +258,11 @@ button[type="reset"] {
   font-size: 1.5rem;
   cursor: pointer;
 }
+button[type="reset"]:hover {
+  background-color:  #68d2d4;
+  
+}
+
 
 /* modal Product not found - container */
 .container-modal {
@@ -343,6 +349,7 @@ div[itemprop="image"] > img {
 div[itemprop="image"] > img:hover {
   transform: scale(1) translate(15px);
   filter: drop-shadow(-30px 2px 10px rgba(0, 0, 0, 0.7));
+  cursor: pointer;
 }
 
 .name {
@@ -367,6 +374,157 @@ h3 {
 .weaknesses > img {
   width: 40px;
 }
+/*Grupal Chat*/
+#myBtnChat{
+  position: fixed;
+  right: 30px;
+  bottom:20px;
+  background-color: var(--color-dark-sky);
+  padding: 15px;
+  border-radius: 50px;
+  z-index: 13;
+  cursor: pointer; 
+
+}
+#myBtnChat:hover{
+background-color: #152834;
+}
+
+#grupal-chat{
+  display: grid;
+  grid-template-rows: auto 1fr auto; 
+  height: 100vh;
+  width: 100%;
+  
+  
+}
+#iconschat{
+  display: flex;
+  justify-content: space-between;
+  /* border: white solid 2px; */
+  align-items: center;
+  padding: 0px 18px 0px 18px;
+  margin-top: 18px;
+  
+}
+.chatIcon{
+  background-color: var(--color-dark-sky); 
+  border-radius: 50px;
+  padding: 40px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+#chatG{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  /* border: white solid 2px; */
+  /* margin-top: 150px; */
+  justify-self: flex-end;
+}
+
+#userC{
+    display: flex; 
+   /* border: white solid 2px; */
+   justify-content: flex-end;
+   align-items: center;
+ 
+}
+
+
+#userImage{
+  background-color: var(--color-dark-sky); 
+  border-radius: 50px;
+  padding: 10px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   margin-left:15px; 
+   margin-right: 15px;
+  
+}
+#answerChatU{
+background-color: var(--color-light-sky);
+width: 300px;
+padding: 10px;
+align-self: flex-end;
+text-align: right;
+margin-top: 5px;
+border-radius: 10px;
+
+}
+#pokemonC{
+  display: flex; 
+  /* border: white solid 2px; */
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+#pokemonName{
+  margin-left:15px; 
+  margin-right: 15px;
+}
+
+#pokemonImage{
+   background-color: var(--color-dark-sky); 
+  border-radius: 50px;
+  padding: 10px;
+  width: 40px; 
+  margin-left:15px; 
+  margin-right: 15px;
+  
+}
+
+#pokemonImage>img{
+height:auto;
+width: 40px;
+overflow: hidden;
+  
+}
+.answerChatP{
+  margin-top: 5px;
+  background-color: var(--color-light-blue);
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  }
+
+#inputChat{
+  /* border: white solid 2px;  */
+  position: absolute;
+ bottom: 15px;  
+ justify-self: flex-end;
+ align-items: center;
+ width: 100%;
+ display: flex;
+padding: 0 18px;
+ 
+}
+#inputGrupal {
+   width: 100%;
+   padding: 0 25px;
+}
+
+#inputGrupal::placeholder {
+   text-align: left;
+  font-size: 1.2rem;
+  
+}
+
+#sendButton {
+  position: absolute;
+  right: 35px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+   
+}
+
+
 
 /* Footer */
 footer p {
@@ -580,6 +738,7 @@ footer p {
   display: flex;
   justify-content: flex-end;
 }
+
 .recoilArrow > .fa-arrow-left {
   background-color: var(--color-sky);
   color: black;
@@ -592,6 +751,10 @@ footer p {
   align-items: center;
   cursor: pointer;
 }
+.recoilArrow > .fa-arrow-left:hover {
+  background-color:  #68d2d4;
+}
+
 
 /* statistics modal of each pokemon  */
 .modalBase {

@@ -5,6 +5,7 @@ import {DetailCard} from './views/DetailCard.js';
 import {Error} from './views/Error.js';
 import { setRoutes, setRootEl , onURLChange, queryStringToObject} from './router.js';
 import data from './data/dataset.js';
+import { GrupalChat } from './views/grupalChat.js';
 /*
 TODO:
 1.- Definir rutas en router.
@@ -14,6 +15,7 @@ TODO:
 const routes = {
     "/": Welcome,
     "/home": Home,
+    "/grupalChat":GrupalChat,
     "/detailCard":DetailCard,
     "/error":Error
 }
