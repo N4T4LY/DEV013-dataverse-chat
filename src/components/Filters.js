@@ -21,19 +21,19 @@ export const Filters = () => {
     filters.innerHTML = `<label for="type">Filtrar por tipo:</label>
     <select name="type" id="type" data-testid="select-filter">
       <option value="default" >----</option>
-      <option value="Fire">Fuego</option>
-      <option value="Water">Agua</option>
-      <option value="Electric">Eléctrico</option>
-      <option value="Fighting">Lucha</option>
+      <option value="Fuego">Fuego</option>
+      <option value="Agua">Agua</option>
+      <option value="Electrico">Eléctrico</option>
+      <option value="Lucha">Lucha</option>
       <option value="Normal">Normal</option>
-      <option value="Grass">Planta</option>
-      <option value="Psychic">Psiquico</option>
-      <option value="Poison">Veneno</option>
-      <option value="Ghost">Fantasma</option>
-      <option value="Fairy">Hada</option>
-      <option value="Ground">Tierra</option>
-      <option value="Bug">Bicho</option>
-      <option value="Stone">Roca</option>
+      <option value="Planta">Planta</option>
+      <option value="Psíquico">Psíquico</option>
+      <option value="Veneno">Veneno</option>
+      <option value="Fantasma">Fantasma</option>
+      <option value="Hada">Hada</option>
+      <option value="Tierra">Tierra</option>
+      <option value="Bicho">Bicho</option>
+      <option value="Roca">Roca</option>
     </select>
     <label for="name">Ordenar por nombre:</label>
     <select name="name" id="name" data-testid="select-sort">

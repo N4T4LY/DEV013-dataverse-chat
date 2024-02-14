@@ -7,33 +7,33 @@ export const Cards = (data) => {
       lower = color.toLowerCase();
     }
     switch (lower) {
-      case "fire":
+      case "fuego":
         return "#C33030";
-      case "grass":
+      case "planta":
         return "#55B870";
-      case "poison":
+      case "veneno":
         return "#7D3EA4";
-      case "water":
+      case "agua":
         return "#5594B8";
-      case "electric":
+      case "electrico":
         return "#AAB855";
-      case "fairy":
+      case "hada":
         return "#B85567";
-      case "ground":
+      case "tierra":
         return "#B89055";
-      case "fighting":
+      case "lucha":
         return "#DB9731";
       case "normal":
         return "#CBBBA3";
-      case "flying":
+      case "volador":
         return "#30A3C7";
-      case "ghost":
+      case "fantasma":
         return "#3B0B46";
-      case "stone":
+      case "roca":
         return "#61290e";
-      case "bug":
+      case "bicho":
         return "#33A021";
-      case "psychic":
+      case "psíquico":
         return "#BC2D47";
 
       default:
