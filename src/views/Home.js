@@ -19,7 +19,7 @@ export const Home = () => {
   //button chat
   const buttonChat = document.createElement("section");
   buttonChat.setAttribute("id", "myBtnChat");
-  buttonChat.innerHTML = `<i class="fa-solid fa-comments"></i>`;
+  buttonChat.innerHTML = `<i class="fa-solid fa-comments fa-xl" id="chatgrup"></i>`;
   newContainer.appendChild(buttonChat);
 
   buttonChat.addEventListener("click", () => {
