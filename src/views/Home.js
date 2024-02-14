@@ -8,46 +8,13 @@ import { getApiKey } from "../lib/apiKey.js";
 import { navigateTo } from "../router.js";
 
 export const Home = () => {
+  let currentData = [...data];
   const newContainer = document.createElement("section");
   newContainer.setAttribute("class", "newContainer");
-  const input = document.createElement("input");
-  const btn = document.createElement("button");
-  const p = document.createElement("p");
-  input.setAttribute("type", "text");
-  btn.textContent = "Hazme click!";
-  let currentData = [...data];
-  // appenChild -> un solo elemento
-  // append -> varios elementos
-  newContainer.append(input, btn, p);
   newContainer.appendChild(Header());
   newContainer.appendChild(Filters());
   newContainer.appendChild(Cards(data));
   newContainer.appendChild(Footer());
-
-  //button chat
-  const buttonChat = document.createElement("section");
-  buttonChat.setAttribute("id", "myBtnChat");
-  buttonChat.innerHTML = `<i class="fa-solid fa-comments"></i>`;
-  newContainer.appendChild(buttonChat);
-
-  buttonChat.addEventListener("click", () => {
-    
-     
-    navigateTo("/grupalChat", {});
-  });
-
-  const btnP = newContainer.querySelector("button");
-  console.log(btnP)
-  const inputP = newContainer.querySelector("input"); 
-  const pP = newContainer.querySelector("p")
-
-  btnP.addEventListener("click", () => {
-    if (!inputP.value) return;
-    const prueba = getApiKey(inputP.value);
-    pP.innerHTML = prueba;
-    console.log(pP)
-  });
-  console.log(getApiKey("hola"))
 
   //modal
   const modal = newContainer.querySelector("#myBtn");
