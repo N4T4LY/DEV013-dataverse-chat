@@ -34,7 +34,17 @@ export const Home = () => {
   newContainer.appendChild(Cards(data));
   newContainer.appendChild(Footer());
 
-  
+  //button chat
+  const buttonChat = document.createElement("section");
+  buttonChat.setAttribute("id", "myBtnChat");
+  buttonChat.innerHTML = `<i class="fa-solid fa-comments"></i>`;
+  newContainer.appendChild(buttonChat);
+
+  buttonChat.addEventListener("click", () => {
+    
+     
+    navigateTo("/grupalChat", {});
+  });
 
 
   //modal
