@@ -5,7 +5,7 @@ export default [
     description:
       "Bulbasaur es un Pokémon de tipo dual Hierba/Veneno. Tiene un bulbo vegetal en la espalda que crece hasta convertirse en una gran flor a medida que evoluciona.",
     type: {
-      typeName: ["Grass", "Poison"],
+      typeName: ["Planta", "Veneno"],
       typeImage: [
         "./assets/pokemones/planta.png",
         "./assets/pokemones/veneno.png",
@@ -46,7 +46,7 @@ export default [
     description:
       "Charmander es un Pokémon de tipo Fuego. Tiene una llama en la cola que se vuelve más brillante a medida que evoluciona.",
     type: {
-      typeName: ["Fire"],
+      typeName: ["Fuego"],
       typeImage: ["./assets/pokemones/fuego.png"],
     },
     image: "./assets/pokemones/Charmander.png",
@@ -83,7 +83,7 @@ export default [
     description:
       "Charmeleon es un Pokémon de tipo Fuego. Tiene una llama más desarrollada en la cola y es más agresivo que Charmander.",
     type: {
-      typeName: ["Fire"],
+      typeName: ["Fuego"],
       typeImage: ["./assets/pokemones/fuego.png"],
     },
     image: "./assets/pokemones/Charmeleon.png",
@@ -119,7 +119,7 @@ export default [
     description:
       "Charizard es un Pokémon de tipo Fuego/Volador. Es la evolución final de Charmander y es conocido por sus poderosos ataques de fuego.",
     type: {
-      typeName: ["Fire", "Flying"],
+      typeName: ["Fuego", "Volador"],
       typeImage: [
         "./assets/pokemones/fuego.png",
         "./assets/pokemones/volador.png",
@@ -159,7 +159,7 @@ export default [
     description:
       "Squirtle es un Pokémon de tipo Agua. Es un Pokémon pequeño, con forma de tortuga y caparazón azul.",
     type: {
-      typeName: ["Water"],
+      typeName: ["Agua"],
       typeImage: ["./assets/pokemones/agua.png"],
     },
     image: "./assets/pokemones/Squirtle.png",
@@ -195,7 +195,7 @@ export default [
     description:
       "Wartortle es un Pokémon de tipo Agua. Evoluciona de Squirtle y es la segunda etapa de su línea evolutiva.",
     type: {
-      typeName: ["Water"],
+      typeName: ["Agua"],
       typeImage: ["./assets/pokemones/agua.png"],
     },
     image: "./assets/pokemones/Wartortle.png",
@@ -231,7 +231,7 @@ export default [
     description:
       "Caterpie es un Pokémon de tipo Bicho. Es la primera etapa de su línea evolutiva y es conocido por su voraz apetito por las hojas.",
     type: {
-      typeName: ["Bug"],
+      typeName: ["Bicho"],
       typeImage: ["./assets/pokemones/bicho.png"],
     },
     image: "./assets/pokemones/Caterpie.png",
@@ -268,7 +268,7 @@ export default [
     description:
       "Clefairy es un Pokémon de tipo Hada. Es conocido por su aspecto adorable y su asociación con la luna.",
     type: {
-      typeName: ["Fairy"],
+      typeName: ["Hada"],
       typeImage: ["./assets/pokemones/hada.png"],
     },
     image: "./assets/pokemones/Clefairy.png",
@@ -304,7 +304,7 @@ export default [
     description:
       "Pikachu es un Pokémon de tipo Eléctrico. Es la forma evolucionada de Pichu y evoluciona a Raichu cuando se expone a una Piedra Trueno.",
     type: {
-      typeName: ["Electric"],
+      typeName: ["Electrico"],
       typeImage: ["./assets/pokemones/electrico.png"],
     },
     image: "./assets/pokemones/Pikachu.png",
@@ -337,7 +337,7 @@ export default [
     description:
       "Diglett es un Pokémon de tipo Tierra. Es conocido por su capacidad para excavar túneles subterráneos y por las tres protuberancias redondeadas que tiene en la cabeza.",
     type: {
-      typeName: ["Ground"],
+      typeName: ["Tierra"],
       typeImage: ["./assets/pokemones/tierra.png"],
     },
     image: "./assets/pokemones/Diglett.png",
@@ -373,7 +373,7 @@ export default [
     description:
       "Ekans es un Pokémon de tipo Veneno. Es conocido por su habilidad para acercarse sigilosamente a su presa y por su particular sonido de cascabel.",
     type: {
-      typeName: ["Poison"],
+      typeName: ["Veneno"],
       typeImage: ["./assets/pokemones/veneno.png"],
     },
     image: "./assets/pokemones/Ekans.png",
@@ -408,7 +408,7 @@ export default [
     description:
       "Raichu es un Pokémon de tipo Eléctrico. Es la forma evolucionada de Pikachu y es conocido por sus poderes eléctricos mejorados.",
     type: {
-      typeName: ["Electric"],
+      typeName: ["Electrico"],
       typeImage: ["./assets/pokemones/electrico.png"],
     },
     image: "./assets/pokemones/Raichu.png",
@@ -441,7 +441,7 @@ export default [
     description:
       "Un Pokémon simio de color blanco y marrón con una nariz rosada. Es muy ágil y tiene una personalidad traviesa.",
     type: {
-      typeName: ["Fighting"],
+      typeName: ["Lucha"],
       typeImage: ["./assets/pokemones/lucha.png"],
     },
     image: "./assets/pokemones/Mankey.png",
@@ -478,7 +478,7 @@ export default [
     description:
       "Un Pokémon anfibio con apariencia de rana grande. Tiene una piel azul y una barriga blanca. Es poderoso en combate cuerpo a cuerpo.",
     type: {
-      typeName: ["Water", "Fighting"],
+      typeName: ["Agua", "Lucha"],
       typeImage: [
         "./assets/pokemones/agua.png",
         "./assets/pokemones/lucha.png",
@@ -521,7 +521,7 @@ export default [
     description:
       "Abra es un Pokémon pequeño y amarillo con orejas puntiagudas. Tiene poderes psíquicos y puede teletransportarse.",
     type: {
-      typeName: ["Psychic"],
+      typeName: ["Psíquico"],
       typeImage: ["./assets/pokemones/psiquico.png"],
     },
     image: "./assets/pokemones/Abra.png",
@@ -558,7 +558,7 @@ export default [
     description:
       "Machop es un Pokémon de tipo Lucha. Con su cuerpo musculoso, destaca por su fuerza y dedicación al entrenamiento. Es un compañero valiente y amistoso que siempre está listo para desafíos emocionantes.",
     type: {
-      typeName: ["Fighting"],
+      typeName: ["Lucha"],
       typeImage: ["./assets/pokemones/lucha.png"],
     },
     image: "./assets/pokemones/Machop.png",
@@ -595,7 +595,7 @@ export default [
     description:
       "Slowpoke es un Pokémon de color rosa pálido con una expresión facial relajada. Es conocido por ser extremadamente lento y por su aparente falta de reacción ante situaciones peligrosas.",
     type: {
-      typeName: ["Water", "Psychic"],
+      typeName: ["Agua", "Psíquico"],
       typeImage: [
         "./assets/pokemones/agua.png",
         "./assets/pokemones/psiquico.png",
@@ -636,7 +636,7 @@ export default [
     description:
       "Pidgey es un Pokémon pequeño y común de color marrón claro con un pico corto y ancho. Es conocido por ser un excelente volador, capaz de moverse rápidamente en el aire.",
     type: {
-      typeName: ["Normal", "Flying"],
+      typeName: ["Normal", "Volador"],
       typeImage: [
         "./assets/pokemones/volador.png",
         "./assets/pokemones/normal.png",
@@ -675,7 +675,7 @@ export default [
     description:
       "Ivysaur es la evolución intermedia de Bulbasaur. Tiene un cuerpo más grande y una flor en su espalda que está en proceso de crecimiento. Esta flor emite un aroma dulce y agradable.",
     type: {
-      typeName: ["Grass", "Poison"],
+      typeName: ["Planta", "Veneno"],
       typeImage: [
         "./assets/pokemones/planta.png",
         "./assets/pokemones/veneno.png",
@@ -716,7 +716,7 @@ export default [
     description:
       "Gengar es la evolución final de Gastly. Es un Pokémon de tipo Fantasma y Veneno. Se dice que Gengar se esconde en las sombras, esperando el momento adecuado para asustar a sus víctimas.",
     type: {
-      typeName: ["Ghost", "Poison"],
+      typeName: ["Fantasma", "Veneno"],
       typeImage: [
         "./assets/pokemones/fantasma.png",
         "./assets/pokemones/veneno.png",
@@ -756,7 +756,7 @@ export default [
     description:
       "Gastly es un Pokémon de tipo Fantasma y Veneno. Se le conoce por su habilidad para aparecer y desaparecer a voluntad. A menudo se le ve flotando en lugares oscuros.",
     type: {
-      typeName: ["Ghost", "Poison"],
+      typeName: ["Fantasma", "Veneno"],
       typeImage: [
         "./assets/pokemones/fantasma.png",
         "./assets/pokemones/veneno.png",
@@ -797,7 +797,7 @@ export default [
     description:
       "Venonat es un Pokémon de tipo Bicho y Veneno. Este Pokémon tiene grandes ojos que le permiten ver en la oscuridad. Se alimenta de hojas cercanas a la luz de la luna.",
     type: {
-      typeName: ["Bug", "Poison"],
+      typeName: ["Bicho", "Veneno"],
       typeImage: [
         "./assets/pokemones/bicho.png",
         "./assets/pokemones/veneno.png",
@@ -837,7 +837,7 @@ export default [
     description:
       "Cubone es un Pokémon de tipo Tierra. Este Pokémon lleva siempre consigo un cráneo que una vez perteneció a su madre. Se dice que llora en solitario durante la noche por la pérdida de su progenitora.",
     type: {
-      typeName: ["Ground"],
+      typeName: ["Tierra"],
       typeImage: ["./assets/pokemones/tierra.png"],
     },
     image: "./assets/pokemones/Cubone.png",
@@ -906,7 +906,7 @@ export default [
     description:
       "Scyther es un Pokémon de tipo Bicho/Volador. Es conocido por su velocidad y habilidades en el combate. Tiene afiladas guadañas en lugar de manos y es capaz de volar a gran velocidad para atacar a sus oponentes.",
     type: {
-      typeName: ["Bug", "Flying"],
+      typeName: ["Bicho", "Volador"],
       typeImage: [
         "./assets/pokemones/bicho.png",
         "./assets/pokemones/volador.png",
@@ -946,7 +946,7 @@ export default [
     description:
       "Electabuzz es un Pokémon de tipo Eléctrico. Se caracteriza por su pelaje amarillo y el patrón de rayas negras de su cuerpo. Puede descargar potentes descargas eléctricas.",
     type: {
-      typeName: ["Electric"],
+      typeName: ["Electrico"],
       typeImage: ["./assets/pokemones/electrico.png"],
     },
     image: "./assets/pokemones/Electabuzz.png",
@@ -979,7 +979,7 @@ export default [
     description:
       "Cleffa es un Pokémon de tipo Hada. Tiene forma de estrella y es conocido por su ternura y suaves movimientos. Se dice que ver a Cleffa en la noche estrellada trae buena fortuna.",
     type: {
-      typeName: ["Fairy"],
+      typeName: ["Hada"],
       typeImage: ["./assets/pokemones/hada.png"],
     },
     image: "./assets/pokemones/Cleffa.png",
@@ -1015,7 +1015,7 @@ export default [
     description:
       "Togepi es un Pokémon de tipo Hada. Tiene forma de huevo con espinas en su cáscara. Se dice que aquellos que lo abrazan con cariño serán bendecidos con felicidad y buena suerte.",
     type: {
-      typeName: ["Fairy"],
+      typeName: ["Hada"],
       typeImage: ["./assets/pokemones/hada.png"],
     },
     image: "./assets/pokemones/Togepi.png",
@@ -1051,7 +1051,7 @@ export default [
     description:
       "Larvitar es un Pokémon de tipo Roca/Tierra. Tiene la piel dura y áspera y vive en montañas y cuevas. Pasa la mayor parte de su vida cavando y comiendo minerales.",
     type: {
-      typeName: ["Stone", "Ground"],
+      typeName: ["Roca", "Tierra"],
       typeImage: [
         "./assets/pokemones/roca.png",
         "./assets/pokemones/tierra.png",
