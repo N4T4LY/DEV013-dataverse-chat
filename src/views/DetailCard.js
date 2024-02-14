@@ -1,5 +1,6 @@
 import { navigateTo } from "../router.js";
 import data from "../data/dataset.js";
+import { panelIndividual } from "../components/panelIndividual.js"
 
 export const DetailCard = (pokemon) => {
   console.log("detalle",pokemon)
@@ -9,6 +10,8 @@ export const DetailCard = (pokemon) => {
   const polygon = document.createElement("div");
   const containerLeft = document.createElement("section");
   const containerRight = document.createElement("section");
+  const overlayDetails = document.createElement("div");
+  overlayDetails.classList.add("overlay");
   main.setAttribute("class", "infoPokemon");
   polygon.setAttribute("class", "poligon");
   containerLeft.setAttribute("class", "containerLeft");
@@ -37,7 +40,7 @@ export const DetailCard = (pokemon) => {
 
   containerLeft.innerHTML = `
     <div class="chatPersonal">
-        <i class="fa-brands fa-rocketchat"></i>
+    <i class="fa-solid fa-comment"></i>
     </div>
     <img src="${pokemon1.image}" alt="${pokemon1.name}">
     <div class="baseStats">
@@ -84,13 +87,24 @@ export const DetailCard = (pokemon) => {
         </div>
     </div>
 `;
-  main.appendChild(polygon);
-  // main.appendChild(overlayDetails);
-  main.appendChild(containerLeft);
-  main.appendChild(containerRight);
-
+  main.append(polygon,containerLeft,containerRight,overlayDetails);
+  
+  const chatModal = main.querySelector(".chatPersonal")
   const recoilArrow = main.querySelector(".recoilArrow");
   const baseStats = main.querySelector(".baseStatsChart");
+
+  chatModal.addEventListener("click", () =>{
+    main.appendChild(panelIndividual(pokemon));
+    const panelPersonal = main.querySelector(".panelPersonal");
+    const closeChat = main.querySelector(".imageChat");
+    closeChat.addEventListener("click",() =>{
+      panelPersonal.remove();
+      overlayDetails.classList.toggle("overlay-active");    
+    })
+    overlayDetails.classList.toggle("overlay-active");
+
+  })
+
   recoilArrow.addEventListener("click", () => {
     //navigateTo("/home", {});
     history.back();
@@ -101,8 +115,8 @@ export const DetailCard = (pokemon) => {
     const titleBase = document.createElement("h2");
     const canvasBase = document.createElement("canvas");
     const close = document.createElement("div");
-    const overlayDetails = document.createElement("div");
-    overlayDetails.classList.add("overlay");
+    // const overlayDetails = document.createElement("div");
+    // overlayDetails.classList.add("overlay");
     overlayDetails.classList.toggle("overlay-active");
     canvasBase.setAttribute("name", "myChartBase");
     close.setAttribute("class", "closeEstadistic");
@@ -117,8 +131,9 @@ export const DetailCard = (pokemon) => {
     closeModal.addEventListener("click", () => {
       modalBase.remove();
       overlayDetails.classList.toggle("overlay-active");
-    })
-    console.log(stadisticBase);
+    });
+
+
     new Chart(stadisticBase, {
       type: "bar",
       data: {
