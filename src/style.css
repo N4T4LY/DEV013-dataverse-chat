@@ -781,7 +781,7 @@ td {
   margin-top: -20px;
 }
 
-/* Chat Individual */
+/* --------------------------------------- CHAT INDIVIDUAL ------------------------------------------------------*/
 #panel-chatIndividual {
   /* border: 2px solid white; */
   position: fixed;
@@ -853,6 +853,7 @@ td {
   color: var(--color-dark-blue2);
 }
 
+/* global close */
 .fa-xmark{
   cursor: pointer;
 }
