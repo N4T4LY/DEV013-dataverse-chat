@@ -22,15 +22,16 @@ export const panelIndividual = (pokemon) => {
   inputChat.setAttribute("placeholder", "Escribe tu mensaje");
   buttonChat.setAttribute("type", "submit");
   const getName = data.find((item) => item.name === pokemon.name);
+  console.log(getName.type.typeName[0])
   if (getName.type.typeName.length === 1) {
-    typeName += getName.type.typeName[0];
+    typeName = getName.type.typeName[0];
   } else {
     const type1 = getName.type.typeName[0];
     const type2 = getName.type.typeName[1];
-    typeName += `${type1} y ${type2}`;
+    typeName = `${type1} y ${type2}`;
   }
 
-  buttonChat.innerHTML = '<img src="assets/pokemones/send.png"/>';
+  buttonChat.innerHTML = '<ion-icon name="send"></ion-icon>';
   chatTitle.innerHTML = `<h2>${getName.name}</h2>
                             <span>Tipo ${typeName}</span>`;
   chat.innerHTML = '<i class="fa-solid fa-xmark"></i>';

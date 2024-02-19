@@ -1,9 +1,11 @@
 import { navigateTo } from "../router.js";
 import data from "../data/dataset.js";
-import { panelIndividual } from "../components/panelIndividual.js"
+import { panelIndividual } from "../components/PanelIndividual.js";
+import { modalApi } from "../components/ModalApi.js";
+import { setApiKey } from "../lib/apiKey.js";
 
 export const DetailCard = (pokemon) => {
-  console.log("detalle",pokemon)
+  console.log("detalle", pokemon);
   let weaknesses = "";
   let evolutions = "";
   const main = document.createElement("main");
@@ -17,9 +19,7 @@ export const DetailCard = (pokemon) => {
   containerLeft.setAttribute("class", "containerLeft");
   containerRight.setAttribute("class", "containerRight");
 
-  const pokemon1 = data.find(
-    (item) => item.name === pokemon.name
-  );
+  const pokemon1 = data.find((item) => item.name === pokemon.name);
   //Agrega imagenes de las debilidades de cada pokemón
   for (let i = 0; i < pokemon1.weaknesses.weaknessesName.length; i++) {
     weaknesses += `<img src="${pokemon1.weaknesses.weaknessesImage[i]}" alt="${pokemon1.weaknesses.weaknessesName[i]}"/>`;
@@ -40,7 +40,8 @@ export const DetailCard = (pokemon) => {
 
   containerLeft.innerHTML = `
     <div class="chatPersonal">
-    <i class="fa-solid fa-comment"></i>
+      <i class="fa-solid fa-comment fa-xl"></i>
+      <p class="titleChat">Chat</p>
     </div>
     <img src="${pokemon1.image}" alt="${pokemon1.name}">
     <div class="baseStats">
@@ -87,23 +88,40 @@ export const DetailCard = (pokemon) => {
         </div>
     </div>
 `;
-  main.append(polygon,containerLeft,containerRight,overlayDetails);
-  
-  const chatModal = main.querySelector(".chatPersonal")
+  main.append(polygon, containerLeft, containerRight, overlayDetails);
+
+  const chatModal = main.querySelector(".chatPersonal");
   const recoilArrow = main.querySelector(".recoilArrow");
   const baseStats = main.querySelector(".baseStatsChart");
 
-  chatModal.addEventListener("click", () =>{
-    main.appendChild(panelIndividual(pokemon));
-    const panelPersonal = main.querySelector(".panelPersonal");
-    const closeChat = main.querySelector(".imageChat");
-    closeChat.addEventListener("click",() =>{
-      panelPersonal.remove();
-      overlayDetails.classList.toggle("overlay-active");    
-    })
+  chatModal.addEventListener("click", () => {
+    main.appendChild(modalApi());
+    const modalKey = main.querySelector(".modalKey");
+    const closeModal = main.querySelector(".cancel");
+    const acceptModal = main.querySelector(".accept"); 
+    // const closeChat = main.querySelector(".imageChat");
+    closeModal.addEventListener("click", () => {
+      modalKey.remove();
+      overlayDetails.classList.toggle("overlay-active");
+    });
+    modalKey.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const sendApi = main.querySelector("input[type ='password']").value;
+      // localStorage.setItem("sendApi",sendApi)
+      if (sendApi) {
+        setApiKey(sendApi);
+        main.appendChild(panelIndividual(pokemon));
+        modalKey.remove();
+        const panelPersonal = main.querySelector(".panelPersonal");
+        const closeChat = main.querySelector(".imageChat");
+        closeChat.addEventListener("click", () => {
+          panelPersonal.remove();
+          overlayDetails.classList.toggle("overlay-active");
+        });
+      }
+    });
     overlayDetails.classList.toggle("overlay-active");
-
-  })
+  });
 
   recoilArrow.addEventListener("click", () => {
     //navigateTo("/home", {});
@@ -124,7 +142,7 @@ export const DetailCard = (pokemon) => {
     titleBase.textContent = `Estadisticas`;
     close.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
     modalBase.append(close, titleBase, canvasBase);
-    containerLeft.appendChild(overlayDetails)
+    containerLeft.appendChild(overlayDetails);
     containerLeft.appendChild(modalBase);
     const stadisticBase = main.querySelector("canvas[name='myChartBase']");
     const closeModal = main.querySelector(".closeEstadistic");
@@ -132,7 +150,6 @@ export const DetailCard = (pokemon) => {
       modalBase.remove();
       overlayDetails.classList.toggle("overlay-active");
     });
-
 
     new Chart(stadisticBase, {
       type: "bar",
