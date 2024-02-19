@@ -259,10 +259,8 @@ button[type="reset"] {
   cursor: pointer;
 }
 button[type="reset"]:hover {
-  background-color:  #68d2d4;
-  
+  background-color: #68d2d4;
 }
-
 
 /* modal Product not found - container */
 .container-modal {
@@ -375,27 +373,27 @@ h3 {
   width: 40px;
 }
 /*GrupalChat button*/
-#myBtnChat{
+#myBtnChat {
   position: fixed;
   right: 30px;
-  bottom:20px;
-  background-color: var(--color-dark-sky);
+  bottom: 20px;
+  background-color: #217B84;
+  /* border: solid 3px var(--color-sky); */
   padding: 15px;
   border-radius: 50px;
   z-index: 13;
- height: 60px;
-width: 60px;
-display: flex;
-align-items: center;
-justify-content: center;
- cursor: pointer; 
-
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-#myBtnChat>#chatgrup{
- color: white;
+#myBtnChat > #chatgrup {
+  color: white;
 }
-#myBtnChat:hover{
-background-color: #152834;
+#myBtnChat:hover {
+  background-color: #152834;
 }
 
 /*---------------------------------------------*/
@@ -531,25 +529,22 @@ footer p {
 }
 /* --------------------------------------- panel grupal--------------------------------------------*/
 
-#grupal-chat{
+#grupal-chat {
   display: grid;
-  grid-template-rows: auto 1fr auto; 
+  grid-template-rows: auto 1fr auto;
   height: 100vh;
   width: 100%;
-  
-  
 }
-#iconschat{
+#iconschat {
   display: flex;
   justify-content: space-between;
   /* border: white solid 2px; */
   align-items: center;
   padding: 0px 18px 0px 18px;
   margin-top: 18px;
-  
 }
-.chatIcon{
-  background-color: var(--color-dark-sky); 
+.chatIcon {
+  background-color: var(--color-dark-sky);
   border-radius: 50px;
   padding: 40px;
   width: 50px;
@@ -557,7 +552,7 @@ footer p {
   display: flex;
   align-items: center;
 }
-#chatG{
+#chatG {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -567,93 +562,84 @@ footer p {
   justify-self: flex-end;
 }
 
-#userC{
-    display: flex; 
-   /* border: white solid 2px; */
-   justify-content: flex-end;
-   align-items: center;
- 
+#userC {
+  display: flex;
+  /* border: white solid 2px; */
+  justify-content: flex-end;
+  align-items: center;
 }
 
-
-#userImage{
-  background-color: var(--color-dark-sky); 
+#userImage {
+  background-color: var(--color-dark-sky);
   border-radius: 50px;
   padding: 10px;
   width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-   margin-left:15px; 
-   margin-right: 15px;
-  
+  margin-left: 15px;
+  margin-right: 15px;
 }
-#answerChatU{
-background-color: var(--color-light-sky);
-width: 300px;
-padding: 10px;
-align-self: flex-end;
-text-align: right;
-margin-top: 5px;
-border-radius: 10px;
-
+#answerChatU {
+  background-color: var(--color-light-sky);
+  width: 300px;
+  padding: 10px;
+  align-self: flex-end;
+  text-align: right;
+  margin-top: 5px;
+  border-radius: 10px;
 }
-#pokemonC{
-  display: flex; 
+#pokemonC {
+  display: flex;
   /* border: white solid 2px; */
   justify-content: flex-start;
   align-items: center;
-  
 }
-#pokemonName{
-  margin-left:15px; 
+#pokemonName {
+  margin-left: 15px;
   margin-right: 15px;
 }
 
-#pokemonImage{
-   background-color: var(--color-dark-sky); 
+#pokemonImage {
+  background-color: var(--color-dark-sky);
   border-radius: 50px;
   padding: 10px;
-  width: 40px; 
-  margin-left:15px; 
+  width: 40px;
+  margin-left: 15px;
   margin-right: 15px;
-  
 }
 
-#pokemonImage>img{
-height:auto;
-width: 40px;
-overflow: hidden;
-  
+#pokemonImage > img {
+  height: auto;
+  width: 40px;
+  overflow: hidden;
 }
-.answerChatP{
+.answerChatP {
   margin-top: 5px;
   background-color: var(--color-light-blue);
   width: 300px;
   padding: 10px;
   border-radius: 10px;
-  }
+}
 
-#inputChat{
+#inputChat {
   /* border: white solid 2px;  */
   position: absolute;
- bottom: 15px;  
- justify-self: flex-end;
- align-items: center;
- width: 100%;
- display: flex;
-padding: 0 18px;
- 
+  bottom: 15px;
+  justify-self: flex-end;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding: 0 18px;
 }
 #inputGrupal {
-   width: 100%;
-   padding: 0 25px;
+  width: 100%;
+  padding: 0 25px;
 }
 
 #inputGrupal::placeholder {
-   text-align: left;
+  text-align: left;
   font-size: 1.2rem;
-  
 }
 
 #sendButton {
@@ -662,9 +648,7 @@ padding: 0 18px;
   padding: 10px;
   background-color: transparent;
   border: none;
-   
 }
-
 
 /* --------------------------------------- details ------------------------------------------------------*/
 
@@ -709,22 +693,36 @@ padding: 0 18px;
   margin-top: -70px; */
 }
 .chatPersonal {
-  width: 95%;
+  width: 58px;
+  height: 58px;
   display: flex;
-  justify-content: flex-end;
-  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   top: 130px;
-  right: 115px;
+  left: 545px;
   cursor: pointer;
-}
-.chatPersonal > .fa-comment {
-  background-color: var(--color-dark-sky);
+  background-color: #217B84;
   border-radius: 50%;
+  z-index: 2;
+  margin: 0;
+}
+
+.chatPersonal > .fa-comment {
   padding: 15px;
   color: white;
   cursor: pointer;
-  z-index: 2;
+  margin-top: 10px;
 }
+
+.titleChat {
+  margin-top: -2px;
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
 .baseStats {
   width: 95%;
   display: flex;
@@ -733,7 +731,7 @@ padding: 0 18px;
   /* border: solid 2px green; */
 }
 .baseStats > .fa-chart-simple {
-  background-color: var(--color-dark-sky);
+  background-color: #217B84;
   border-radius: 50%;
   padding: 21px;
   display: flex;
@@ -761,9 +759,8 @@ padding: 0 18px;
   cursor: pointer;
 }
 .recoilArrow > .fa-arrow-left:hover {
-  background-color:  #68d2d4;
+  background-color: #68d2d4;
 }
-
 
 /* statistics modal of each pokemon  */
 .modalBase {
@@ -852,8 +849,11 @@ td {
   padding: 10px;
   margin-bottom: 40px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  border:2px solid green;
   align-items: center;
+  /* width: 90%; */
   /* gap: 50px; */
   /* margin: 0; */
 }
@@ -865,7 +865,7 @@ td {
 .debilidadesImages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   margin-left: 70px;
@@ -899,6 +899,7 @@ td {
   gap: 15px;
   /* border: 2px solid green; */
   width: 100%;
+  margin:0;
 }
 .evolutionImage > .borderEvolution {
   border: 2px solid var(--color-white);
@@ -908,7 +909,10 @@ td {
   overflow: hidden;
 }
 .borderEvolution > img {
+  margin: 0;
   padding: 15px;
+  width: 100%;
+  height: 100%;
   /* width: 105px; */
 }
 
@@ -981,7 +985,7 @@ td {
   justify-content: space-between;
   align-items: center;
 }
-.chatTitle{
+.chatTitle {
   display: flex;
   flex-direction: column;
 }
@@ -995,8 +999,8 @@ td {
   color: var(--color-white);
   margin: 0;
 }
-.imageChat{
-  background-color: var(--color-dark-sky);
+.imageChat {
+  background-color: #217B84;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -1012,7 +1016,7 @@ td {
   height: 80px;
   margin: 20px;
 }
-#send-message{
+#send-message {
   background: transparent;
   border: none;
   position: absolute;
@@ -1021,11 +1025,95 @@ td {
   bottom: 40px;
   cursor: pointer;
 }
-#send-message > img :hover{
-  color: var(--color-dark-blue2);
+#send-message > ion-icon{
+  width: 31px;
+  height: 34px;
+  color: #7B8595;
+}
+#send-message > ion-icon:hover {
+  color: var(--color-sky);
+  /* filter: grayscale(100%); */
+  /* filter: hue-rotate(180deg); */
 }
 
 /* global close */
-.fa-xmark{
+.fa-xmark {
   cursor: pointer;
+}
+
+
+/* ----------------------------modal APIKEY---------------- */
+.modalKey{
+  background-color: var(--color-light-sky);
+  border-radius: 30px;
+  position: fixed;
+  top:200px;
+  left: 500px;
+  width: 500px;
+  height: 350px;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* overflow: hidden; */
+}
+.titleModal{
+  text-align: center;
+  font-size: 0.9rem;
+  width: 450px;
+  /* border: 2px solid white; */
+  margin: 0;
+}
+
+.pokebolaKey{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 60px;
+  top: 134px;
+  /* margin-right: -60px;
+  margin-top: 5px; */
+}
+
+input[type="password"]{
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 20px 20px 20px 70px;
+  width: 400px;
+  height: 60px;
+  color: var(--color-gray);
+}
+input[type="password"]:focus {
+  outline: none;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 450px;
+}
+
+.buttonContainer button{
+  background-color: var(--color-sky);
+  border-radius: 20px;
+  border: none;
+  width: 150px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.generateApi{
+  color: var(--color-sky);
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: -50px;
+}
+.imageKey{
+  width: 50px;
+  height: 50px;
+  z-index: 4;
 }
