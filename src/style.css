@@ -552,7 +552,9 @@ footer p {
   display: flex;
   align-items: center;
 }
-#chatG {
+
+#chats{
+
   display: flex;
   flex-direction: column;
   padding: 20px;
