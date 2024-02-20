@@ -1037,6 +1037,12 @@ td {
   /* filter: grayscale(100%); */
   /* filter: hue-rotate(180deg); */
 }
+/* #individual-chat{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  width: 50%;
+} */
 
 /* global close */
 .fa-xmark {
