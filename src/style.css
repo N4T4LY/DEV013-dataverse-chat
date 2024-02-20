@@ -188,7 +188,7 @@ header img {
 }
 
 /* Filters */
-form {
+#formFilters {
   background-color: var(--color-light-sky);
   height: 300px;
   display: flex;
