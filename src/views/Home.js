@@ -23,8 +23,6 @@ export const Home = () => {
   newContainer.appendChild(buttonChat);
 
   buttonChat.addEventListener("click", () => {
-    
-     
     navigateTo("/grupalChat", {});
   });
   //modal
@@ -145,21 +143,18 @@ export const Home = () => {
   updateChart(names, nroPokemons);
 
   //Navigate  to next page
-  const addImageListeners=()=>{
+  const addImageListeners = () => {
     const imagePokemon = newContainer.querySelectorAll(".imageBtn");
-  imagePokemon.forEach((pokemon) => {
-    pokemon.addEventListener("click", () => {
-      navigateTo(`/detailCard`, {
-        name: pokemon.getAttribute("alt").slice(0, -1),
+    imagePokemon.forEach((pokemon) => {
+      pokemon.addEventListener("click", () => {
+        navigateTo(`/detailCard`, {
+          name: pokemon.getAttribute("alt").slice(0, -1),
+        });
       });
     });
-  });
   };
 
   addImageListeners();
-  
-
- 
 
   return newContainer;
 };
