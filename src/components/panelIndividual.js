@@ -58,14 +58,16 @@ export const panelIndividual = (pokemon) => {
 
   styleButton.style.right = "60px";
   styleButton.style.bottom = "40px";
-  
+
   buttonSend.addEventListener("click", () => {
     // console.log(input.value);
+    // input.value="";
     communicateWithOpenAI(pokemon.name, input.value)
       .then((res) => res.json())
       .then((data) => {
         //   console.log(input.value , data.choices[0].message.content);
         sectionDiv.appendChild(BubblesChat(pokemon,input.value, data.choices[0].message.content));
+        input.value="";
       })
       .catch((error) => {
         console.log(error);
