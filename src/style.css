@@ -552,16 +552,40 @@ footer p {
   display: flex;
   align-items: center;
 }
+#individual-chat{
+  width: 95%;
+  height: 65%;
+  /* border: 2px solid green; */
+  overflow-y: scroll;
+  padding: 10px;
+  scrollbar-width: none;
+}
 
+#individual-chat::-webkit-scrollbar{
+  width: 7px;
+  background: none;
+  border: none;
+  border-radius: 20px;
+}
+#individual-chat::-webkit-scrollbar-thumb {
+  background: var(--color-light-blue);
+  border-radius: 20px;
+}
 #chats{
-
+  /* border: 2px solid green; */
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  padding: 20px;
-  width: 100%;
+  justify-content: space-around;
+  /* width: 100%;
+  margin: 0; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* padding: 20px;
+  width: 100%; */
   /* border: white solid 2px; */
   /* margin-top: 150px; */
-  justify-self: flex-end;
+  /* justify-self: flex-end; */
 }
 
 #userC {
@@ -624,8 +648,7 @@ footer p {
   border-radius: 10px;
 }
 
-#inputChat {
-  /* border: white solid 2px;  */
+/*#inputChat {
   position: absolute;
   bottom: 15px;
   justify-self: flex-end;
@@ -633,7 +656,7 @@ footer p {
   width: 100%;
   display: flex;
   padding: 0 18px;
-}
+}*/
 #inputGrupal {
   width: 100%;
   padding: 0 25px;
@@ -1013,18 +1036,17 @@ td {
   align-items: center;
   color: white;
 }
-.inputChat[type="text"] {
+/* .inputChat[type="text"] {
   width: 680px;
   height: 80px;
   margin: 20px;
-}
+} */
 #send-message {
   background: transparent;
   border: none;
   position: absolute;
-  /* top: -9; */
-  right: 60px;
-  bottom: 40px;
+  /* right: 60px;
+  bottom: 40px; */
   cursor: pointer;
 }
 #send-message > ion-icon{
@@ -1048,6 +1070,7 @@ td {
 .fa-xmark {
   cursor: pointer;
 }
+/* modalIndividual messages */
 
 
 /* ----------------------------modal APIKEY---------------- */

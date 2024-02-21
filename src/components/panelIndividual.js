@@ -43,20 +43,29 @@ export const panelIndividual = (pokemon) => {
                             <span>Tipo ${typeName}</span>`;
   chat.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   sectionName.append(chatTitle, chat);
-  sectionInput.append(InputChat(pokemon));
+  sectionInput.append(InputChat());
   // panel.append(sectionName, sectionDiv, sectionInput);
   panel.append(sectionName, sectionDiv, sectionInput);
 
+  const styleInput = panel.querySelector(".inputChat");
+  const styleButton = panel.querySelector("#send-message");
   const buttonSend = panel.querySelector(".sendMessage");
   const input = panel.querySelector(".inputChat");
-  console.log(buttonSend);
+  console.log(styleInput);
+  styleInput.style.width = '680px';
+  styleInput.style.height= '80px';
+  styleInput.style.margin = '20px';
+
+  styleButton.style.right = "60px";
+  styleButton.style.bottom = "40px";
+  
   buttonSend.addEventListener("click", () => {
     // console.log(input.value);
     communicateWithOpenAI(pokemon.name, input.value)
       .then((res) => res.json())
       .then((data) => {
         //   console.log(input.value , data.choices[0].message.content);
-        sectionDiv.append(BubblesChat(pokemon,input.value, data.choices[0].message.content));
+        sectionDiv.appendChild(BubblesChat(pokemon,input.value, data.choices[0].message.content));
       })
       .catch((error) => {
         console.log(error);
