@@ -1101,7 +1101,7 @@ td {
   color: var(--color-white);
   margin: 0;
 }
-/* .imageChat {
+.imageChat {
   background-color: #217B84;
   width: 60px;
   height: 60px;
@@ -1112,7 +1112,7 @@ td {
   justify-content: center;
   align-items: center;
   color: white;
-} */
+}
 
 .inputChat[type="text"] {
   padding: 35px;
