@@ -31,6 +31,7 @@ body {
   --color-dark-purple: #3b0b46;
   --color-dark-green: #33a021;
   --color-dark-sky: #124e53;
+  --color-light:#217B84;
   --font-family: "JetBrains Mono", monospace;
 }
 /*Welcome view*/
@@ -537,11 +538,21 @@ footer p {
 }
 #iconschat {
   display: flex;
-  justify-content: space-between;
-  /* border: white solid 2px; */
+ justify-content: center;
+  background-color: var(--color-light);
   align-items: center;
   padding: 0px 18px 0px 18px;
-  margin-top: 18px;
+  
+}
+.titleChatG{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleChatG>h1{
+text-align: center;
+  margin-bottom: 2px;
 }
 .chatIcon {
   background-color: var(--color-dark-sky);
@@ -553,17 +564,35 @@ footer p {
   align-items: center;
 }
 
+#main-sectionChat{
+  display: flex;
+  width: 100%;
+
+}
+#sectionChat{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 75%;
+  border: #cfafd6 solid 2px;
+  
+  
+}
 #chats{
 
   display: flex;
   flex-direction: column;
   padding: 20px;
   width: 100%;
-  /* border: white solid 2px; */
+   border: white solid 2px; 
   /* margin-top: 150px; */
   justify-self: flex-end;
 }
-
+.aside-pokemons{
+  height: 100%;
+  width: 25%;
+  border: rgb(223, 61, 61) solid 2px; 
+  background-color: var(--color-dark-sky);
+}
 #userC {
   display: flex;
   /* border: white solid 2px; */
@@ -651,6 +680,7 @@ footer p {
   background-color: transparent;
   border: none;
 }
+
 
 /* --------------------------------------- details ------------------------------------------------------*/
 
