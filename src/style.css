@@ -538,16 +538,19 @@ footer p {
 }
 #iconschat {
   display: flex;
- justify-content: center;
+ /* justify-content: center; */
   background-color: var(--color-light);
   align-items: center;
   padding: 0px 18px 0px 18px;
   
 }
+
 .titleChatG{
   display: flex;
   flex-direction: column;
   align-items: center;
+ margin-left: 200px;
+ margin-right: 200px;
 }
 
 .titleChatG>h1{
@@ -567,31 +570,50 @@ text-align: center;
 #main-sectionChat{
   display: flex;
   width: 100%;
-
+  
+  
 }
 #sectionChat{
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+ flex-direction: column;
   width: 75%;
-  border: #cfafd6 solid 2px;
+   /* border: #a851df solid 2px; */
+   justify-content: space-between;
   
   
 }
+#inputChatG{
+  /* border: #eeee72 solid 2px; */
+ height: 100px;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+
 #chats{
 
   display: flex;
   flex-direction: column;
   padding: 20px;
   width: 100%;
-   border: white solid 2px; 
+   /* border: white solid 2px;  */
   /* margin-top: 150px; */
   justify-self: flex-end;
+}
+.conected-pokemons{
+  /* border: rgb(223, 61, 61) solid 2px;  */
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-bottom: var(--color-dark-sky) solid 1px;
 }
 .aside-pokemons{
   height: 100%;
   width: 25%;
-  border: rgb(223, 61, 61) solid 2px; 
-  background-color: var(--color-dark-sky);
+  /* border: rgb(223, 61, 61) solid 2px;  */
+  background-color: var(--color-light-blue);
 }
 #userC {
   display: flex;
@@ -619,6 +641,7 @@ text-align: center;
   text-align: right;
   margin-top: 5px;
   border-radius: 10px;
+  color: white;
 }
 #pokemonC {
   display: flex;
@@ -639,6 +662,19 @@ text-align: center;
   margin-left: 15px;
   margin-right: 15px;
 }
+#pokemonImagec {
+  background-color: var(--color-light);
+  border-radius: 50px;
+  padding: 10px;
+  width: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#pokemonImagec > img {
+  height: auto;
+  width: 40px;
+  overflow: hidden;
+}
 
 #pokemonImage > img {
   height: auto;
@@ -651,6 +687,7 @@ text-align: center;
   width: 300px;
   padding: 10px;
   border-radius: 10px;
+  color: white;
 }
 
 #inputChat {
@@ -753,6 +790,7 @@ text-align: center;
   color: var(--color-white);
   font-weight: bold;
   font-size: 0.8rem;
+ 
 }
 
 .baseStats {
@@ -776,6 +814,7 @@ text-align: center;
 .recoilArrow {
   display: flex;
   justify-content: flex-end;
+ ;
 }
 
 .recoilArrow > .fa-arrow-left {
@@ -1044,17 +1083,17 @@ td {
   color: white;
 }
 .inputChat[type="text"] {
-  width: 680px;
+  /* width: 680px;
   height: 80px;
-  margin: 20px;
+  margin: 20px; */
 }
 #send-message {
   background: transparent;
   border: none;
   position: absolute;
   /* top: -9; */
-  right: 60px;
-  bottom: 40px;
+  /* right: 60px;
+  bottom: 40px; */
   cursor: pointer;
 }
 #send-message > ion-icon{
