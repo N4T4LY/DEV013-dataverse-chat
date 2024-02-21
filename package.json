@@ -35,5 +35,8 @@
     "createdAt": "2024-01-24T14:12:42.297Z",
     "version": "8.0.0",
     "commit": "df14b61576f0321119b1906ba3544ab94fc2b1a1"
+  },
+  "dependencies": {
+    "openai": "^4.28.0"
   }
 }
