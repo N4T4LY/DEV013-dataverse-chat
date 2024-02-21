@@ -955,7 +955,8 @@ td {
   justify-content: center;
   border:2px solid green;
   align-items: center;
-  /* width: 90%; */
+  width: 100%;
+  gap: 5px;
   /* gap: 50px; */
   /* margin: 0; */
 }
@@ -963,6 +964,8 @@ td {
   color: var(--color-white);
   /* margin-left: -50px; */
   margin: 0;
+  width: 90%;
+  /* border: 2px solid white; */
 }
 .debilidadesImages {
   display: flex;
@@ -970,14 +973,16 @@ td {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-left: 70px;
+  /* margin-left: 70px; */
   /* margin-left: 200px; */
   height: 70px;
   overflow: hidden;
+  width: 90%;
+  /* border: 2px solid white; */
 }
 .debilidadesImages > img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   /* margin: 0; */
 }
 .evolution {
