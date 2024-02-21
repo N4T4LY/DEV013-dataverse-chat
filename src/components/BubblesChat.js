@@ -12,7 +12,7 @@ export const BubblesChat = (pokemon,message1, message2) => {
         </div>
     </article> 
     <article id="answerChatU">
-    <p>${message1}</p>
+    <p id="pokemonName">${message1}</p>
     </article>
 
     <article id="pokemonC">
