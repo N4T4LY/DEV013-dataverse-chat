@@ -31,7 +31,7 @@ body {
   --color-dark-purple: #3b0b46;
   --color-dark-green: #33a021;
   --color-dark-sky: #124e53;
-  --color-light:#217B84;
+  --color-light: #217b84;
   --font-family: "JetBrains Mono", monospace;
 }
 /*Welcome view*/
@@ -252,11 +252,11 @@ button[type="reset"] {
   border: none;
   border-radius: 20px;
   padding: 15px;
-  color: #0d091e;
-  font-weight: bold;
-  width: 1000px;
+  color: #0d2923;
+  font-weight: lighter;
+  width: 950px;
   height: 60px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 button[type="reset"]:hover {
@@ -378,7 +378,7 @@ h3 {
   position: fixed;
   right: 30px;
   bottom: 20px;
-  background-color: #217B84;
+  background-color: #217b84;
   /* border: solid 3px var(--color-sky); */
   padding: 15px;
   border-radius: 50px;
@@ -538,23 +538,22 @@ footer p {
 }
 #iconschat {
   display: flex;
- /* justify-content: center; */
-  background-color: var(--color-light);
+  /* justify-content: center; */
+  background-color: #1f4144;
   align-items: center;
   padding: 0px 18px 0px 18px;
-  
 }
 
-.titleChatG{
+.titleChatG {
   display: flex;
   flex-direction: column;
   align-items: center;
- margin-left: 200px;
- margin-right: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
-.titleChatG>h1{
-text-align: center;
+.titleChatG > h1 {
+  text-align: center;
   margin-bottom: 2px;
 }
 .chatIcon {
@@ -566,7 +565,7 @@ text-align: center;
   display: flex;
   align-items: center;
 }
-#individual-chat{
+#individual-chat {
   width: 95%;
   height: 65%;
   /* border: 2px solid green; */
@@ -575,7 +574,7 @@ text-align: center;
   scrollbar-width: none;
 }
 
-#individual-chat::-webkit-scrollbar{
+#individual-chat::-webkit-scrollbar {
   width: 7px;
   background: none;
   border: none;
@@ -586,29 +585,25 @@ text-align: center;
   border-radius: 20px;
 }
 
-#main-sectionChat{
+#main-sectionChat {
   display: flex;
   width: 100%;
-  
-  
 }
-#sectionChat{
+#sectionChat {
   display: flex;
- flex-direction: column;
+  flex-direction: column;
   width: 75%;
-   /* border: #a851df solid 2px; */
-   justify-content: space-between;
-  
-  
+  /* border: #a851df solid 2px; */
+  justify-content: space-between;
 }
-#inputChatG{
+#inputChatG {
   /* border: #eeee72 solid 2px; */
- height: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
 }
 
-#chats{
+#chats {
   /* border: 2px solid green; */
   display: flex;
   flex-wrap: wrap;
@@ -622,18 +617,18 @@ text-align: center;
   /* padding: 20px;
   width: 100%; */
   /* border: white solid 2px; */
-   /* border: white solid 2px;  */
+  /* border: white solid 2px;  */
   /* margin-top: 150px; */
   /* justify-self: flex-end; */
 }
-.conected-pokemons{
+.conected-pokemons {
   /* border: rgb(223, 61, 61) solid 2px;  */
   display: flex;
   justify-content: space-between;
   padding: 25px;
   border-bottom: var(--color-dark-sky) solid 1px;
 }
-.aside-pokemons{
+.aside-pokemons {
   height: 100%;
   width: 25%;
   /* border: rgb(223, 61, 61) solid 2px;  */
@@ -646,7 +641,7 @@ text-align: center;
   align-items: center;
 }
 
-#userName{
+#userName {
   margin-top: 2px;
 }
 
@@ -671,7 +666,7 @@ text-align: center;
   border-radius: 10px;
   color: white;
 }
-#pokemonName{
+#pokemonName {
   margin-top: 2px;
 }
 
@@ -749,7 +744,6 @@ text-align: center;
   border: none;
 }
 
-
 /* --------------------------------------- details ------------------------------------------------------*/
 
 .infoPokemon {
@@ -780,6 +774,7 @@ text-align: center;
   align-items: center;
   /* margin-top: -70px; */
   flex-direction: column;
+  height: 100vh;
 }
 .containerLeft > img {
   width: 650px;
@@ -803,7 +798,7 @@ text-align: center;
   top: 130px;
   left: 545px;
   cursor: pointer;
-  background-color: #217B84;
+  background-color: #217b84;
   border-radius: 50%;
   z-index: 2;
   margin: 0;
@@ -821,7 +816,6 @@ text-align: center;
   color: var(--color-white);
   font-weight: bold;
   font-size: 0.8rem;
- 
 }
 
 .baseStats {
@@ -832,7 +826,7 @@ text-align: center;
   /* border: solid 2px green; */
 }
 .baseStats > .fa-chart-simple {
-  background-color: #217B84;
+  background-color: #217b84;
   border-radius: 50%;
   padding: 21px;
   display: flex;
@@ -845,7 +839,6 @@ text-align: center;
 .recoilArrow {
   display: flex;
   justify-content: flex-end;
- ;
 }
 
 .recoilArrow > .fa-arrow-left {
@@ -888,26 +881,40 @@ text-align: center;
 
 .containerRight {
   width: 50%;
+  height: 100vh;
   /* overflow: auto; */
-  /* border: solid 2px white; */
-  padding: 16px;
-  margin: 0;
+  border: solid 2px white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
 }
-.containerRight > h1 {
+.containerGreen {
+  display: flex;
+  flex-direction: column;
+  background-color: #0b2b2e;
+  border-radius: 50px;
+  width: 699px;
+}
+.containerGreen > h1 {
   text-align: center;
   font-size: 5rem;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: -10px;
 }
-.containerRight > p {
+.containerGreen > p {
   /* width: 89%; */
   text-align: justify;
+  border: 2px solid white;
+  color: var(--color-white);
+  padding: 20px;
 }
 
 .table {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: -30px;
+  margin-bottom: -30px;
 }
 table {
   width: 35%;
@@ -944,12 +951,13 @@ td {
 }
 
 .debilidadesDetails {
-  background-color: var(--color-dark-sky);
+  /* background-color: var(--color-dark-sky); */
   border-radius: 30px;
   /* 115px */
-  height: 100px;
-  padding: 10px;
-  margin-bottom: 40px;
+  height: 400%;
+  padding: 0;
+  margin:0;
+  /* margin-bottom: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -965,7 +973,7 @@ td {
   /* margin-left: -50px; */
   margin: 0;
   width: 90%;
-  /* border: 2px solid white; */
+  border: 2px solid white;
 }
 .debilidadesImages {
   display: flex;
@@ -975,15 +983,31 @@ td {
   gap: 30px;
   /* margin-left: 70px; */
   /* margin-left: 200px; */
-  height: 70px;
+  height: 150px;
   overflow: hidden;
   width: 90%;
-  /* border: 2px solid white; */
+  border: 2px solid white;
+  margin: 0;
+  padding: 0;
 }
-.debilidadesImages > img {
+.borderWeaknesses{
+  background-color: #1f4144;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 140px;
+  border-radius: 50px;
+}
+.borderWeaknesses > img {
   width: 45px;
   height: 45px;
   /* margin: 0; */
+}
+.borderWeaknesses > p{
+  color: var(--color-white);
 }
 .evolution {
   width: auto;
@@ -991,12 +1015,14 @@ td {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
+  /* border: 2px solid white; */
   gap: 15px;
 }
 .evolution > h3 {
   width: 95%;
   justify-content: flex-start;
   margin: 0;
+  color: white;
 }
 .evolutionImage {
   display: flex;
@@ -1006,13 +1032,14 @@ td {
   gap: 15px;
   /* border: 2px solid green; */
   width: 100%;
-  margin:0;
+  margin-top: 0;
 }
+
 .evolutionImage > .borderEvolution {
   border: 2px solid var(--color-white);
   border-radius: 50%;
-  width: 135px;
-  height: 135px;
+  width: 120px;
+  height: 120px;
   overflow: hidden;
 }
 .borderEvolution > img {
@@ -1107,7 +1134,7 @@ td {
   margin: 0;
 }
 .imageChat {
-  background-color: #217B84;
+  background-color: #217b84;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -1129,10 +1156,10 @@ td {
   position: absolute;
   cursor: pointer;
 }
-#send-message > ion-icon{
+#send-message > ion-icon {
   width: 31px;
   height: 34px;
-  color: #7B8595;
+  color: #7b8595;
 }
 #send-message > ion-icon:hover {
   color: var(--color-sky);
@@ -1152,13 +1179,12 @@ td {
 }
 /* modalIndividual messages */
 
-
 /* ----------------------------modal APIKEY---------------- */
-.modalKey{
+.modalKey {
   background-color: var(--color-light-sky);
   border-radius: 30px;
   position: fixed;
-  top:200px;
+  top: 200px;
   left: 500px;
   width: 500px;
   height: 350px;
@@ -1170,7 +1196,7 @@ td {
   align-items: center;
   /* overflow: hidden; */
 }
-.titleModal{
+.titleModal {
   text-align: center;
   font-size: 0.9rem;
   width: 450px;
@@ -1178,7 +1204,7 @@ td {
   margin: 0;
 }
 
-.pokebolaKey{
+.pokebolaKey {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -1188,7 +1214,7 @@ td {
   margin-top: 5px; */
 }
 
-input[type="password"]{
+input[type="password"] {
   border: 2px solid white;
   background-color: transparent;
   border-radius: 20px;
@@ -1201,14 +1227,14 @@ input[type="password"]:focus {
   outline: none;
 }
 
-.buttonContainer{
+.buttonContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 450px;
 }
 
-.buttonContainer button{
+.buttonContainer button {
   background-color: var(--color-sky);
   border-radius: 20px;
   border: none;
@@ -1217,13 +1243,13 @@ input[type="password"]:focus {
   cursor: pointer;
 }
 
-.generateApi{
+.generateApi {
   color: var(--color-sky);
   font-style: italic;
   font-size: 0.8rem;
   margin-top: -50px;
 }
-.imageKey{
+.imageKey {
   width: 50px;
   height: 50px;
   z-index: 4;
