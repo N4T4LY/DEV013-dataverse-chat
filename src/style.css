@@ -593,8 +593,10 @@ footer p {
   display: flex;
   flex-direction: column;
   width: 75%;
-  /* border: #a851df solid 2px; */
-  justify-content: space-between;
+   /* border: #a851df solid 2px; */
+   justify-content: space-between;
+  padding: 20px 20px 0 20px;
+  
 }
 #inputChatG {
   /* border: #eeee72 solid 2px; */
@@ -697,17 +699,15 @@ footer p {
   margin-left: 15px;
   margin-right: 15px;
 }
-#pokemonImagec > img {
+
+#pokemonImage > img , #pokemonImagec > img {
   height: auto;
-  width: 40px;
+  width: 50px;
   overflow: hidden;
 }
 
-#pokemonImage > img {
-  height: auto;
-  width: 40px;
-  overflow: hidden;
-}
+
+
 .answerChatP {
   margin-top: 5px;
   background-color: var(--color-light-blue);

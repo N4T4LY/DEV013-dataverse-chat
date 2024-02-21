@@ -13,7 +13,7 @@ export default [
     },
     image: "./assets/pokemones/Bulbasaur.png",
     weaknesses: {
-      weaknessesName: ["Fire", "Flying", "Ice", "Psychic"],
+      weaknessesName: ["Fuego", "Volador", "Hielo", "Psiquico"],
       weaknessesImage: [
         "./assets/pokemones/fuego.png",
         "./assets/pokemones/volador.png",
@@ -51,7 +51,7 @@ export default [
     },
     image: "./assets/pokemones/Charmander.png",
     weaknesses: {
-      weaknessesName: ["Water", "Rock", "Ground"],
+      weaknessesName: ["Agua", "Roca", "Tierra"],
       weaknessesImage: [
         "./assets/pokemones/agua.png",
         "./assets/pokemones/roca.png",
@@ -88,7 +88,7 @@ export default [
     },
     image: "./assets/pokemones/Charmeleon.png",
     weaknesses: {
-      weaknessesName: ["Water", "Rock", "Ground"],
+      weaknessesName: ["Agua", "Roca", "Tierra"],
       weaknessesImage: [
         "./assets/pokemones/agua.png",
         "./assets/pokemones/roca.png",
@@ -127,7 +127,7 @@ export default [
     },
     image: "./assets/pokemones/Charizard.png",
     weaknesses: {
-      weaknessesName: ["Water", "Electric", "Rock"],
+      weaknessesName: ["Agua", "Eléctrico", "Roca"],
       weaknessesImage: [
         "./assets/pokemones/agua.png",
         "./assets/pokemones/electrico.png",
@@ -164,7 +164,7 @@ export default [
     },
     image: "./assets/pokemones/Squirtle.png",
     weaknesses: {
-      weaknessesName: ["Electric", "Grass"],
+      weaknessesName: ["Eléctrico", "Planta"],
       weaknessesImage: [
         "./assets/pokemones/electrico.png",
         "./assets/pokemones/planta.png",
@@ -200,7 +200,7 @@ export default [
     },
     image: "./assets/pokemones/Wartortle.png",
     weaknesses: {
-      weaknessesName: ["Electric", "Grass"],
+      weaknessesName: ["Eléctrico", "Planta"],
       weaknessesImage: [
         "./assets/pokemones/electrico.png",
         "./assets/pokemones/planta.png",
@@ -236,7 +236,7 @@ export default [
     },
     image: "./assets/pokemones/Caterpie.png",
     weaknesses: {
-      weaknessesName: ["Flying", "Rock", "Fire"],
+      weaknessesName: ["Volador", "Roca", "Fuego"],
       weaknessesImage: [
         "./assets/pokemones/volador.png",
         "./assets/pokemones/roca.png",
@@ -273,7 +273,7 @@ export default [
     },
     image: "./assets/pokemones/Clefairy.png",
     weaknesses: {
-      weaknessesName: ["Steel", "Poison"],
+      weaknessesName: ["Acero", "Veneno"],
       weaknessesImage: [
         "./assets/pokemones/acero.png",
         "./assets/pokemones/veneno.png",
@@ -304,12 +304,12 @@ export default [
     description:
       "Pikachu es un Pokémon de tipo Eléctrico. Es la forma evolucionada de Pichu y evoluciona a Raichu cuando se expone a una Piedra Trueno.",
     type: {
-      typeName: ["Electrico"],
+      typeName: ["Eléctrico"],
       typeImage: ["./assets/pokemones/electrico.png"],
     },
     image: "./assets/pokemones/Pikachu.png",
     weaknesses: {
-      weaknessesName: ["Ground"],
+      weaknessesName: ["Tierra"],
       weaknessesImage: ["./assets/pokemones/tierra.png"],
     },
     baseStats: {
@@ -342,7 +342,7 @@ export default [
     },
     image: "./assets/pokemones/Diglett.png",
     weaknesses: {
-      weaknessesName: ["Water", "Grass", "Ice"],
+      weaknessesName: ["Agua", "Planta", "Hielo"],
       weaknessesImage: [
         "./assets/pokemones/agua.png",
         "./assets/pokemones/planta.png",
@@ -378,7 +378,7 @@ export default [
     },
     image: "./assets/pokemones/Ekans.png",
     weaknesses: {
-      weaknessesName: ["Ground", "Psychic"],
+      weaknessesName: ["Tierra", "Psiquico"],
       weaknessesImage: [
         "./assets/pokemones/tierra.png",
         "./assets/pokemones/psiquico.png",
@@ -408,12 +408,12 @@ export default [
     description:
       "Raichu es un Pokémon de tipo Eléctrico. Es la forma evolucionada de Pikachu y es conocido por sus poderes eléctricos mejorados.",
     type: {
-      typeName: ["Electrico"],
+      typeName: ["Eléctrico"],
       typeImage: ["./assets/pokemones/electrico.png"],
     },
     image: "./assets/pokemones/Raichu.png",
     weaknesses: {
-      weaknessesName: ["Ground"],
+      weaknessesName: ["Tierra"],
       weaknessesImage: ["./assets/pokemones/tierra.png"],
     },
     baseStats: {
@@ -446,7 +446,7 @@ export default [
     },
     image: "./assets/pokemones/Mankey.png",
     weaknesses: {
-      weaknessesName: ["Flying", "Psychic", "Fairy"],
+      weaknessesName: ["Volador", "Psiquico", "Hada"],
       weaknessesImage: [
         "./assets/pokemones/volador.png",
         "./assets/pokemones/psiquico.png",
@@ -486,7 +486,7 @@ export default [
     },
     image: "./assets/pokemones/Poliwrath.png",
     weaknesses: {
-      weaknessesName: ["Electric", "Grass", "Flying", "Psychic", "Fairy"],
+      weaknessesName: ["Eléctrico", "Planta", "Volador", "Psiquico", "Hada"],
       weaknessesImage: [
         "./assets/pokemones/electrico.png",
         "./assets/pokemones/planta.png",
@@ -526,7 +526,7 @@ export default [
     },
     image: "./assets/pokemones/Abra.png",
     weaknesses: {
-      weaknessesName: ["Bug", "Ghost", "Dark"],
+      weaknessesName: ["Bicho", "Fantasma", "Oscuro"],
       weaknessesImage: [
         "./assets/pokemones/bicho.png",
         "./assets/pokemones/fantasma.png",
@@ -563,7 +563,7 @@ export default [
     },
     image: "./assets/pokemones/Machop.png",
     weaknesses: {
-      weaknessesName: ["Flying", "Psychic", "Fairy"],
+      weaknessesName: ["Volador", "Psiquico", "Hada"],
       weaknessesImage: [
         "./assets/pokemones/volador.png",
         "./assets/pokemones/psiquico.png",
@@ -603,7 +603,7 @@ export default [
     },
     image: "./assets/pokemones/Slowpoke.png",
     weaknesses: {
-      weaknessesName: ["Electric", "Bug", "Ghost", "Dark"],
+      weaknessesName: ["Eléctrico", "Bicho", "Fantasma", "Oscuro"],
       weaknessesImage: [
         "./assets/pokemones/electrico.png",
         "./assets/pokemones/bicho.png",
@@ -644,7 +644,7 @@ export default [
     },
     image: "./assets/pokemones/Pidgey.png",
     weaknesses: {
-      weaknessesName: ["Electric", "Rock"],
+      weaknessesName: ["Eléctrico", "Roca"],
       weaknessesImage: [
         "./assets/pokemones/electrico.png",
         "./assets/pokemones/roca.png",
@@ -683,7 +683,7 @@ export default [
     },
     image: "./assets/pokemones/Ivysaur.png",
     weaknesses: {
-      weaknessesName: ["Fire", "Flying", "Ice", "Psychic"],
+      weaknessesName: ["Fuego", "Volador", "Hielo", "Psiquico"],
       weaknessesImage: [
         "./assets/pokemones/fuego.png",
         "./assets/pokemones/volador.png",
@@ -724,7 +724,7 @@ export default [
     },
     image: "./assets/pokemones/Gengar.png",
     weaknesses: {
-      weaknessesName: ["Ghost", "Dark", "Ground"],
+      weaknessesName: ["Fantasma", "Oscuro", "Tierra"],
       weaknessesImage: [
         "./assets/pokemones/fantasma.png",
         "./assets/pokemones/oscuro.png",
@@ -764,7 +764,7 @@ export default [
     },
     image: "./assets/pokemones/Gastly.png",
     weaknesses: {
-      weaknessesName: ["Ground", "Psychic", "Ghost", "Dark"],
+      weaknessesName: ["Tierra", "Psiquico", "Fantasma", "Oscuro"],
       weaknessesImage: [
         "./assets/pokemones/tierra.png",
         "./assets/pokemones/psiquico.png",
@@ -805,7 +805,7 @@ export default [
     },
     image: "./assets/pokemones/Venonat.png",
     weaknesses: {
-      weaknessesName: ["Flying", "Rock", "Fire", "Psychic"],
+      weaknessesName: ["Volador", "Roca", "Fuego", "Psiquico"],
       weaknessesImage: [
         "./assets/pokemones/volador.png",
         "./assets/pokemones/roca.png",
@@ -842,7 +842,7 @@ export default [
     },
     image: "./assets/pokemones/Cubone.png",
     weaknesses: {
-      weaknessesName: ["Water", "Grass", "Ice"],
+      weaknessesName: ["Agua", "Planta", "Hielo"],
       weaknessesImage: [
         "./assets/pokemones/agua.png",
         "./assets/pokemones/planta.png",
@@ -878,7 +878,7 @@ export default [
     },
     image: "./assets/pokemones/Chansey.png",
     weaknesses: {
-      weaknessesName: ["Fighting"],
+      weaknessesName: ["Lucha"],
       weaknessesImage: ["./assets/pokemones/lucha.png"],
     },
     baseStats: {
@@ -914,7 +914,7 @@ export default [
     },
     image: "./assets/pokemones/Scyther.png",
     weaknesses: {
-      weaknessesName: ["Electric", "Rock", "Ice"],
+      weaknessesName: ["Eléctrico", "Roca", "Hielo"],
       weaknessesImage: [
         "./assets/pokemones/electrico.png",
         "./assets/pokemones/roca.png",
@@ -946,12 +946,12 @@ export default [
     description:
       "Electabuzz es un Pokémon de tipo Eléctrico. Se caracteriza por su pelaje amarillo y el patrón de rayas negras de su cuerpo. Puede descargar potentes descargas eléctricas.",
     type: {
-      typeName: ["Electrico"],
+      typeName: ["Eléctrico"],
       typeImage: ["./assets/pokemones/electrico.png"],
     },
     image: "./assets/pokemones/Electabuzz.png",
     weaknesses: {
-      weaknessesName: ["Ground"],
+      weaknessesName: ["Tierra"],
       weaknessesImage: ["./assets/pokemones/tierra.png"],
     },
     baseStats: {
@@ -984,7 +984,7 @@ export default [
     },
     image: "./assets/pokemones/Cleffa.png",
     weaknesses: {
-      weaknessesName: ["Steel", "Poison"],
+      weaknessesName: ["Acero", "Veneno"],
       weaknessesImage: [
         "./assets/pokemones/acero.png",
         "./assets/pokemones/veneno.png",
@@ -1020,7 +1020,7 @@ export default [
     },
     image: "./assets/pokemones/Togepi.png",
     weaknesses: {
-      weaknessesName: ["Steel", "Poison"],
+      weaknessesName: ["Acero", "Veneno"],
       weaknessesImage: [
         "./assets/pokemones/acero.png",
         "./assets/pokemones/veneno.png",
@@ -1059,7 +1059,7 @@ export default [
     },
     image: "./assets/pokemones/Larvitar.png",
     weaknesses: {
-      weaknessesName: ["Water", "Grass", "Ice", "Fighting", "Ground", "Steel"],
+      weaknessesName: ["Agua", "Planta", "Hielo", "Lucha", "Tierra", "Acero"],
       weaknessesImage: [
         "./assets/pokemones/agua.png",
         "./assets/pokemones/planta.png",
