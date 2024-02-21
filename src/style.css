@@ -31,6 +31,7 @@ body {
   --color-dark-purple: #3b0b46;
   --color-dark-green: #33a021;
   --color-dark-sky: #124e53;
+  --color-light:#217B84;
   --font-family: "JetBrains Mono", monospace;
 }
 /*Welcome view*/
@@ -537,11 +538,24 @@ footer p {
 }
 #iconschat {
   display: flex;
-  justify-content: space-between;
-  /* border: white solid 2px; */
+ /* justify-content: center; */
+  background-color: var(--color-light);
   align-items: center;
   padding: 0px 18px 0px 18px;
-  margin-top: 18px;
+  
+}
+
+.titleChatG{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ margin-left: 200px;
+ margin-right: 200px;
+}
+
+.titleChatG>h1{
+text-align: center;
+  margin-bottom: 2px;
 }
 .chatIcon {
   background-color: var(--color-dark-sky);
@@ -571,6 +585,29 @@ footer p {
   background: var(--color-light-blue);
   border-radius: 20px;
 }
+
+#main-sectionChat{
+  display: flex;
+  width: 100%;
+  
+  
+}
+#sectionChat{
+  display: flex;
+ flex-direction: column;
+  width: 75%;
+   /* border: #a851df solid 2px; */
+   justify-content: space-between;
+  
+  
+}
+#inputChatG{
+  /* border: #eeee72 solid 2px; */
+ height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
 #chats{
   /* border: 2px solid green; */
   display: flex;
@@ -584,10 +621,23 @@ footer p {
   /* padding: 20px;
   width: 100%; */
   /* border: white solid 2px; */
+   /* border: white solid 2px;  */
   /* margin-top: 150px; */
   /* justify-self: flex-end; */
 }
-
+.conected-pokemons{
+  /* border: rgb(223, 61, 61) solid 2px;  */
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-bottom: var(--color-dark-sky) solid 1px;
+}
+.aside-pokemons{
+  height: 100%;
+  width: 25%;
+  /* border: rgb(223, 61, 61) solid 2px;  */
+  background-color: var(--color-light-blue);
+}
 #userC {
   display: flex;
   /* border: white solid 2px; */
@@ -614,6 +664,7 @@ footer p {
   text-align: right;
   margin-top: 5px;
   border-radius: 10px;
+  color: white;
 }
 #pokemonC {
   display: flex;
@@ -634,6 +685,19 @@ footer p {
   margin-left: 15px;
   margin-right: 15px;
 }
+#pokemonImagec {
+  background-color: var(--color-light);
+  border-radius: 50px;
+  padding: 10px;
+  width: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#pokemonImagec > img {
+  height: auto;
+  width: 40px;
+  overflow: hidden;
+}
 
 #pokemonImage > img {
   height: auto;
@@ -646,6 +710,7 @@ footer p {
   width: 300px;
   padding: 10px;
   border-radius: 10px;
+  color: white;
 }
 
 /*#inputChat {
@@ -674,6 +739,7 @@ footer p {
   background-color: transparent;
   border: none;
 }
+
 
 /* --------------------------------------- details ------------------------------------------------------*/
 
@@ -746,6 +812,7 @@ footer p {
   color: var(--color-white);
   font-weight: bold;
   font-size: 0.8rem;
+ 
 }
 
 .baseStats {
@@ -769,6 +836,7 @@ footer p {
 .recoilArrow {
   display: flex;
   justify-content: flex-end;
+ ;
 }
 
 .recoilArrow > .fa-arrow-left {
@@ -1036,17 +1104,17 @@ td {
   align-items: center;
   color: white;
 }
+
 /* .inputChat[type="text"] {
   width: 680px;
   height: 80px;
   margin: 20px;
 } */
+
 #send-message {
   background: transparent;
   border: none;
   position: absolute;
-  /* right: 60px;
-  bottom: 40px; */
   cursor: pointer;
 }
 #send-message > ion-icon{
