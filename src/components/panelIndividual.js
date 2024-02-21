@@ -67,6 +67,7 @@ export const panelIndividual = (pokemon) => {
       .then((data) => {
         //   console.log(input.value , data.choices[0].message.content);
         sectionDiv.appendChild(BubblesChat(pokemon,input.value, data.choices[0].message.content));
+        sectionDiv.scrollTop = sectionDiv.scrollHeight;
         input.value="";
       })
       .catch((error) => {
