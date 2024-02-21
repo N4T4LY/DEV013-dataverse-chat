@@ -52,9 +52,9 @@ export const panelIndividual = (pokemon) => {
   const buttonSend = panel.querySelector(".sendMessage");
   const input = panel.querySelector(".inputChat");
   console.log(styleInput);
-  styleInput.style.width = '680px';
-  styleInput.style.height= '80px';
-  styleInput.style.margin = '20px';
+  styleInput.style.width = "680px";
+  styleInput.style.height = "80px";
+  styleInput.style.margin = "20px";
 
   styleButton.style.right = "60px";
   styleButton.style.bottom = "40px";
@@ -62,17 +62,21 @@ export const panelIndividual = (pokemon) => {
   buttonSend.addEventListener("click", () => {
     // console.log(input.value);
     // input.value="";
-    communicateWithOpenAI(pokemon.name, input.value)
-      .then((res) => res.json())
-      .then((data) => {
-        //   console.log(input.value , data.choices[0].message.content);
-        sectionDiv.appendChild(BubblesChat(pokemon,input.value, data.choices[0].message.content));
-        sectionDiv.scrollTop = sectionDiv.scrollHeight;
-        input.value="";
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (input.value) {
+      communicateWithOpenAI(pokemon.name, input.value)
+        .then((res) => res.json())
+        .then((data) => {
+          //   console.log(input.value , data.choices[0].message.content);
+          sectionDiv.appendChild(
+            BubblesChat(pokemon, input.value, data.choices[0].message.content)
+          );
+          sectionDiv.scrollTop = sectionDiv.scrollHeight;
+          input.value = "";
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   });
 
   return panel;
