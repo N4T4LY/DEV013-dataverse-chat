@@ -1,8 +1,7 @@
-import { navigateTo } from "../router.js";
 import data from "../data/dataset.js";
-import { panelIndividual } from "../components/PanelIndividual.js";
 import { modalApi } from "../components/ModalApi.js";
 import { setApiKey } from "../lib/apiKey.js";
+import { panelIndividual } from "../components/panelIndividual.js";
 
 export const DetailCard = (pokemon) => {
   console.log("detalle", pokemon);
