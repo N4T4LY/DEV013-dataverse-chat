@@ -21,7 +21,10 @@ export const DetailCard = (pokemon) => {
   const pokemon1 = data.find((item) => item.name === pokemon.name);
   //Agrega imagenes de las debilidades de cada pokemón
   for (let i = 0; i < pokemon1.weaknesses.weaknessesName.length; i++) {
-    weaknesses += `<img src="${pokemon1.weaknesses.weaknessesImage[i]}" alt="${pokemon1.weaknesses.weaknessesName[i]}"/>`;
+    weaknesses += `<div class="borderWeaknesses">
+                      <img src="${pokemon1.weaknesses.weaknessesImage[i]}" alt="${pokemon1.weaknesses.weaknessesName[i]}"/>
+                      <p>${pokemon1.weaknesses.weaknessesName[i]}</p>
+                    </div>`;
   }
 
   // Agrega imagenes de las evoluciones de cada pokemón
@@ -39,16 +42,17 @@ export const DetailCard = (pokemon) => {
 
   containerLeft.innerHTML = `
     <div class="chatPersonal">
-      <i class="fa-solid fa-comment fa-xl"></i>
-      <p class="titleChat">Chat</p>
-    </div>
-    <img src="${pokemon1.image}" alt="${pokemon1.name}">
-    <div class="baseStats">
-        <i class="fa-solid fa-chart-simple baseStatsChart"></i>
-    </div>`;
+        <i class="fa-solid fa-comment fa-xl"></i>
+        <p class="titleChat">Chat</p>
+      </div>
+      <img src="${pokemon1.image}" alt="${pokemon1.name}">
+      <div class="baseStats">
+          <i class="fa-solid fa-chart-simple baseStatsChart"></i>
+      </div>`;
   containerRight.innerHTML = `
-  <div class="recoilArrow"><i class="fa-solid fa-arrow-left"></i></div>
-  <h1>${pokemon1.name}</h1>
+  <div class="containerGreen">
+    <div class="recoilArrow"><i class="fa-solid fa-arrow-left"></i></div>
+    <h1>${pokemon1.name}</h1>
     <p>${pokemon1.description}</p>
     <div class="table">
         <table>
@@ -74,9 +78,9 @@ export const DetailCard = (pokemon) => {
         </table>
     </div>
 
-    <div class="debilidadesDetails">
+    <div class="weaknessessDetails">
         <h3>Debilidades</h3>
-        <div class="debilidadesImages">
+        <div class="weaknessesImages">
         ${weaknesses}
         </div>
     </div>
@@ -86,6 +90,7 @@ export const DetailCard = (pokemon) => {
         ${evolutions}
         </div>
     </div>
+  </div>
 `;
   main.append(polygon, containerLeft, containerRight, overlayDetails);
 
@@ -97,7 +102,7 @@ export const DetailCard = (pokemon) => {
     main.appendChild(modalApi());
     const modalKey = main.querySelector(".modalKey");
     const closeModal = main.querySelector(".cancel");
-    const acceptModal = main.querySelector(".accept"); 
+    const acceptModal = main.querySelector(".accept");
     // const closeChat = main.querySelector(".imageChat");
     closeModal.addEventListener("click", () => {
       modalKey.remove();

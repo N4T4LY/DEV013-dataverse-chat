@@ -839,6 +839,9 @@ footer p {
 .recoilArrow {
   display: flex;
   justify-content: flex-end;
+  margin-right: 30px;
+  /* border: 2px solid red; */
+  margin: 0;
 }
 
 .recoilArrow > .fa-arrow-left {
@@ -894,17 +897,18 @@ footer p {
   background-color: #0b2b2e;
   border-radius: 50px;
   width: 699px;
+  /* height: 710px; */
 }
 .containerGreen > h1 {
   text-align: center;
   font-size: 5rem;
-  margin-top: 0;
-  margin-bottom: -10px;
+  margin-top: -20px;
+  margin-bottom: -30px;
 }
 .containerGreen > p {
   /* width: 89%; */
   text-align: justify;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   color: var(--color-white);
   padding: 20px;
 }
@@ -913,8 +917,8 @@ footer p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-bottom: -30px;
+  margin-top: -20px;
+  /* margin-bottom: -8px; */
 }
 table {
   width: 35%;
@@ -950,44 +954,39 @@ td {
   border-style: solid;
 }
 
-.debilidadesDetails {
+.weaknessessDetails {
   /* background-color: var(--color-dark-sky); */
   border-radius: 30px;
   /* 115px */
-  height: 400%;
+  height: 200px;
   padding: 0;
-  margin:0;
-  /* margin-bottom: 20px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border:2px solid green;
-  align-items: center;
-  width: 100%;
-  gap: 5px;
-  /* gap: 50px; */
-  /* margin: 0; */
+  /* border:2px solid red; */
+  align-items: flex-start;
+  gap: 2px;
+  margin-top: -40px;
 }
-.debilidadesDetails > h3 {
+.weaknessessDetails > h3 {
   color: var(--color-white);
-  /* margin-left: -50px; */
+  padding-left: 10px;
   margin: 0;
-  width: 90%;
-  border: 2px solid white;
+  /* border: 2px solid rgb(151, 65, 65); */
 }
-.debilidadesImages {
+.weaknessesImages {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   /* margin-left: 70px; */
   /* margin-left: 200px; */
-  height: 150px;
+  /* height: 140px; */
   overflow: hidden;
-  width: 90%;
-  border: 2px solid white;
-  margin: 0;
+  width: 100%;
+  /* border: 2px solid white; */
+  margin-top: 10px;
   padding: 0;
 }
 .borderWeaknesses{
@@ -998,7 +997,7 @@ td {
   justify-content: center;
   align-items: center;
   width: 80px;
-  height: 140px;
+  height: 120px;
   border-radius: 50px;
 }
 .borderWeaknesses > img {
@@ -1008,6 +1007,7 @@ td {
 }
 .borderWeaknesses > p{
   color: var(--color-white);
+  font-size: 0.8rem;
 }
 .evolution {
   width: auto;
@@ -1032,7 +1032,7 @@ td {
   gap: 15px;
   /* border: 2px solid green; */
   width: 100%;
-  margin-top: 0;
+  margin-top: -10px;
 }
 
 .evolutionImage > .borderEvolution {
