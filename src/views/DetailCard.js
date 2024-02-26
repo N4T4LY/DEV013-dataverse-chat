@@ -128,7 +128,6 @@ export const DetailCard = (pokemon) => {
       overlayDetails.classList.toggle("overlay-active");
     } else {
       main.appendChild(panelIndividual(pokemon));
-      modalKey.remove();
       const panelPersonal = main.querySelector(".panelPersonal");
       const closeChat = main.querySelector(".imageChat");
       closeChat.addEventListener("click", () => {
