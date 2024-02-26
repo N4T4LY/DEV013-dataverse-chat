@@ -66,7 +66,7 @@ export const panelIndividual = (pokemon) => {
       communicateWithOpenAI(pokemon.name, input.value)
         .then((res) => res.json())
         .then((data) => {
-          //   console.log(input.value , data.choices[0].message.content);
+          console.log(input.value, data.choices[0].message.content);
           sectionDiv.appendChild(
             BubblesChat(pokemon, input.value, data.choices[0].message.content)
           );

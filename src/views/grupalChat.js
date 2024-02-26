@@ -1,10 +1,10 @@
 import { InputChat } from "../components/InputChat.js";
 import { BubblesChat } from "../components/BubblesChat.js";
 import data from "../data/dataset.js";
-export const GrupalChat=()=>{
-    const main =document.createElement("main");
-    
-    main.innerHTML=`
+export const GrupalChat = () => {
+  const main = document.createElement("main");
+
+  main.innerHTML = `
     <section id="iconschat">
         <div class="recoilArrow" ><i class="fa-solid fa-arrow-left"></i></div>
         <div class="titleChatG">
@@ -13,32 +13,30 @@ export const GrupalChat=()=>{
         </div>
         
     </section>
-    `
+    `;
 
-    const mainSection=document.createElement("section");
-    const sectionChat = document.createElement("section");
-   const sectionInput = document.createElement("section");
-    const aside=document.createElement("aside");
-    main.setAttribute( "id","grupal-chat" );
-    mainSection.setAttribute("id","main-sectionChat")
-    sectionChat.setAttribute("id","sectionChat");
-    sectionInput.setAttribute( "id","inputChatG" );
-    aside.setAttribute("class","aside-pokemons");
-    sectionInput.appendChild((InputChat()))
+  const mainSection = document.createElement("section");
+  const sectionChat = document.createElement("section");
+  const sectionInput = document.createElement("section");
+  const aside = document.createElement("aside");
+  main.setAttribute("id", "grupal-chat");
+  mainSection.setAttribute("id", "main-sectionChat");
+  sectionChat.setAttribute("id", "sectionChat");
+  sectionInput.setAttribute("id", "inputChatG");
+  aside.setAttribute("class", "aside-pokemons");
+  sectionInput.appendChild(InputChat());
 
-    const inputStyle = sectionInput.querySelector(".inputChat");
-    const buttonStyle = sectionInput.querySelector("#send-message");
-    inputStyle.style.width='1030px';
-    inputStyle.style.height='80px';
-    inputStyle.style.margin='0 0 20px 0';
+  const inputStyle = sectionInput.querySelector(".inputChat");
+  const buttonStyle = sectionInput.querySelector("#send-message");
+  inputStyle.style.width = "1030px";
+  inputStyle.style.height = "80px";
+  inputStyle.style.margin = "0 0 20px 0";
 
-    buttonStyle.style.right="420px";
-    buttonStyle.style.bottom="40px";
-    // inputStyle.style.margin-bottom= '-3px';
+  buttonStyle.style.right = "420px";
+  buttonStyle.style.bottom = "40px";
+  // inputStyle.style.margin-bottom= '-3px';
 
-
-
-    aside.innerHTML=`
+  aside.innerHTML = `
     <div class="conected-pokemons">
         
         <h3 id="pokemonName">Charmander</h3>
@@ -80,17 +78,17 @@ export const GrupalChat=()=>{
         </div>
     </div>
     
-    `    
+    `;
 
-   sectionChat.appendChild(BubblesChat(data[0],"ads","sadsdsd"));
-    sectionChat.appendChild(sectionInput);
-    mainSection.append(sectionChat, aside)
-     main.appendChild(mainSection);
-    // main.appendChild(sectionInput);
-    const recoilArrow = main.querySelector(".recoilArrow");
-    recoilArrow.addEventListener("click", () => {
-        //navigateTo("/home", {});
-        history.back();
-      });
-    return main;
-} 
+  sectionChat.appendChild(BubblesChat(data[0], "ads", "sadsdsd"));
+  sectionChat.appendChild(sectionInput);
+  mainSection.append(sectionChat, aside);
+  main.appendChild(mainSection);
+  // main.appendChild(sectionInput);
+  const recoilArrow = main.querySelector(".recoilArrow");
+  recoilArrow.addEventListener("click", () => {
+    //navigateTo("/home", {});
+    history.back();
+  });
+  return main;
+};

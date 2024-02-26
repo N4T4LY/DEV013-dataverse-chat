@@ -8,12 +8,11 @@ export const Error = () => {
   title.setAttribute("class", "titleNotFound");
   buttonBack.setAttribute("class", "buttonBack");
   error.setAttribute("class", "title404");
-  error.innerHTML = `4<img class="error404" src="assets/pokemones/Pokebola404.png"/>4`
+  error.innerHTML = `4<img class="error404" src="assets/pokemones/Pokebola404.png"/>4`;
   title.textContent = `Pagina no encontrada`;
   buttonBack.textContent = "Volver al Inicio";
-  containerError.append(error,title, buttonBack);
+  containerError.append(error, title, buttonBack);
   const backHome = containerError.querySelector(".buttonBack");
-  console.log(backHome);
   backHome.addEventListener("click", () => {
     navigateTo("/home", {});
   });

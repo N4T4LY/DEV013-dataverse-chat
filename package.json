@@ -7,7 +7,7 @@
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
-    "test": "jest --verbose --coverage test/",
+    "test": "jest --verbose --coverage src/test/",
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
     "start": "serve src/ -s"
   },
@@ -18,6 +18,7 @@
     "babel-jest": "^27.0.1",
     "css": "^3.0.0",
     "eslint": "^8.3.0",
+    "eslint-plugin-import": "^2.29.1",
     "gh-pages": "^3.1.0",
     "htmlhint": "^1.0.0",
     "jest": "^27.0.1",
