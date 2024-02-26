@@ -7,37 +7,36 @@ export const Cards = (data) => {
       lower = color.toLowerCase();
     }
     switch (lower) {
-      case "fuego":
-        return "#C33030";
-      case "planta":
-        return "#55B870";
-      case "veneno":
-        return "#7D3EA4";
-      case "agua":
-        return "#5594B8";
-      case "eléctrico":
-        return "#AAB855";
-      case "hada":
-        return "#B85567";
-      case "tierra":
-        return "#B89055";
-      case "lucha":
-        return "#DB9731";
-      case "normal":
-        return "#CBBBA3";
-      case "volador":
-        return "#30A3C7";
-      case "fantasma":
-        return "#3B0B46";
-      case "roca":
-        return "#61290e";
-      case "bicho":
-        return "#33A021";
-      case "psíquico":
-        return "#BC2D47";
-
-      default:
-        return "black";
+    case "fuego":
+      return "#C33030";
+    case "planta":
+      return "#55B870";
+    case "veneno":
+      return "#7D3EA4";
+    case "agua":
+      return "#5594B8";
+    case "eléctrico":
+      return "#AAB855";
+    case "hada":
+      return "#B85567";
+    case "tierra":
+      return "#B89055";
+    case "lucha":
+      return "#DB9731";
+    case "normal":
+      return "#CBBBA3";
+    case "volador":
+      return "#30A3C7";
+    case "fantasma":
+      return "#3B0B46";
+    case "roca":
+      return "#61290e";
+    case "bicho":
+      return "#33A021";
+    case "psíquico":
+      return "#BC2D47";
+    default:
+      return "black";
     }
   };
 

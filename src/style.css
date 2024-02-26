@@ -565,25 +565,6 @@ footer p {
   display: flex;
   align-items: center;
 }
-#individual-chat {
-  width: 95%;
-  height: 65%;
-  /* border: 2px solid green; */
-  overflow-y: scroll;
-  padding: 10px;
-  scrollbar-width: none;
-}
-
-#individual-chat::-webkit-scrollbar {
-  width: 7px;
-  background: none;
-  border: none;
-  border-radius: 20px;
-}
-#individual-chat::-webkit-scrollbar-thumb {
-  background: var(--color-light-blue);
-  border-radius: 20px;
-}
 
 #main-sectionChat {
   display: flex;
@@ -641,7 +622,9 @@ footer p {
   justify-content: space-between;
   padding: 25px;
   border-bottom: var(--color-dark-sky) solid 1px;
-  
+  /* overflow-y: scroll;
+  padding: 10px;
+  scrollbar-width: none; */
 
 }
 .aside-pokemons {
@@ -1121,7 +1104,7 @@ td {
 
 /* --------------------------------------- CHAT INDIVIDUAL ------------------------------------------------------*/
 #panel-chatIndividual {
-  /* border: 2px solid white; */
+  border: 2px solid white;
   position: fixed;
   right: 0;
   width: 740px;
@@ -1176,6 +1159,25 @@ td {
 
 .inputChat[type="text"] {
   padding: 35px;
+}
+#individual-chat {
+  width: 95%;
+  height: 65%;
+  /* border: 2px solid green; */
+  overflow-y: scroll;
+  padding: 10px;
+  scrollbar-width: none;
+}
+
+#individual-chat::-webkit-scrollbar {
+  width: 7px;
+  background: none;
+  border: none;
+  border-radius: 20px;
+}
+#individual-chat::-webkit-scrollbar-thumb {
+  background: var(--color-light-blue);
+  border-radius: 20px;
 }
 
 #send-message {

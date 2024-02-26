@@ -4,7 +4,7 @@ import { getApiKey, setApiKey } from "../lib/apiKey.js";
 import { panelIndividual } from "../components/panelIndividual.js";
 
 export const DetailCard = (pokemon) => {
-  console.log("detalle", pokemon);
+  // console.log("detalle", pokemon);
   let weaknesses = "";
   let evolutions = "";
   const main = document.createElement("main");
@@ -33,8 +33,8 @@ export const DetailCard = (pokemon) => {
                         <img src=${pokemon1.evolutions.evolutionImage[i]} alt=${pokemon1.evolutions.evolutionName[i]}/>
                     </div>`;
   }
-  let propertyBase = [];
-  let resultBase = [];
+  const propertyBase = [];
+  const resultBase = [];
   for (const property in pokemon1.baseStats) {
     propertyBase.push(property);
     resultBase.push(pokemon1.baseStats[property]);
@@ -103,7 +103,6 @@ export const DetailCard = (pokemon) => {
       main.appendChild(modalApi());
       const modalKey = main.querySelector(".modalKey");
       const closeModal = main.querySelector(".cancel");
-      const acceptModal = main.querySelector(".accept");
       // const closeChat = main.querySelector(".imageChat");
       closeModal.addEventListener("click", () => {
         modalKey.remove();
@@ -166,7 +165,7 @@ export const DetailCard = (pokemon) => {
       modalBase.remove();
       overlayDetails.classList.toggle("overlay-active");
     });
-
+    // eslint-disable-next-line no-undef
     new Chart(stadisticBase, {
       type: "bar",
       data: {
