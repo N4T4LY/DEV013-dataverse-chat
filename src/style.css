@@ -886,7 +886,7 @@ footer p {
   width: 50%;
   height: 100vh;
   /* overflow: auto; */
-  border: solid 2px white;
+  /* border: solid 2px white; */
   padding: 15px;
   display: flex;
   justify-content: center;
