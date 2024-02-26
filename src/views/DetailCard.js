@@ -99,7 +99,7 @@ export const DetailCard = (pokemon) => {
   const baseStats = main.querySelector(".baseStatsChart");
 
   chatModal.addEventListener("click", () => {
-    main.appendChild(modalApi());
+    main.appendChild(modalApi("/detailCard"));
     const modalKey = main.querySelector(".modalKey");
     const closeModal = main.querySelector(".cancel");
     const acceptModal = main.querySelector(".accept");
