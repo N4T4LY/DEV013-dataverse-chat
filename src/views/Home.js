@@ -6,6 +6,8 @@ import { Footer } from "../components/Footer.js";
 import { sortData, filterData, computeStats } from "../lib/dataFunctions.js";
 import { getApiKey } from "../lib/apiKey.js";
 import { navigateTo } from "../router.js";
+import { setApiKey } from "../lib/apiKey.js";
+import { modalApi } from "../components/ModalApi.js";
 
 export const Home = () => {
   let currentData = [...data];
@@ -22,9 +24,6 @@ export const Home = () => {
   buttonChat.innerHTML = `<i class="fa-solid fa-comments fa-xl" id="chatgrup"></i>`;
   newContainer.appendChild(buttonChat);
 
-  buttonChat.addEventListener("click", () => {
-    navigateTo("/grupalChat", {});
-  });
   //modal
   const modal = newContainer.querySelector("#myBtn");
   const modalContent = newContainer.querySelector(".modal-content");
@@ -32,7 +31,30 @@ export const Home = () => {
   const sortOrderSelect = newContainer.querySelector(
     "select[data-testid='select-sort']"
   );
+
   const close = newContainer.querySelector(".fa-xmark");
+  
+  buttonChat.addEventListener("click", () => {
+    // navigateTo("/grupalChat", {});
+    newContainer.appendChild(modalApi());
+    const modalKey = newContainer.querySelector(".modalKey");
+    const closeModal = newContainer.querySelector(".cancel");
+    closeModal.addEventListener("click", () => {
+      modalKey.remove();
+      overlay.classList.toggle("overlay-active");
+    });
+    modalKey.addEventListener("submit", (e) => {
+      // e.preventDefault();
+      const sendApi = newContainer.querySelector("input[type ='password']").value;
+      // localStorage.setItem("sendApi",sendApi)
+      if (sendApi) {
+        setApiKey(sendApi);
+        navigateTo("/grupalChat", {});
+        // modalKey.remove();
+      }
+    });
+    overlay.classList.toggle("overlay-active");
+  });
 
   modal.addEventListener("click", () => {
     modalContent.classList.toggle("modal-active");
