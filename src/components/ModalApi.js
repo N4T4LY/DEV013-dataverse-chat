@@ -1,7 +1,7 @@
 import { getApiKey } from "../lib/apiKey.js";
-import { navigateTo } from "../router.js";
 
-export const modalApi = (ruta) => {
+
+export const modalApi = () => {
   const modalKey = document.createElement("form");
   const title = document.createElement("h3");
   const input = document.createElement("div");
@@ -19,13 +19,9 @@ export const modalApi = (ruta) => {
   content.textContent = `No tienes un APIKEY ¡Genera una!`;
   buttonContainer.innerHTML = `<button type="submit" class="cancel">Cancelar</button>
                                 <button class="accept">Aceptar</button>`;
-  // modalKey.append(title, buttonContainer, input, content, buttonContainer);
-  if (!getApiKey()) {
-    modalKey.append(title, buttonContainer, input, content, buttonContainer);
-    // Agrega aquí la lógica para mostrar el modal
-  } else {
-    navigateTo(ruta,{});
-  }
-
+  modalKey.append(title, buttonContainer, input, content, buttonContainer);
+  // if (!getApiKey()) {
+  //   modalKey.append(title, buttonContainer, input, content, buttonContainer);
+  // }
   return modalKey;
 };
