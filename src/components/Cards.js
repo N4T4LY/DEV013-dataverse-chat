@@ -15,7 +15,7 @@ export const Cards = (data) => {
         return "#7D3EA4";
       case "agua":
         return "#5594B8";
-      case "electrico":
+      case "eléctrico":
         return "#AAB855";
       case "hada":
         return "#B85567";
