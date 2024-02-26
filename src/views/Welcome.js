@@ -1,15 +1,18 @@
-import { navigateTo } from "../router.js";
+import { navigateTo }  from "../router.js";
+import { modalApi } from "../components/ModalApi.js";
+import { setApiKey } from "../lib/apiKey.js";
 export const Welcome = () => {
+  const overlayDetails = document.createElement("div");
   const main = document.createElement("div");
   const containerLeft = document.createElement("div");
   const polygon = document.createElement("div");
   const img = document.createElement("img");
   const containerRight = document.createElement("div");
-  const h1 = document.createElement("h1");
-  const p = document.createElement("p");
-  const button = document.createElement("button");
-  const footer = document.createElement("p");
-
+  const  h1 = document.createElement("h1");
+  const p=document.createElement("p")
+  const button=document.createElement("button");
+  const footer=document.createElement("p");
+  overlayDetails.classList.add("overlay");
   main.setAttribute("id", "welcoming");
   containerLeft.setAttribute("class", "image");
   polygon.setAttribute("class", "polygon");
@@ -21,9 +24,8 @@ export const Welcome = () => {
   h1.innerHTML = "¡Bienvenidos a PokéDex!";
   p.innerHTML = "¡Encuentra a tu Pokémon!";
   button.innerHTML = "INICIAR";
-  footer.innerHTML =
-    "Copyright © 2023 Nataly Fernandez y Aylin Santa Cruz Vargas";
-
+  footer.innerHTML="Copyright © 2023 Nataly Fernandez Ovando y Aylin Santa Cruz Vargas";
+  
   //containerLeft
   containerLeft.appendChild(polygon);
   containerLeft.appendChild(img);
@@ -35,9 +37,36 @@ export const Welcome = () => {
 
   main.appendChild(containerLeft);
   main.appendChild(containerRight);
+ main.appendChild(overlayDetails);
+  button.addEventListener("click",()=>{
+    main.appendChild(modalApi("/home"));
+    const modalKey = main.querySelector(".modalKey");
+    const closeModal = main.querySelector(".cancel");
+    // const acceptModal = main.querySelector(".accept"); 
+           // const closeChat = main.querySelector(".imageChat");
+    closeModal.addEventListener("click", () => {
+      modalKey.remove();
+      overlayDetails.classList.toggle("overlay-active");
+      navigateTo("/home",{});
+    });
+    modalKey.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const sendApi = main.querySelector("input[type ='password']").value;
+      // localStorage.setItem("sendApi",sendApi)
+      if (sendApi) {
+        setApiKey(sendApi);
+        // main.appendChild(panelIndividual(pokemon));
+        navigateTo("/home",{});
+        modalKey.remove();
+       
+        
+      }
+    });
+    overlayDetails.classList.toggle("overlay-active");
 
-  button.addEventListener("click", () => {
-    navigateTo("/home", {});
-  });
-  return main;
-};
+
+    
+    
+    }) 
+return main;
+}

@@ -5,13 +5,13 @@ export const BubblesChat = (pokemon,message1, message2) => {
   chats.setAttribute("id", "chats");
   const detailPokemon = data.find((item) => item.name === pokemon.name);
   chats.innerHTML = `
-    <article id="userC">
+  <article id="userC" style="${message1 ? '' : 'display: none;'}">
         <h3 id="userName">Tú</h3>
         <div id="userImage">
             <i class="fa-solid fa-user"></i>
         </div>
     </article> 
-    <article id="answerChatU">
+    <article id="answerChatU" style="${message1 ? '' : 'display: none;'}">
     <p id="pokemonName">${message1}</p>
     </article>
 
