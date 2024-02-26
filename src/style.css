@@ -572,30 +572,26 @@ footer p {
 }
 #sectionChat {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   width: 75%;
   height: 100%;
-    /* border: #a851df solid 2px;  */
-   justify-content: space-between;
+  /* border: #a851df solid 2px; */
+  justify-content: space-around;
+  align-items: center;
   padding: 20px 20px 0 20px;
- 
-  
 }
-#divChat{
-  /* border: #72ee89 solid 2px;  */
-  height: 100%;
-  max-height: 540px;
+#divChat {
+  /* border: #72ee89 solid 2px; */
+  height: 80%;
+  width: 100%;
+  max-height: 500px;
   overflow-y: scroll;
   padding: 10px;
   scrollbar-width: none;
 }
-#inputChatG{
-   /* border: #eeee72 solid 2px;  */
-
-  
+#inputChatG {
   width: 100%;
-  /* margin-top: 100px; */
-  bottom: 0;
 }
 
 #chats {
@@ -605,16 +601,6 @@ footer p {
   flex-direction: column;
   justify-content: space-around;
   gap: 10px;
-  /* width: 100%;
-  margin: 0; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* padding: 20px;
-  width: 100%; */
-  /* border: white solid 2px; */
-  /* border: white solid 2px;  */
-  /* margin-top: 150px; */
-  /* justify-self: flex-end; */
 }
 .conected-pokemons {
   /* border: rgb(223, 61, 61) solid 2px;  */
@@ -622,27 +608,23 @@ footer p {
   justify-content: space-between;
   padding: 25px;
   border-bottom: var(--color-dark-sky) solid 1px;
-  /* overflow-y: scroll;
-  padding: 10px;
-  scrollbar-width: none; */
-
 }
 .aside-pokemons {
-  height: 86vh;
+  height: 85.8vh;
   width: 25%;
-  /* border: rgb(223, 61, 61) solid 2px;  */
+  /* border: rgb(223, 61, 61) solid 2px; */
   background-color: var(--color-light-blue);
-  overflow-y:scroll;
-  
+  overflow-y: scroll;
+  padding: 10px;
+  scrollbar-width: none;
 }
 
-.connected{
+.connected {
   /* border: 2px solid green; */
 }
-.disconnected{
+.disconnected {
   /* border: 2px solid red; */
 }
-
 
 #userC {
   display: flex;
@@ -674,7 +656,7 @@ footer p {
   align-self: flex-end;
   text-align: right;
   margin-top: 5px;
- 
+
   border-radius: 10px;
   color: white;
 }
@@ -710,13 +692,12 @@ footer p {
   margin-right: 15px;
 }
 
-#pokemonImage > img , #pokemonImagec > img {
+#pokemonImage > img,
+#pokemonImagec > img {
   height: auto;
   width: 50px;
   overflow: hidden;
 }
-
-
 
 .answerChatP {
   margin-top: 5px;
@@ -1000,7 +981,7 @@ td {
   margin-top: 10px;
   padding: 0;
 }
-.borderWeaknesses{
+.borderWeaknesses {
   background-color: #1f4144;
   display: flex;
   flex-wrap: wrap;
@@ -1016,7 +997,7 @@ td {
   height: 45px;
   /* margin: 0; */
 }
-.borderWeaknesses > p{
+.borderWeaknesses > p {
   color: var(--color-white);
   font-size: 0.8rem;
 }
@@ -1156,14 +1137,13 @@ td {
   align-items: center;
   color: white;
 }
-
 .inputChat[type="text"] {
   padding: 35px;
 }
 #individual-chat {
   width: 95%;
   height: 65%;
-  /* border: 2px solid green; */
+  border: 2px solid green;
   overflow-y: scroll;
   padding: 10px;
   scrollbar-width: none;

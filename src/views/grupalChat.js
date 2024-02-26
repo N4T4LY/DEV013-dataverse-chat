@@ -29,9 +29,9 @@ export const GrupalChat = () => {
   const buttonStyle = sectionInput.querySelector("#send-message");
   inputStyle.style.width = "100%";
   inputStyle.style.height = "80px";
-  inputStyle.style.margin = "0 0 20px 0";
-  buttonStyle.style.right = "400px";
-  buttonStyle.style.bottom = "40px";
+  // inputStyle.style.margin = "0 0 20px 0";
+  buttonStyle.style.right = "420px";
+  buttonStyle.style.bottom = "32px";
   aside.innerHTML = ``;
   data.forEach((pokemon) => {
     const pokemonDiv = document.createElement("div");
@@ -49,8 +49,7 @@ export const GrupalChat = () => {
         `;
     aside.appendChild(pokemonDiv);
   });
-  sectionChat.appendChild(divChat);
-  sectionChat.appendChild(sectionInput);
+  sectionChat.append(divChat,sectionInput);
   mainSection.append(sectionChat, aside);
   main.appendChild(mainSection);
   // main.appendChild(sectionInput);
