@@ -1,3 +1,4 @@
+import { communicateWithOpenAI } from "../lib/openAIApi.js";
 import { InputChat } from "../components/InputChat.js";
 import { BubblesChat } from "../components/BubblesChat.js";
 import data from "../data/dataset.js";
@@ -17,72 +18,49 @@ export const GrupalChat=()=>{
 
     const mainSection=document.createElement("section");
     const sectionChat = document.createElement("section");
+    const divChat = document.createElement("section");
    const sectionInput = document.createElement("section");
     const aside=document.createElement("aside");
     main.setAttribute( "id","grupal-chat" );
     mainSection.setAttribute("id","main-sectionChat")
     sectionChat.setAttribute("id","sectionChat");
+    divChat.setAttribute("id","divChat");
     sectionInput.setAttribute( "id","inputChatG" );
     aside.setAttribute("class","aside-pokemons");
     sectionInput.appendChild((InputChat()))
 
     const inputStyle = sectionInput.querySelector(".inputChat");
     const buttonStyle = sectionInput.querySelector("#send-message");
-    inputStyle.style.width='1030px';
+    inputStyle.style.width='100%';
     inputStyle.style.height='80px';
     inputStyle.style.margin='0 0 20px 0';
 
-    buttonStyle.style.right="420px";
+    buttonStyle.style.right="400px";
     buttonStyle.style.bottom="40px";
-    // inputStyle.style.margin-bottom= '-3px';
-
-
-
-    aside.innerHTML=`
-    <div class="conected-pokemons">
         
-        <h3 id="pokemonName">Charmander</h3>
-        <div id="pokemonImagec">
-        <img src="../assets/pokemones/Charmander.png" alt="">
-        </div>
-    </div>
+    aside.innerHTML=``
+    data.forEach(pokemon=>{
+        const pokemonDiv=document.createElement("div");
+        pokemonDiv.setAttribute("class","conected-pokemons")
 
-    <div class="conected-pokemons">
+        if(pokemon.connected){
+            pokemonDiv.classList.add("connected");
+        } else {
+            pokemonDiv.classList.add("disconnected");
+        }
+
+        pokemonDiv.innerHTML=`
+        <h3 id="pokemonName">${pokemon.name}</h3>
+        <div id="pokemonImagec">
+            <img src="${pokemon.image}" alt="${pokemon.name}">
+        </div>
+        `;
+        aside.appendChild(pokemonDiv);
         
-        <h3 id="pokemonName">Pikachu</h3>
-        <div id="pokemonImagec">
-        <img src="../assets/pokemones/Pikachu.png" alt="">
-        </div>
-    </div>
+    })
 
 
-    <div class="conected-pokemons">
-        
-        <h3 id="pokemonName">Bulbasaur</h3>
-        <div id="pokemonImagec">
-        <img src="../assets/pokemones/Bulbasaur.png" alt="">
-        </div>
-    </div>
-
-    <div class="conected-pokemons">
-        
-        <h3 id="pokemonName">Clefairy</h3>
-        <div id="pokemonImagec">
-        <img src="../assets/pokemones/Clefairy.png" alt="">
-        </div>
-    </div>
-
-    <div class="conected-pokemons">
-        
-        <h3 id="pokemonName">Ekans</h3>
-        <div id="pokemonImagec">
-        <img src="../assets/pokemones/Ekans.png" alt="">
-        </div>
-    </div>
-    
-    `    
-
-   sectionChat.appendChild(BubblesChat(data[0],"ads","sadsdsd"));
+ sectionChat.appendChild(divChat);
     sectionChat.appendChild(sectionInput);
     mainSection.append(sectionChat, aside)
      main.appendChild(mainSection);
@@ -92,5 +70,44 @@ export const GrupalChat=()=>{
         //navigateTo("/home", {});
         history.back();
       });
+
+      const buttonSend=main.querySelector(".sendMessage");
+      const input=main.querySelector(".inputChat");
+      console.log(input);
+
+      buttonSend.addEventListener("click", () => {
+      // console.log(input.value);
+      // input.value=""; 
+    data.forEach((pokemon)=>{
+        if (input.value) {
+            communicateWithOpenAI(pokemon.name, input.value)
+              .then((res) => res.json())
+              .then((data) => {
+                //   console.log(input.value , data.choices[0].message.content);
+                divChat.appendChild(
+                  BubblesChat(pokemon, input.value, data.choices[0].message.content)
+                );
+                //const bubblechat=divChat.querySelector( "#userC")
+                // console.log("article",bubblechat)
+                
+                // if(input.value===''){
+                //   console.log("el input esta vacio")
+                  
+                // }else{
+                  
+                //   console.log("el input esta lleno")
+                // }
+                divChat.scrollTop = divChat.scrollHeight;
+                input.value = "";
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+          }
+        });
+})
+       
+     
+
     return main;
 } 
