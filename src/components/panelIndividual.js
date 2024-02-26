@@ -51,7 +51,7 @@ export const panelIndividual = (pokemon) => {
   const styleButton = panel.querySelector("#send-message");
   const buttonSend = panel.querySelector(".sendMessage");
   const input = panel.querySelector(".inputChat");
-  console.log(styleInput);
+  // console.log(styleInput);
   styleInput.style.width = "680px";
   styleInput.style.height = "80px";
   styleInput.style.margin = "20px";
@@ -66,7 +66,7 @@ export const panelIndividual = (pokemon) => {
       communicateWithOpenAI(pokemon.name, input.value)
         .then((res) => res.json())
         .then((data) => {
-          console.log(input.value, data.choices[0].message.content);
+          // console.log(input.value, data.choices[0].message.content);
           sectionDiv.appendChild(
             BubblesChat(pokemon, input.value, data.choices[0].message.content)
           );
