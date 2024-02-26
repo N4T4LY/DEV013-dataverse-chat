@@ -1,6 +1,6 @@
 import data from "../data/dataset.js";
 import { modalApi } from "../components/ModalApi.js";
-import { setApiKey } from "../lib/apiKey.js";
+import { getApiKey, setApiKey } from "../lib/apiKey.js";
 import { panelIndividual } from "../components/panelIndividual.js";
 
 export const DetailCard = (pokemon) => {
@@ -99,32 +99,45 @@ export const DetailCard = (pokemon) => {
   const baseStats = main.querySelector(".baseStatsChart");
 
   chatModal.addEventListener("click", () => {
-    main.appendChild(modalApi("/detailCard"));
-    const modalKey = main.querySelector(".modalKey");
-    const closeModal = main.querySelector(".cancel");
-    const acceptModal = main.querySelector(".accept");
-    // const closeChat = main.querySelector(".imageChat");
-    closeModal.addEventListener("click", () => {
-      modalKey.remove();
-      overlayDetails.classList.toggle("overlay-active");
-    });
-    modalKey.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const sendApi = main.querySelector("input[type ='password']").value;
-      // localStorage.setItem("sendApi",sendApi)
-      if (sendApi) {
-        setApiKey(sendApi);
-        main.appendChild(panelIndividual(pokemon));
+    if (!getApiKey()) {
+      main.appendChild(modalApi());
+      const modalKey = main.querySelector(".modalKey");
+      const closeModal = main.querySelector(".cancel");
+      const acceptModal = main.querySelector(".accept");
+      // const closeChat = main.querySelector(".imageChat");
+      closeModal.addEventListener("click", () => {
         modalKey.remove();
-        const panelPersonal = main.querySelector(".panelPersonal");
-        const closeChat = main.querySelector(".imageChat");
-        closeChat.addEventListener("click", () => {
-          panelPersonal.remove();
-          overlayDetails.classList.toggle("overlay-active");
-        });
-      }
-    });
-    overlayDetails.classList.toggle("overlay-active");
+        overlayDetails.classList.toggle("overlay-active");
+      });
+      modalKey.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const sendApi = main.querySelector("input[type ='password']").value;
+        // localStorage.setItem("sendApi",sendApi)
+        if (sendApi) {
+          setApiKey(sendApi);
+          main.appendChild(panelIndividual(pokemon));
+          modalKey.remove();
+          const panelPersonal = main.querySelector(".panelPersonal");
+          const closeChat = main.querySelector(".imageChat");
+          closeChat.addEventListener("click", () => {
+            panelPersonal.remove();
+            overlayDetails.classList.toggle("overlay-active");
+          });
+        }
+      });
+      overlayDetails.classList.toggle("overlay-active");
+    } else {
+      main.appendChild(panelIndividual(pokemon));
+      modalKey.remove();
+      const panelPersonal = main.querySelector(".panelPersonal");
+      const closeChat = main.querySelector(".imageChat");
+      closeChat.addEventListener("click", () => {
+        panelPersonal.remove();
+        overlayDetails.classList.toggle("overlay-active");
+      });
+      overlayDetails.classList.toggle("overlay-active");
+    }
+    // overlayDetails.classList.toggle("overlay-active");
   });
 
   recoilArrow.addEventListener("click", () => {
