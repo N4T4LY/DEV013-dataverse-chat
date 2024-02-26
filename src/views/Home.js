@@ -4,10 +4,9 @@ import { Header } from "../components/Header.js";
 import { Filters } from "../components/Filters.js";
 import { Footer } from "../components/Footer.js";
 import { sortData, filterData, computeStats } from "../lib/dataFunctions.js";
-import { getApiKey } from "../lib/apiKey.js";
 import { navigateTo } from "../router.js";
-import { setApiKey } from "../lib/apiKey.js";
-import { modalApi } from "../components/ModalApi.js";
+import { setApiKey,getApiKey } from "../lib/apiKey.js";
+import { modalApi} from "../components/ModalApi.js";
 
 export const Home = () => {
   let currentData = [...data];
@@ -36,24 +35,24 @@ export const Home = () => {
   
   buttonChat.addEventListener("click", () => {
     // navigateTo("/grupalChat", {});
-    newContainer.appendChild(modalApi());
-    const modalKey = newContainer.querySelector(".modalKey");
-    const closeModal = newContainer.querySelector(".cancel");
-    closeModal.addEventListener("click", () => {
-      modalKey.remove();
+      newContainer.appendChild(modalApi('/grupalChat'));
+      const modalKey = newContainer.querySelector(".modalKey");
+      const closeModal = newContainer.querySelector(".cancel");
+      closeModal.addEventListener("click", () => {
+        modalKey.remove();
+        overlay.classList.toggle("overlay-active");
+      });
+      modalKey.addEventListener("submit", (e) => {
+        // e.preventDefault();
+        const sendApi = newContainer.querySelector("input[type ='password']").value;
+        // localStorage.setItem("sendApi",sendApi)
+        if (sendApi) {
+          setApiKey(sendApi);
+          navigateTo("/grupalChat", {});
+          // modalKey.remove();
+        }
+      });
       overlay.classList.toggle("overlay-active");
-    });
-    modalKey.addEventListener("submit", (e) => {
-      // e.preventDefault();
-      const sendApi = newContainer.querySelector("input[type ='password']").value;
-      // localStorage.setItem("sendApi",sendApi)
-      if (sendApi) {
-        setApiKey(sendApi);
-        navigateTo("/grupalChat", {});
-        // modalKey.remove();
-      }
-    });
-    overlay.classList.toggle("overlay-active");
   });
 
   modal.addEventListener("click", () => {
