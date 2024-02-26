@@ -24,7 +24,7 @@ export const Welcome = () => {
   h1.innerHTML = "¡Bienvenidos a PokéDex!";
   p.innerHTML = "¡Encuentra a tu Pokémon!";
   button.innerHTML = "INICIAR";
-  footer.innerHTML="Copyright © 2023 Nataly Fernandez y Aylin Santa Cruz Vargas";
+  footer.innerHTML="Copyright © 2023 Nataly Fernandez Ovando y Aylin Santa Cruz Vargas";
   
   //containerLeft
  containerLeft.appendChild(polygon);
@@ -39,11 +39,11 @@ export const Welcome = () => {
   main.appendChild(containerRight);
  main.appendChild(overlayDetails);
   button.addEventListener("click",()=>{
-    main.appendChild(modalApi());
+    main.appendChild(modalApi("/home"));
     const modalKey = main.querySelector(".modalKey");
     const closeModal = main.querySelector(".cancel");
     // const acceptModal = main.querySelector(".accept"); 
-    // const closeChat = main.querySelector(".imageChat");
+           // const closeChat = main.querySelector(".imageChat");
     closeModal.addEventListener("click", () => {
       modalKey.remove();
       overlayDetails.classList.toggle("overlay-active");

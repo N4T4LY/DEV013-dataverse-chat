@@ -36,7 +36,7 @@ export const Home = () => {
   
   buttonChat.addEventListener("click", () => {
     // navigateTo("/grupalChat", {});
-    newContainer.appendChild(modalApi());
+    newContainer.appendChild(modalApi("/grupalChat"));
     const modalKey = newContainer.querySelector(".modalKey");
     const closeModal = newContainer.querySelector(".cancel");
     closeModal.addEventListener("click", () => {
