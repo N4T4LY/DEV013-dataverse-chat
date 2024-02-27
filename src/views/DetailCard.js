@@ -11,10 +11,12 @@ export const DetailCard = (pokemon) => {
   const polygon = document.createElement("div");
   const containerLeft = document.createElement("section");
   const containerRight = document.createElement("section");
+  const recoilArrow = document.createElement("section");
   const overlayDetails = document.createElement("div");
   overlayDetails.classList.add("overlay");
   main.setAttribute("class", "infoPokemon");
   polygon.setAttribute("class", "poligon");
+  recoilArrow.setAttribute("class", "recoilArrow");
   containerLeft.setAttribute("class", "containerLeft");
   containerRight.setAttribute("class", "containerRight");
 
@@ -39,7 +41,7 @@ export const DetailCard = (pokemon) => {
     propertyBase.push(property);
     resultBase.push(pokemon1.baseStats[property]);
   }
-
+  recoilArrow.innerHTML = `<i class="fa-solid fa-arrow-left"></i>`;
   containerLeft.innerHTML = `
     <div class="chatPersonal">
         <i class="fa-solid fa-comment fa-xl"></i>
@@ -51,7 +53,6 @@ export const DetailCard = (pokemon) => {
       </div>`;
   containerRight.innerHTML = `
   <div class="containerGreen">
-    <div class="recoilArrow"><i class="fa-solid fa-arrow-left"></i></div>
     <h1>${pokemon1.name}</h1>
     <p>${pokemon1.description}</p>
     <div class="table">
@@ -92,10 +93,16 @@ export const DetailCard = (pokemon) => {
     </div>
   </div>
 `;
-  main.append(polygon, containerLeft, containerRight, overlayDetails);
+  main.append(
+    polygon,
+    recoilArrow,
+    containerLeft,
+    containerRight,
+    overlayDetails
+  );
 
   const chatModal = main.querySelector(".chatPersonal");
-  const recoilArrow = main.querySelector(".recoilArrow");
+  // const recoilArrow = main.querySelector(".recoilArrow");
   const baseStats = main.querySelector(".baseStatsChart");
 
   chatModal.addEventListener("click", () => {
