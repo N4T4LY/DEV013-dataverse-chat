@@ -1,4 +1,4 @@
-import { filterData, sortData, computeStats } from "../src/dataFunctions.js";
+import { filterData, sortData, computeStats } from "../src/lib/dataFunctions.js";
 
 describe("SORTDATA", () => {
   // 1. Fn existe

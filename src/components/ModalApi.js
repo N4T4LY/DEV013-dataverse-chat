@@ -1,6 +1,3 @@
-import { getApiKey } from "../lib/apiKey.js";
-
-
 export const modalApi = () => {
   const modalKey = document.createElement("form");
   const title = document.createElement("h3");
@@ -20,8 +17,5 @@ export const modalApi = () => {
   buttonContainer.innerHTML = `<button type="submit" class="cancel">Cancelar</button>
                                 <button class="accept">Aceptar</button>`;
   modalKey.append(title, buttonContainer, input, content, buttonContainer);
-  // if (!getApiKey()) {
-  //   modalKey.append(title, buttonContainer, input, content, buttonContainer);
-  // }
   return modalKey;
 };

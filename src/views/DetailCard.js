@@ -4,17 +4,19 @@ import { getApiKey, setApiKey } from "../lib/apiKey.js";
 import { panelIndividual } from "../components/panelIndividual.js";
 
 export const DetailCard = (pokemon) => {
-  console.log("detalle", pokemon);
+  // console.log("detalle", pokemon);
   let weaknesses = "";
   let evolutions = "";
   const main = document.createElement("main");
   const polygon = document.createElement("div");
   const containerLeft = document.createElement("section");
   const containerRight = document.createElement("section");
+  const recoilArrow = document.createElement("section");
   const overlayDetails = document.createElement("div");
   overlayDetails.classList.add("overlay");
   main.setAttribute("class", "infoPokemon");
   polygon.setAttribute("class", "poligon");
+  recoilArrow.setAttribute("class", "recoilArrow");
   containerLeft.setAttribute("class", "containerLeft");
   containerRight.setAttribute("class", "containerRight");
 
@@ -33,13 +35,13 @@ export const DetailCard = (pokemon) => {
                         <img src=${pokemon1.evolutions.evolutionImage[i]} alt=${pokemon1.evolutions.evolutionName[i]}/>
                     </div>`;
   }
-  let propertyBase = [];
-  let resultBase = [];
+  const propertyBase = [];
+  const resultBase = [];
   for (const property in pokemon1.baseStats) {
     propertyBase.push(property);
     resultBase.push(pokemon1.baseStats[property]);
   }
-
+  recoilArrow.innerHTML = `<i class="fa-solid fa-arrow-left"></i>`;
   containerLeft.innerHTML = `
     <div class="chatPersonal">
         <i class="fa-solid fa-comment fa-xl"></i>
@@ -51,7 +53,6 @@ export const DetailCard = (pokemon) => {
       </div>`;
   containerRight.innerHTML = `
   <div class="containerGreen">
-    <div class="recoilArrow"><i class="fa-solid fa-arrow-left"></i></div>
     <h1>${pokemon1.name}</h1>
     <p>${pokemon1.description}</p>
     <div class="table">
@@ -92,10 +93,16 @@ export const DetailCard = (pokemon) => {
     </div>
   </div>
 `;
-  main.append(polygon, containerLeft, containerRight, overlayDetails);
+  main.append(
+    polygon,
+    recoilArrow,
+    containerLeft,
+    containerRight,
+    overlayDetails
+  );
 
   const chatModal = main.querySelector(".chatPersonal");
-  const recoilArrow = main.querySelector(".recoilArrow");
+  // const recoilArrow = main.querySelector(".recoilArrow");
   const baseStats = main.querySelector(".baseStatsChart");
 
   chatModal.addEventListener("click", () => {
@@ -103,7 +110,6 @@ export const DetailCard = (pokemon) => {
       main.appendChild(modalApi());
       const modalKey = main.querySelector(".modalKey");
       const closeModal = main.querySelector(".cancel");
-      const acceptModal = main.querySelector(".accept");
       // const closeChat = main.querySelector(".imageChat");
       closeModal.addEventListener("click", () => {
         modalKey.remove();
@@ -166,7 +172,7 @@ export const DetailCard = (pokemon) => {
       modalBase.remove();
       overlayDetails.classList.toggle("overlay-active");
     });
-
+    // eslint-disable-next-line no-undef
     new Chart(stadisticBase, {
       type: "bar",
       data: {
