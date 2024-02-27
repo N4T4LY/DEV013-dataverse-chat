@@ -51,7 +51,7 @@ export const panelIndividual = (pokemon) => {
   const styleButton = panel.querySelector("#send-message");
   const buttonSend = panel.querySelector(".sendMessage");
   const input = panel.querySelector(".inputChat");
-  // console.log(styleInput);
+  console.log(styleInput);
   styleInput.style.width = "680px";
   styleInput.style.height = "80px";
   styleInput.style.margin = "20px";

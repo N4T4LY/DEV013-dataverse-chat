@@ -17,13 +17,12 @@ describe("getApiKey", () => {
 describe("setApiKey", () => {
   it("should set the API Key correctly", () => {
     const apiKey = "1234";
-    console.log(setApiKey(apiKey));
     expect(localStorage.getItem('apiKey')).toBe(apiKey);
   });
 
   it("should return false if the API is not saved", () => {
     const apiKey = "";
-    console.log(setApiKey(apiKey));
+    setApiKey(apiKey);
     expect(localStorage.getItem('apiKey')).toBeFalsy();
   });
 });
