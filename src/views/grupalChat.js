@@ -6,7 +6,7 @@ export const GrupalChat = () => {
   const main = document.createElement("main");
   main.innerHTML = `
     <section id="iconschat">
-        <div class="recoilArrow" ><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="recoilArrowG" ><i class="fa-solid fa-arrow-left"></i></div>
         <div class="titleChatG">
         <h1>Chat Pokedex</h1>
         <p>Maestros Pokemón: Conéctate, comparte y domina el mundo Pokémon en nuestro chat grupal.</p>
@@ -53,8 +53,8 @@ export const GrupalChat = () => {
   mainSection.append(sectionChat, aside);
   main.appendChild(mainSection);
   // main.appendChild(sectionInput);
-  const recoilArrow = main.querySelector(".recoilArrow");
-  recoilArrow.addEventListener("click", () => {
+  const recoilArrowG = main.querySelector(".recoilArrowG");
+  recoilArrowG.addEventListener("click", () => {
     //navigateTo("/home", {});
     history.back();
   });
