@@ -15,7 +15,7 @@ export const GrupalChat = () => {
         <div class="recoilArrowG" ><i class="fa-solid fa-arrow-left"></i></div>
         <div class="titleChatG">
         <h1>Chat Pokedex</h1>
-        <p>Maestros Pokemón: Conéctate, comparte y domina el mundo Pokémon en nuestro chat grupal.</p>
+        <p style="text-align:center;">Maestros Pokemón: Conéctate, comparte y domina el mundo Pokémon en nuestro chat grupal.</p>
         </div>
     </section>
     `;
@@ -32,12 +32,12 @@ export const GrupalChat = () => {
   aside.setAttribute("class", "aside-pokemons");
   sectionInput.appendChild(InputChat());
   const inputStyle = sectionInput.querySelector(".inputChat");
-  const buttonStyle = sectionInput.querySelector("#send-message");
+  // const buttonStyle = sectionInput.querySelector("#send-message");
   inputStyle.style.width = "100%";
   inputStyle.style.height = "80px";
   // inputStyle.style.margin = "0 0 20px 0";
-  buttonStyle.style.right = "420px";
-  buttonStyle.style.bottom = "32px";
+  // buttonStyle.style.right = "420px";
+  // buttonStyle.style.bottom = "32px";
   
   sectionChat.append(divChat,sectionInput);
   mainSection.append(sectionChat, aside);
@@ -81,11 +81,13 @@ export const GrupalChat = () => {
       
       
       pokemonDiv.innerHTML = `
-      <div class="connected"></div>
+     
         <h3 id="pokemonName">${pokemon.name}</h3>
+        
         <div id="pokemonImagec">
             <img src="${pokemon.image}" alt="${pokemon.name}">
         </div>
+        <div class="connected"></div>
       `;
       aside.appendChild(pokemonDiv);
     });
