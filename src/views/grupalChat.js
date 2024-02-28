@@ -69,8 +69,14 @@ export const GrupalChat = () => {
   buttonSend.addEventListener("click", () => {
     // console.log(input.value);
     // input.value="";
-    data.forEach((pokemon) => {
-      if (input.value) {
+    function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+    const limit=parseInt(getRandomArbitrary(1,24))
+    console.log("conected pokemons",limit)
+
+    data.forEach((pokemon,index) => {
+      if (input.value && index<=limit) {
         communicateWithOpenAI(pokemon.name, input.value)
           .then((res) => res.json())
           .then((data) => {
