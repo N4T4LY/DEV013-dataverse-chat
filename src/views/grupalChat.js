@@ -38,23 +38,7 @@ export const GrupalChat = () => {
   // inputStyle.style.margin = "0 0 20px 0";
   buttonStyle.style.right = "420px";
   buttonStyle.style.bottom = "32px";
-  aside.innerHTML = ``;
-  data.forEach((pokemon) => {
-    const pokemonDiv = document.createElement("div");
-    pokemonDiv.setAttribute("class", "conected-pokemons");
-    if (pokemon.connected) {
-      pokemonDiv.classList.add("connected");
-    } else {
-      pokemonDiv.classList.add("disconnected");
-    }
-    pokemonDiv.innerHTML = `
-        <h3 id="pokemonName">${pokemon.name}</h3>
-        <div id="pokemonImagec">
-            <img src="${pokemon.image}" alt="${pokemon.name}">
-        </div>
-        `;
-    aside.appendChild(pokemonDiv);
-  });
+  
   sectionChat.append(divChat,sectionInput);
   mainSection.append(sectionChat, aside);
   main.appendChild(mainSection);
@@ -66,32 +50,68 @@ export const GrupalChat = () => {
   });
   const buttonSend = main.querySelector(".sendMessage");
   const input = main.querySelector(".inputChat");
-  buttonSend.addEventListener("click", () => {
-    // console.log(input.value);
-    // input.value="";
-    function getRandomArbitrary(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-    const limit=parseInt(getRandomArbitrary(1,24))
-    console.log("conected pokemons",limit)
 
-    data.forEach((pokemon,index) => {
-      if (input.value && index<=limit) {
-        communicateWithOpenAI(pokemon.name, input.value)
-          .then((res) => res.json())
-          .then((data) => {
-            // console.log(input.value , data.choices[0].message.content);
-            divChat.appendChild(
-              BubblesChat(pokemon, input.value, data.choices[0].message.content)
-            );
-            divChat.scrollTop = divChat.scrollHeight;
-            input.value = "";
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      }
+  let conectedPokemons = []; 
+  function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+  
+  
+  function generateConectedPokemons() {
+    const limit = parseInt(getRandomArbitrary(1, 10));
+    console.log("Conected pokemons:", limit);
+    // data.forEach((pokemon,index) => {
+    //   if (input.value && index<=limit) {
+    //     conectedPokemons.push(pokemon)
+    //   }
+    // });
+
+    conectedPokemons = data.slice(0, limit);
+    console.log("Array pokemons conectados:", conectedPokemons);
+    asideConnectedPokemons();
+  }
+
+
+  function asideConnectedPokemons() {
+    aside.innerHTML = "";
+    conectedPokemons.forEach((pokemon) => {
+      const pokemonDiv = document.createElement("div");
+      pokemonDiv.setAttribute("class", "conected-pokemons");
+     
+      
+      
+      pokemonDiv.innerHTML = `
+      <div class="connected"></div>
+        <h3 id="pokemonName">${pokemon.name}</h3>
+        <div id="pokemonImagec">
+            <img src="${pokemon.image}" alt="${pokemon.name}">
+        </div>
+      `;
+      aside.appendChild(pokemonDiv);
+    });
+  }
+
+ 
+  generateConectedPokemons();
+
+  buttonSend.addEventListener("click", () => {
+    conectedPokemons.forEach((pokemon) => {
+      communicateWithOpenAI(pokemon.name, input.value)
+        .then((res) => res.json())
+        .then((data) => {
+          divChat.appendChild(
+            BubblesChat(pokemon, input.value, data.choices[0].message.content)
+          );
+          divChat.scrollTop = divChat.scrollHeight;
+          input.value = "";
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     });
   });
+
   return main;
 };
+
+
