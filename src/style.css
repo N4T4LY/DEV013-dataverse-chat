@@ -982,7 +982,7 @@ td {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  border:2px solid red;
+  /* border:2px solid red; */
   align-items: flex-start;
   gap: 2px;
   margin-top: -20px;
@@ -991,7 +991,7 @@ td {
   color: var(--color-white);
   padding-left: 10px;
   margin: 0;
-  border: 2px solid rgb(151, 65, 65);
+  /* border: 2px solid rgb(151, 65, 65); */
 }
 .weaknessesImages {
   display: flex;
@@ -1092,7 +1092,7 @@ td {
     z-index: 2;
     width: 100%;
     height: 700px;
-    border: solid 6px green;
+    /* border: solid 6px green; */
     margin:0;
     padding: 0;
     margin-top: -250px;
@@ -1121,20 +1121,13 @@ td {
   .containerRight {
     height: auto;
     width: 100%;
-    border: solid 2px white;
+    /* border: solid 2px white; */
   }
   .containerGreen {
     width: 100%;
   }
-  .recoilArrow {
-    /* display: flex;
-    justify-content: flex-end;
-    margin-right: 30px;
-    border: 2px solid red; */
-    /* margin-top: -100px; */
-  }
   #panel-chatIndividual {
-    width: 100%;
+    bottom:0;
   }
 }
 
@@ -1144,16 +1137,19 @@ td {
     left: 708px;
     /* border: 2px solid red; */
   }
+  #panel-chatIndividual {
+  }
 }
 
 @media (max-width: 768px) {
   .chatPersonal {
     top: 260px;
-    left: 600px;
+    left: 580px;
     
   }
   .containerLeft > img {
     margin-right: 4px;
+    /* border: 2px solid #3b0b46; */
   }
 }
 
@@ -1165,11 +1161,25 @@ td {
   .chatPersonal {
     left: 250px;
   }
+  .recoilArrow {
+    top: 60px;
+    left: -2px;
+  }
+  .recoilArrow > .fa-arrow-left {
+    padding:0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
   .containerLeft > img {
     width: 350px;
     height: 350px;
     margin-left: -1px;
     margin-top: -200px;
+    /* border: 2px solid yellow; */
   }
   .baseStats {
     width: 95%;
@@ -1181,7 +1191,7 @@ td {
   .containerGreen {
     margin-top: -280px;
     width: 100%;
-    height: 1500px;
+    height: 1200px;
   }
   .baseStats {
     margin-top: -5px;
@@ -1191,11 +1201,11 @@ td {
   }
   .containerGreen > h1{
     font-size: 3rem;
-    margin-top: -350px;
-    margin-bottom: -30px;
+    margin-top: 0;
+    margin-bottom: -20px;
   }
   .weaknessessDetails {
-    height: 900px;
+    height: 300px;
   }
   
 }
