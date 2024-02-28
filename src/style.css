@@ -34,53 +34,57 @@ body {
   --color-light: #217b84;
   --font-family: "JetBrains Mono", monospace;
 }
-/*Welcome view*/
 
 /* ----------------------------------------Welcome-----------------------------------------------------*/
 #welcoming {
   background-color: var(--color-dark-blue);
-  /* border: solid 1px white; */
   display: flex;
-  height: 100vh;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#welcoming .image {
-  position: relative;
-
-  /* height: 100%; */
-}
-
-/* .image{
-  height: auto ;
-} */
-
-.image img {
-  width: 100vh;
-  height: auto;
-  object-fit: cover;
-  position: relative;
-  z-index: 2;
-  margin-left: 20px;
-}
-
-.image .polygon {
-  background-color: var(--color-light-sky);
   height: 100%;
   width: 100%;
-  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+  flex-direction: row;
+  justify-content: center;
+  position: relative; /* Añadir posición relativa */
+}
+
+#welcoming .polygon {
+  background-color: var(--color-light-sky);
+  width: 100%;
+  height: 100%; 
+  clip-path: polygon(0 0, 20% 0, 60% 100%, 0% 100%);
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0; 
+ 
+}
+
+#welcoming .image {
+  z-index: 2;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%; 
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
   z-index: 1;
 }
 
 #welcoming .text {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  z-index: 3;
+  height: 100vh; 
+  /* border: solid 2px white; */
 }
 
 .text h1 {
@@ -109,16 +113,13 @@ body {
   font-size: 1.3rem;
   cursor: pointer;
   padding: 15px 20px;
-  /*animacion*/
   transition: 1.2s;
   position: relative;
   overflow: hidden;
 }
 
 #close-welcoming:hover {
-  color: var(--color-white); /*opcion1*/
-  /*color: var(--color-dark-blue); opcion2*/
-  /* border: none; */
+  color: var(--color-white);
   z-index: 1;
 }
 
@@ -128,8 +129,7 @@ body {
   left: 0;
   width: 100%;
   height: 0%;
-  background: #0c575e; /*opcion1*/
-  /*background: var(--color-sky2);opcion2*/
+  background: #0c575e;
   z-index: -1;
   transition: 1.2s;
   bottom: 0;
@@ -142,34 +142,44 @@ body {
 
 .text .footer {
   color: var(--color-sky);
-  /* border: solid 1px white; */
   margin-top: 200px;
   margin-bottom: 0px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1213px) {
   #welcoming {
     flex-direction: column;
+    align-items: center;
+    
   }
 
-  #welcoming .text {
-    order: 2;
+  .polygon {
+    height: 150%; 
   }
 
-  #welcoming .image {
-    order: 1;
-  }
-
-  .image img {
-    z-index: 2;
-  }
-  .image .polygon {
-    background-color: var(--color-light-sky);
-
-    z-index: 1;
+  .image,
+  .text {
+    width: 100%;
   }
 }
 
+@media (max-width: 768px) {
+  .image , .text{
+    width: 100%;
+  }
+  .polygon {
+    height: 200%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .image, .text {
+    width: 100%;
+  }
+  .polygon {
+    height: 250%;
+}
+}
 /* --------------------------------------- Home ------------------------------------------------------*/
 
 .newContainer {
@@ -592,6 +602,17 @@ footer p {
 }
 #inputChatG {
   width: 100%;
+  /* border: #ff1b1b solid 2px; */
+  /* display: flex; */
+  position: relative;
+  z-index: 1;
+}
+#inputChatG  button {
+  right : 20px;
+bottom : 18px;
+/* border: #ff1b1b solid 2px; */
+position: absolute;
+z-index: 3;
 }
 
 #chats {
@@ -605,10 +626,15 @@ footer p {
 .conected-pokemons {
   /* border: rgb(223, 61, 61) solid 2px;  */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 25px;
   border-bottom: var(--color-dark-sky) solid 1px;
+  position: relative;
 }
+.conected-pokemons h3{
+  display: block;
+}
+
 .aside-pokemons {
   height: 85.8vh;
   width: 25%;
@@ -617,14 +643,20 @@ footer p {
   overflow-y: scroll;
   padding: 10px;
   scrollbar-width: none;
+  display: block;
 }
 
 .connected {
-  /* border: 2px solid green; */
+ width: 10px;
+  height: 10px;
+  background-color: rgb(24, 252, 24);
+  border-radius: 50%;
+   margin-right: 10px; 
+  align-self: flex-end;
+  position: absolute;
+  right: 55px;
 }
-.disconnected {
-  /* border: 2px solid red; */
-}
+
 
 #userC {
   display: flex;
@@ -757,6 +789,45 @@ footer p {
 }
 .recoilArrowG > .fa-arrow-left:hover {
   background-color: #68d2d4;
+}
+
+@media (max-width: 1213px) {
+  .aside-pokemons{
+   
+    display: block;
+  }
+  .conected-pokemons h3{
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .aside-pokemons{
+    max-width: 15%;
+    display: none;
+  }
+  #sectionChat {
+    width: 100%;
+  }
+
+  .aside-pokemons .connected {
+    position: fixed;
+    right: 10px;
+    bottom: 10px; 
+  }
+  
+ 
+}
+
+@media (max-width: 480px) {
+  .aside-pokemons{
+    display: none;
+  }
+  #sectionChat {
+    width: 100%;
+  }
 }
 
 /* --------------------------------------- details ------------------------------------------------------*/
