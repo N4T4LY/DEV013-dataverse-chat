@@ -602,6 +602,17 @@ footer p {
 }
 #inputChatG {
   width: 100%;
+  /* border: #ff1b1b solid 2px; */
+  /* display: flex; */
+  position: relative;
+  z-index: 1;
+}
+#inputChatG  button {
+  right : 20px;
+bottom : 18px;
+/* border: #ff1b1b solid 2px; */
+position: absolute;
+z-index: 3;
 }
 
 #chats {
@@ -615,10 +626,15 @@ footer p {
 .conected-pokemons {
   /* border: rgb(223, 61, 61) solid 2px;  */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 25px;
   border-bottom: var(--color-dark-sky) solid 1px;
+  position: relative;
 }
+.conected-pokemons h3{
+  display: block;
+}
+
 .aside-pokemons {
   height: 85.8vh;
   width: 25%;
@@ -627,15 +643,18 @@ footer p {
   overflow-y: scroll;
   padding: 10px;
   scrollbar-width: none;
+  display: block;
 }
 
 .connected {
  width: 10px;
   height: 10px;
-  background-color: green;
+  background-color: rgb(24, 252, 24);
   border-radius: 50%;
    margin-right: 10px; 
-  align-self: center;
+  align-self: flex-end;
+  position: absolute;
+  right: 55px;
 }
 
 
@@ -773,38 +792,42 @@ footer p {
 }
 
 @media (max-width: 1213px) {
-  #inputChatG>#send-message {
-    right:"420px";
-   bottom : "1200px";
-    
+  .aside-pokemons{
+   
+    display: block;
+  }
+  .conected-pokemons h3{
+    display: none;
   }
 
-  .polygon {
-    height: 150%; 
-  }
 
-  .image,
-  .text {
-    width: 100%;
-  }
 }
 
 @media (max-width: 768px) {
-  .image , .text{
+  .aside-pokemons{
+    max-width: 15%;
+    display: none;
+  }
+  #sectionChat {
     width: 100%;
   }
-  .polygon {
-    height: 200%; 
+
+  .aside-pokemons .connected {
+    position: fixed;
+    right: 10px;
+    bottom: 10px; 
   }
+  
+ 
 }
 
 @media (max-width: 480px) {
-  .image, .text {
+  .aside-pokemons{
+    display: none;
+  }
+  #sectionChat {
     width: 100%;
   }
-  .polygon {
-    height: 250%;
-}
 }
 
 /* --------------------------------------- details ------------------------------------------------------*/
