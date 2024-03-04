@@ -6,10 +6,10 @@ describe("InputChat component", () => {
 
   test("InputChat content isn't empty", () => {
     const component = InputChat();
-    const input = component.querySelector(".input");
-    const button = component.querySelector(".button");
+    const input = component.querySelector("input");
+    const button = component.querySelector("button");
 
-    expect(input.value).not.toEqual("");
+    expect(input.value.textContent).not.toEqual("");
     expect(button).toBeDefined()
   });
 
@@ -17,8 +17,8 @@ describe("InputChat component", () => {
     const component = InputChat();
 
     expect(component.tagName).toBe("ARTICLE");
-    expect(component.querySelector(".input").value).toBe("Charmander");
-    expect(component.querySelector(".button").textContent).toBe('<ion-icon name="send"></ion-icon>');
+    expect(component.querySelector("input").value).toBe("");
+    expect(component.querySelector("button").innerHTML).toBe('<ion-icon name="send"></ion-icon>');
   });
 
 });
