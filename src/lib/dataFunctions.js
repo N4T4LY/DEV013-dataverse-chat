@@ -2,10 +2,10 @@ export const sortData = (data, sortBy, sortOrder) => {
   if (data.length === 0) {
     return false;
   }
-  const sortedData = [...data]; //create copy array
+  //const sortedData = [...data]; //create copy array
   // console.log(sortedData);
 
-  sortedData.sort((a, b) => {
+  data.sort((a, b) => {
     const nameA = a[sortBy].toLowerCase();
     const nameB = b[sortBy].toLowerCase();
 
@@ -18,7 +18,7 @@ export const sortData = (data, sortBy, sortOrder) => {
     }
   });
 
-  return sortedData;
+  return data;
 };
 
 export const filterData = (data, filterBy, value) => {
