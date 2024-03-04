@@ -42,6 +42,13 @@ describe("SORTDATA", () => {
     // expect(sortData(TEST_SORT, sortBy, sortOrder )).toBe(false)
     expect(sortData(TEST_SORT, sortBy, sortOrder)).toBeFalsy();
   });
+  it("DATA EMPTY", () => {
+    const TEST_SORT = [];
+    const sortBy = "name";
+    const sortOrder = "desc";
+    // expect(sortData(TEST_SORT, sortBy, sortOrder )).toBe(false)
+    expect(sortData(TEST_SORT, sortBy, sortOrder)).toBeFalsy();
+  });
 });
 
 describe("FILTERDATA", () => {
