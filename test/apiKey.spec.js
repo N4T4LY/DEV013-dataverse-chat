@@ -17,6 +17,7 @@ describe("getApiKey", () => {
 describe("setApiKey", () => {
   it("should set the API Key correctly", () => {
     const apiKey = "1234";
+    setApiKey(apiKey);
     expect(localStorage.getItem('apiKey')).toBe(apiKey);
   });
 
