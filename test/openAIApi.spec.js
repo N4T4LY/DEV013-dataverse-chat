@@ -44,4 +44,10 @@ describe("OpenAI", () => {
     // expect(captureData).toEqual(response);  
     // console.log("response",response)
   });
+
+
+  it("Test successful API request", async ()=>{
+    const response = await communicateWithOpenAI("Charmander","hola").then((res) => res.json())
+    expect(response.ok).toBe(true);
+  })  
 });
