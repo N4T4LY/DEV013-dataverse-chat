@@ -23,7 +23,7 @@ export const Filters = () => {
       <option value="default" >----</option>
       <option value="Fuego">Fuego</option>
       <option value="Agua">Agua</option>
-      <option value="Electrico">Eléctrico</option>
+      <option value="Eléctrico">Eléctrico</option>
       <option value="Lucha">Lucha</option>
       <option value="Normal">Normal</option>
       <option value="Planta">Planta</option>
