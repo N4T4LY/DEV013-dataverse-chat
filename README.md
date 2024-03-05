@@ -1,4 +1,4 @@
-# Dataverse Chat
+# <div style="display:flex;justify.content:center;align-items:center;"><img src="src/assets/pokemones/pokebola.png" width="50px" heigth="50px"/>  Pokedex </div>
 
 ## Índice
 
