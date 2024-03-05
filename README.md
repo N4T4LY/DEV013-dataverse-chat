@@ -29,7 +29,7 @@ La página web de Pokémon utiliza una base de datos generada por ChatGPT para p
   - <p>GitHub: <a href="https://github.com/N4T4LY">@Nataly Fernandez</a></p>
   - <p>LinkedIn: <a href="https://www.linkedin.com/in/nataly-fdz/">Nataly Fernandez</a></p>
 
-## 3. Funcionalidades 🔨
+## 3. Funcionalidades
 
 - Consulta de Datos: Accede a una amplia base de datos de Pokémon generada por ChatGPT, que incluye detalles como nombre, tipo, estadísticas y más.
 
