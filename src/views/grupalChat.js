@@ -1,12 +1,6 @@
-import {
-  communicateWithOpenAI
-} from "../lib/openAIApi.js";
-import {
-  InputChat
-} from "../components/InputChat.js";
-import {
-  BubblesChat
-} from "../components/BubblesChat.js";
+import { communicateWithOpenAI } from "../lib/openAIApi.js";
+import { InputChat } from "../components/InputChat.js";
+import { BubblesChat } from "../components/BubblesChat.js";
 import data from "../data/dataset.js";
 export const GrupalChat = () => {
   const main = document.createElement("main");
@@ -38,8 +32,8 @@ export const GrupalChat = () => {
   // inputStyle.style.margin = "0 0 20px 0";
   // buttonStyle.style.right = "420px";
   // buttonStyle.style.bottom = "32px";
-  
-  sectionChat.append(divChat,sectionInput);
+
+  sectionChat.append(divChat, sectionInput);
   mainSection.append(sectionChat, aside);
   main.appendChild(mainSection);
   // main.appendChild(sectionInput);
@@ -51,12 +45,11 @@ export const GrupalChat = () => {
   const buttonSend = main.querySelector(".sendMessage");
   const input = main.querySelector(".inputChat");
 
-  let conectedPokemons = []; 
+  let conectedPokemons = [];
   function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
   }
-  
-  
+
   function generateConectedPokemons() {
     const limit = parseInt(getRandomArbitrary(1, 10));
     console.log("Conected pokemons:", limit);
@@ -71,29 +64,27 @@ export const GrupalChat = () => {
     asideConnectedPokemons();
   }
 
-
   function asideConnectedPokemons() {
     aside.innerHTML = "";
     conectedPokemons.forEach((pokemon) => {
       const pokemonDiv = document.createElement("div");
       pokemonDiv.setAttribute("class", "conected-pokemons");
-     
-      
-      
+
       pokemonDiv.innerHTML = `
      
         <h3 id="pokemonName">${pokemon.name}</h3>
-        
-        <div id="pokemonImagec">
+        <div class= "imageContainer" >
+          <div id="pokemonImagec">
             <img src="${pokemon.image}" alt="${pokemon.name}">
+          </div>
+          <div class="connected"></div>
         </div>
-        <div class="connected"></div>
+      
       `;
       aside.appendChild(pokemonDiv);
     });
   }
 
- 
   generateConectedPokemons();
 
   buttonSend.addEventListener("click", () => {
@@ -115,5 +106,3 @@ export const GrupalChat = () => {
 
   return main;
 };
-
-
