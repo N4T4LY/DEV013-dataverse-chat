@@ -1,4 +1,4 @@
-# <div style="display:flex;justify.content:center;align-items:center;"><img src="src/assets/pokemones/pokebola.png" width="50px" heigth="50px"/>  Pokedex </div>
+# <div style="display:flex;justify.content:center;align-items:center;"><img src="src/assets/pokemones/pokebola.png" width="50px" heigth="50px"/> Pokedex </div>
 
 ## Índice
 
@@ -22,12 +22,14 @@ La página web de Pokémon utiliza una base de datos generada por ChatGPT para p
 ## 2. Desarrolladoras web
 
 > :octocat: Aylin Santa Cruz Vargas
-  - <p>GitHub: <a href="https://github.com/AnthuA25">@AylinSantaCruz</a></p>
-  - <p>LinkedIn: <a href="www.linkedin.com/in/aylin-santa-cruz-vargas">Aylin Santa Cruz</a></p>
+
+- <p>GitHub: <a href="https://github.com/AnthuA25">@AylinSantaCruz</a></p>
+- <p>LinkedIn: <a href="www.linkedin.com/in/aylin-santa-cruz-vargas">Aylin Santa Cruz</a></p>
 
 > :octocat: Nataly Fernandez Ovando
-  - <p>GitHub: <a href="https://github.com/N4T4LY">@Nataly Fernandez</a></p>
-  - <p>LinkedIn: <a href="https://www.linkedin.com/in/nataly-fdz/">Nataly Fernandez</a></p>
+
+- <p>GitHub: <a href="https://github.com/N4T4LY">@Nataly Fernandez</a></p>
+- <p>LinkedIn: <a href="https://www.linkedin.com/in/nataly-fdz/">Nataly Fernandez</a></p>
 
 ## 3. Funcionalidades
 
@@ -44,6 +46,8 @@ La página web de Pokémon utiliza una base de datos generada por ChatGPT para p
 - Chat Global: Interactúa con otros entrenadores de Pokémon en el chat global, donde puedes compartir tus experiencias, estrategias y hacer nuevos amigos.
 
 - Chat Individual: Inicia conversaciones privadas con cualquier Pokémon específico para obtener información exclusiva sobre él, como sus preferencias, historias y curiosidades.
+
+![Funcionalidad](src/assets/prototipos/Pokedex-final.gif)
 
 ## 4. Estructura del proyecto
 
@@ -90,14 +94,42 @@ La lógica del proyecto esta implementada completamente en JavaScript
 
 ### HTML5
 
-```html
-<!-- La base del contenido se construyó utilizando HTML5, garantizando una estructura semántica y accesible. -->
-<label for="name">Ordenar por nombre:</label>
-<select name="name" id="name" data-testid="select-sort">
-  <option value="default">----</option>
-  <option value="asc">A-Z</option>
-  <option value="desc">Z-A</option>
-</select>
+Integramos HTML5 dentro de un componente para mejorar la modularidad y reutilización de código.
+
+#### ModaLApi.js
+
+```js
+export const modalApi = () => {
+  const modalKey = document.createElement("form");
+  const title = document.createElement("h3");
+  const input = document.createElement("div");
+  const content = document.createElement("a");
+  const buttonContainer = document.createElement("div");
+  modalKey.setAttribute("class", "modalKey");
+  title.setAttribute("class", "titleModal");
+  input.setAttribute("class", "containerInput");
+  input.innerHTML = `<img class="pokebolaKey" src="assets/pokemones/pokebola.png"><input type="password" autocomplete="off"/>`;
+  content.setAttribute("target", "_blank");
+  content.setAttribute("class", "generateApi");
+  content.setAttribute("href", "https://platform.openai.com/api-keys");
+  buttonContainer.setAttribute("class", "buttonContainer");
+  title.textContent = `¡Conversa con tu Pokemones favoritos! Ingresa tu APIKEY y descubre la magia del chat Pokemon.`;
+  content.textContent = `No tienes un APIKEY ¡Genera una!`;
+  buttonContainer.innerHTML = `<button type="submit" class="cancel">Cancelar</button>
+                                <button class="accept">Aceptar</button>`;
+  modalKey.append(title, buttonContainer, input, content, buttonContainer);
+  return modalKey;
+};
+```
+
+#### Header.
+
+```js
+export const Header = () => {
+  const header = document.createElement("header");
+  header.innerHTML = `<h1>P<img class="pokebolaHeader" src="assets/pokemones/pokebola.png" alt="pokebola"/>kéDex</h1>`;
+  return header;
+};
 ```
 
 ### CSS
@@ -203,37 +235,34 @@ describe("SORTDATA", () => {
   });
 });
 ```
+
 ### Trello
+
 ![Organización-trello](src/assets/prototipos/organizacion.png)
 
-### Historias de usuaria
+### Historias de usuario
 
 > Yo como: Entrenar Pokémon.
-> 
 
 > Quiero: Poder iniciar una conversación individual con un Pokémon específico,.
-> 
 
 > Para: Tener interacciones más personalizadas y profundas con los Pokémon y aprender más sobre sus personalidades y características únicas.
-> 
 
-  - Definici**ó**n de terminado
-    
-    El cliente puede interactuar de manera claro con un pokemon especifico para comenzar una conversación.
+- Definici**ó**n de terminado
 
-  - Criterios de aceptación:
-      - La aplicación debe proporcionar una opción clara y accesible para iniciar una conversación individual con un Pokémon.
-      - Al seleccionar un Pokémon para iniciar una conversación, se debe abrir una interfaz de chat dedicada para esa conversación.
-      - El entrenador debe poder enviar mensajes al Pokémon y recibir respuestas en tiempo real.
-      - El Pokémon debe responder de manera coherente y apropiada, mostrando su personalidad y características únicas.
-      - La conversación individual con un Pokémon debe proporcionar información adicional sobre el Pokémon, como detalles de su historia, habilidades o experiencias pasadas.
-      - El chat individual debe ser fácil de usar y navegar, con opciones claras para enviar mensajes, ver mensajes anteriores y cerrar la conversación cuando sea necesario.
- 
+  El cliente puede interactuar de manera claro con un pokemon especifico para comenzar una conversación.
+
+- Criterios de aceptación:
+  - La aplicación debe proporcionar una opción clara y accesible para iniciar una conversación individual con un Pokémon.
+  - Al seleccionar un Pokémon para iniciar una conversación, se debe abrir una interfaz de chat dedicada para esa conversación.
+  - El entrenador debe poder enviar mensajes al Pokémon y recibir respuestas en tiempo real.
+  - El Pokémon debe responder de manera coherente y apropiada, mostrando su personalidad y características únicas.
+  - La conversación individual con un Pokémon debe proporcionar información adicional sobre el Pokémon, como detalles de su historia, habilidades o experiencias pasadas.
+  - El chat individual debe ser fácil de usar y navegar, con opciones claras para enviar mensajes, ver mensajes anteriores y cerrar la conversación cuando sea necesario.
+
 ### Diseño de la Interfaz de Usuaria
 
 <a href="https://www.figma.com/file/twg4MrXgEyAfpr7BHI7aYH/Data-Pokemon?type=design&node-id=2-3&mode=design&t=hw1y5n8Obi6B9smK-0">Prototipos de Baja y Alta Fidelidad</a>
-
-
 
 ### Testeos de usabilidad
 
@@ -243,11 +272,11 @@ El objetivo de nuestros testeos de usabilidad fue evaluar la facilidad de uso y 
 
 #### Tareas Realizadas
 
-  - [ X ] Explorar la base de datos de Pokémon y encontrar información sobre un Pokémon específico.
-  - [ X ] Filtrar Pokémon por tipo y buscar un Pokémon de un tipo específico.
-  - [ X ] Iniciar una conversación en el chat global y enviar un mensaje.
-  - [ X ] Iniciar una conversación individual con un Pokémon específico y recibir una respuesta.
-  - [ X ] Navegar entre las diferentes vistas de la aplicación, incluida la vista de detalle del Pokémon y las estadísticas por tipo.
+- [ X ] Explorar la base de datos de Pokémon y encontrar información sobre un Pokémon específico.
+- [ X ] Filtrar Pokémon por tipo y buscar un Pokémon de un tipo específico.
+- [ X ] Iniciar una conversación en el chat global y enviar un mensaje.
+- [ X ] Iniciar una conversación individual con un Pokémon específico y recibir una respuesta.
+- [ X ] Navegar entre las diferentes vistas de la aplicación, incluida la vista de detalle del Pokémon y las estadísticas por tipo.
 
 ## 6. Prototipos
 
