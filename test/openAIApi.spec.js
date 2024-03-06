@@ -1,6 +1,6 @@
 // import { getApiKey} from "../src/lib/apiKey.js";
 import { communicateWithOpenAI } from "../src/lib/openAIApi.js";
-// eslint-disable-next-line no-undef
+/* eslint-disable */
 global.fetch = jest.fn(() =>
   Promise.resolve({
     status: 200,
@@ -8,7 +8,6 @@ global.fetch = jest.fn(() =>
   })
 );
 
-// eslint-disable-next-line no-undef
 
 describe("OpenAI", () => {
   it("communicateWithOpenAI exists", () => {
@@ -28,7 +27,7 @@ describe("OpenAI", () => {
       ],
     };
 
-    // eslint-disable-next-line no-undef
+
     global.fetch.mockResolvedValueOnce({
       //   ok: true,
       //   json: async () => response,
