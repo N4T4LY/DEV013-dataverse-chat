@@ -598,9 +598,24 @@ footer p {
   padding: 10px;
   scrollbar-width: none;
 }
+#divTyping {
+  /* border: #72ee89 solid 2px; */
+  width: 100%;
+  height: auto; 
+  padding: 5px;
+  display: flex;
+  justify-content: start;
+}
+
+#divTyping #typing-bubble {
+  width: 100%;
+  height: auto;
+  white-space: pre-wrap;
+}
+
 #inputChatG {
   width: 100%;
-  /* border: #ff1b1b solid 2px; */
+  border: #ff1b1b solid 2px;
   /* display: flex; */
   position: relative;
   z-index: 1;
