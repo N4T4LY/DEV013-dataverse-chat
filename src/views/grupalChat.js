@@ -1,6 +1,8 @@
 import { communicateWithOpenAI } from "../lib/openAIApi.js";
 import { InputChat } from "../components/InputChat.js";
 import { BubblesChat } from "../components/BubblesChat.js";
+import { TypingBubble } from "../components/TypingBubble.js";
+
 import data from "../data/dataset.js";
 export const GrupalChat = () => {
   const main = document.createElement("main");
@@ -53,11 +55,11 @@ export const GrupalChat = () => {
   function generateConectedPokemons() {
     const limit = parseInt(getRandomArbitrary(1, 10));
     console.log("Conected pokemons:", limit);
-    // data.forEach((pokemon,index) => {
-    //   if (input.value && index<=limit) {
-    //     conectedPokemons.push(pokemon)
-    //   }
-    // });
+    data.forEach((pokemon,index) => {
+      if (input.value && index<=limit) {
+        conectedPokemons.push(pokemon)
+      }
+    });
 
     conectedPokemons = data.slice(0, limit);
     console.log("Array pokemons conectados:", conectedPokemons);
@@ -88,10 +90,18 @@ export const GrupalChat = () => {
   generateConectedPokemons();
 
   buttonSend.addEventListener("click", () => {
+  
     conectedPokemons.forEach((pokemon) => {
+      divChat.appendChild(TypingBubble(pokemon.name));
       communicateWithOpenAI(pokemon.name, input.value)
         .then((res) => res.json())
         .then((data) => {
+          const typingBubble = document.getElementById("typing-bubble");
+          
+          console.log("typee",typingBubble)
+          if (typingBubble) {
+            typingBubble.remove();
+          }
           divChat.appendChild(
             BubblesChat(pokemon, input.value, data.choices[0].message.content)
           );
