@@ -599,7 +599,7 @@ footer p {
   scrollbar-width: none;
 }
 #divTyping {
-  /* border: #72ee89 solid 2px; */
+  border: transparent solid 2px;
   width: 100%;
   height: auto; 
   padding: 5px;
@@ -607,7 +607,7 @@ footer p {
   justify-content: start;
 }
 
-#divTyping #typing-bubble {
+#divTyping> #typing-bubble {
   width: 100%;
   height: auto;
   white-space: pre-wrap;
@@ -615,7 +615,7 @@ footer p {
 
 #inputChatG {
   width: 100%;
-  border: #ff1b1b solid 2px;
+  /* border: #ff1b1b solid 2px; */
   /* display: flex; */
   position: relative;
   z-index: 1;
