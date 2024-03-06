@@ -1027,6 +1027,7 @@ z-index: 3;
 .containerGreen {
   display: flex;
   flex-direction: column;
+  padding: 4px;
   background-color: #0b2b2e;
   border-radius: 50px;
   width: 699px;
@@ -1241,6 +1242,7 @@ td {
   }
   .containerGreen {
     width: 100%;
+    padding: 20px;
   }
   #panel-chatIndividual {
     bottom:0;
@@ -1305,6 +1307,7 @@ td {
     /* border: solid 2px green; */
   }
   .containerGreen {
+
     margin-top: -280px;
     width: 100%;
     height: 1200px;
@@ -1460,13 +1463,16 @@ td {
   /* filter: grayscale(100%); */
   /* filter: hue-rotate(180deg); */
 }
-/* #individual-chat{
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
-  width: 50%;
-} */
 
+.section-input{
+  /* border:2px solid red; */
+  padding: 0 15px 15px 15px;
+  width: 95%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* global close */
 .fa-xmark {
   cursor: pointer;
@@ -1551,3 +1557,20 @@ input[type="password"]:focus {
   height: 50px;
   z-index: 4;
 }
+
+/* TypingBubble */
+
+ #typing-bubble{
+  color: #7B8595;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  font-style: italic;
+}
+
+#section-typing{
+  padding-left: 30px;
+  /* border: 2px solid white; */
+  width: 95%;
+  height: 30px;
+} 

@@ -9,15 +9,16 @@ export const panelIndividual = (pokemon) => {
   const panel = document.createElement("section");
   const sectionName = document.createElement("aside");
   const sectionDiv = document.createElement("aside");
+  const sectionTyping = document.createElement("aside");
   const sectionInput = document.createElement("aside");
-  // const inputChat = document.createElement("input");
-  // const buttonChat = document.createElement("button");
   const chat = document.createElement("div");
   const chatTitle = document.createElement("div");
-  sectionDiv.setAttribute("id", "individual-chat");
+  sectionTyping.id = "section-typing";
   panel.id = "panel-chatIndividual";
   // inputChat.id = "chat-input";
   // buttonChat.id = "send-message";
+  sectionDiv.setAttribute("id", "individual-chat");
+  sectionInput.setAttribute("class","section-input")
   panel.setAttribute("class", "panelPersonal");
   chat.setAttribute("class", "imageChat");
   chatTitle.setAttribute("class", "chatTitle");
@@ -46,7 +47,8 @@ export const panelIndividual = (pokemon) => {
   sectionName.append(chatTitle, chat);
   sectionInput.append(InputChat());
   // panel.append(sectionName, sectionDiv, sectionInput);
-  panel.append(sectionName, sectionDiv, sectionInput);
+  // sectionTyping.appendChild(TypingBubble(pokemon.name));
+  panel.append(sectionName, sectionDiv,sectionTyping, sectionInput);
 
   const styleInput = panel.querySelector(".inputChat");
   const styleButton = panel.querySelector("#send-message");
@@ -55,16 +57,16 @@ export const panelIndividual = (pokemon) => {
   console.log(styleInput);
   styleInput.style.width = "680px";
   styleInput.style.height = "80px";
-  styleInput.style.margin = "20px";
+  styleInput.style.margin = "0";
 
   styleButton.style.right = "60px";
-  styleButton.style.bottom = "40px";
+  styleButton.style.bottom = "33px";
 
   buttonSend.addEventListener("click", () => {
     // console.log(input.value);
     // input.value="";
     if (input.value) {
-      sectionDiv.appendChild(TypingBubble(pokemon.name));
+      sectionTyping.appendChild(TypingBubble(pokemon.name));
       communicateWithOpenAI(pokemon.name, input.value)
         .then((res) => res.json())
         .then((data) => {
