@@ -18,7 +18,7 @@ export const communicateWithOpenAI = async (pokemon, input) => {
       messages: [
         {
           role: "system",
-          content: `Tu eres este pokemon:  ${pokemon}, responde de manera corta o breve`,
+          content: `Tu eres: ${pokemon}, responde de manera corta o breve y pregunta si requieres algo mas`,
         },
         {
           role: "user",
