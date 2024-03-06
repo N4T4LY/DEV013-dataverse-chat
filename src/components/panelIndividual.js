@@ -2,6 +2,7 @@ import data from "../data/dataset.js";
 import { InputChat } from "./InputChat.js";
 import { BubblesChat } from "./BubblesChat.js";
 import { communicateWithOpenAI } from "../lib/openAIApi.js";
+import { TypingBubble } from "./TypingBubble.js";
 
 export const panelIndividual = (pokemon) => {
   let typeName;
@@ -63,9 +64,16 @@ export const panelIndividual = (pokemon) => {
     // console.log(input.value);
     // input.value="";
     if (input.value) {
+      sectionDiv.appendChild(TypingBubble(pokemon.name));
       communicateWithOpenAI(pokemon.name, input.value)
         .then((res) => res.json())
         .then((data) => {
+          const typingBubble = document.getElementById("typing-bubble");
+          console.log(typingBubble)
+          if (typingBubble) {
+            typingBubble.remove();
+          }
+  
           // console.log(input.value, data.choices[0].message.content);
           sectionDiv.appendChild(
             BubblesChat(pokemon, input.value, data.choices[0].message.content)
