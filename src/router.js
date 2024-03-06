@@ -39,14 +39,14 @@ export const renderView = (pathname, props = {}) => {
 
 //  Actualizar nuestro historial de nuestro navegador a partir de la url
 export const navigateTo = (pathname, props = {}) => {
-  const searchParams = new URLSearchParams(window.location.search);
+  const searchParams = new URLSearchParams();
   Object.entries(props).forEach(([key, value]) => {
     searchParams.set(key, value);
   });
   const queryString = searchParams.toString();
 
   const URLvisited = `${pathname}${queryString ? `?${queryString}` : ""}`;
-
+  // console.log("guarda", window.location.origin + pathname);
   history.pushState({ pathname, props }, "", URLvisited);
   renderView(pathname, props);
 };

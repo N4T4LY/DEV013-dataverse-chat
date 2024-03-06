@@ -17,7 +17,7 @@ El proyecto se enfoca en crear una plataforma web interactiva dedicada al mundo 
 
 Al abordar este proyecto, se tomó un enfoque centrado en el usuario y en la accesibilidad. Se diseñó la interfaz de usuario de manera intuitiva y amigable, permitiendo a los usuarios navegar fácilmente por la plataforma y acceder a la información que desean de forma rápida y eficiente. Se priorizó la experiencia del usuario, asegurándose de que la plataforma fuera accesible en diversos dispositivos y resoluciones de pantalla mediante un diseño responsive.
 
-La página web de Pokémon utiliza una base de datos generada por ChatGPT para proporcionar una amplia gama de información sobre los Pokémon. Los usuarios tienen la capacidad de filtrar y ordenar los Pokémon por tipo, así como realizar búsquedas rápidas para encontrar Pokémon específicos. Además, la plataforma permite a los usuarios navegar entre diferentes vistas con facilidad, incluida una vista detallada que muestra información exhaustiva sobre un Pokémon seleccionado.
+La página web de Pokémon utiliza una base de datos generada por ChatGPT para proporcionar una amplia gama de información sobre los Pokémon. Los usuarios tienen la capacidad de filtrar y ordenar los Pokémon por tipo, así como realizar búsquedas rápidas para encontrar Pokémon específicos. Además, la plataforma permite a los usuarios navegar entre diferentes vistas con facilidad, incluida una vista detallada que muestra información exhaustiva sobre un Pokémon seleccionado y permite la interacción con cada uno de los Pokémon a traves de un chat integrado tanto de manera grupal como individual.
 
 ## 2. Desarrolladoras web
 
@@ -292,4 +292,4 @@ El objetivo de nuestros testeos de usabilidad fue evaluar la facilidad de uso y 
 
 ## 7. Conclusión
 
-En el futuro, nos comprometemos a seguir refinando y mejorando nuestra plataforma de Pokedex para garantizar que siga siendo un destino emocionante y gratificante para todos los entrenadores y aficionados de Pokémon. Estamos emocionados por el potencial que tiene nuestra aplicación para seguir creciendo y evolucionando, y esperamos continuar brindando una experiencia excepcional a nuestra comunidad de usuarios.
+En el futuro, nos comprometemos a seguir refinando y mejorando nuestra plataforma de Pokedex para garantizar que siga siendo un destino emocionante y gratificante para todos los entrenadores y aficionados de Pokémon. Estamos emocionadas por el potencial que tiene nuestra aplicación para seguir creciendo y evolucionando, y esperamos continuar brindando una experiencia excepcional a los usuarios.
