@@ -1,8 +1,8 @@
 import data from "../data/dataset.js";
+import { navigateTo } from "../router.js";
 import { modalApi } from "../components/ModalApi.js";
 import { getApiKey, setApiKey } from "../lib/apiKey.js";
 import { panelIndividual } from "../components/panelIndividual.js";
-
 export const DetailCard = (pokemon) => {
   // console.log("detalle", pokemon);
   let weaknesses = "";
@@ -146,8 +146,8 @@ export const DetailCard = (pokemon) => {
   });
 
   recoilArrow.addEventListener("click", () => {
-    //navigateTo("/home", {});
-    history.back();
+    navigateTo("/home", {});
+    // history.back();
   });
 
   baseStats.addEventListener("click", () => {

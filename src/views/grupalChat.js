@@ -2,6 +2,7 @@ import { communicateWithOpenAI } from "../lib/openAIApi.js";
 import { InputChat } from "../components/InputChat.js";
 import { BubblesChat } from "../components/BubblesChat.js";
 import { TypingBubble } from "../components/TypingBubble.js";
+import { navigateTo } from "../router.js";
 
 import data from "../data/dataset.js";
 export const GrupalChat = () => {
@@ -43,8 +44,8 @@ export const GrupalChat = () => {
   // main.appendChild(sectionInput);
   const recoilArrowG = main.querySelector(".recoilArrowG");
   recoilArrowG.addEventListener("click", () => {
-    //navigateTo("/home", {});
-    history.back();
+    navigateTo("/home", {});
+    // history.back();
   });
   const buttonSend = main.querySelector(".sendMessage");
   const input = main.querySelector(".inputChat");
