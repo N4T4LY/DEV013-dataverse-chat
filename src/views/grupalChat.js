@@ -32,20 +32,14 @@ export const GrupalChat = () => {
   aside.setAttribute("class", "aside-pokemons");
   sectionInput.appendChild(InputChat());
   const inputStyle = sectionInput.querySelector(".inputChat");
-  // const buttonStyle = sectionInput.querySelector("#send-message");
   inputStyle.style.width = "100%";
   inputStyle.style.height = "80px";
-  // inputStyle.style.margin = "0 0 20px 0";
-  // buttonStyle.style.right = "420px";
-  // buttonStyle.style.bottom = "32px";
-  
+
   sectionChat.append(divChat,sectionInput);
   mainSection.append(sectionChat, aside);
   main.appendChild(mainSection);
-  // main.appendChild(sectionInput);
   const recoilArrowG = main.querySelector(".recoilArrowG");
   recoilArrowG.addEventListener("click", () => {
-    //navigateTo("/home", {});
     history.back();
   });
   const buttonSend = main.querySelector(".sendMessage");
@@ -60,11 +54,7 @@ export const GrupalChat = () => {
   function generateConectedPokemons() {
     const limit = parseInt(getRandomArbitrary(1, 10));
     console.log("Conected pokemons:", limit);
-    // data.forEach((pokemon,index) => {
-    //   if (input.value && index<=limit) {
-    //     conectedPokemons.push(pokemon)
-    //   }
-    // });
+
 
     conectedPokemons = data.slice(0, limit);
     console.log("Array pokemons conectados:", conectedPokemons);
