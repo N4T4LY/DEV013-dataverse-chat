@@ -389,7 +389,7 @@ h3 {
   /* border: solid 3px var(--color-sky); */
   padding: 15px;
   border-radius: 50px;
-  z-index: 13;
+  z-index: 2;
   height: 90px;
   width: 90px;
   display: flex;
