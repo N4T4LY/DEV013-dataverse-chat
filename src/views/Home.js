@@ -43,15 +43,12 @@ export const Home = () => {
         overlay.classList.toggle("overlay-active");
       });
       modalKey.addEventListener("submit", () => {
-        // e.preventDefault();
         const sendApi = newContainer.querySelector(
           "input[type ='password']"
         ).value;
-        // localStorage.setItem("sendApi",sendApi)
         if (sendApi) {
           setApiKey(sendApi);
           navigateTo("/grupalChat", {});
-          // modalKey.remove();
         }
       });
       overlay.classList.toggle("overlay-active");

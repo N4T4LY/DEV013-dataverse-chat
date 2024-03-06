@@ -31,7 +31,6 @@ export const GrupalChat = () => {
   aside.setAttribute("class", "aside-pokemons");
   sectionInput.appendChild(InputChat());
   const inputStyle = sectionInput.querySelector(".inputChat");
-  // const buttonStyle = sectionInput.querySelector("#send-message");
   inputStyle.style.width = "100%";
   inputStyle.style.height = "80px";
   // inputStyle.style.margin = "0 0 20px 0";
@@ -41,7 +40,6 @@ export const GrupalChat = () => {
   sectionChat.append(divChat, divTyping,sectionInput);
   mainSection.append(sectionChat, aside);
   main.appendChild(mainSection);
-  // main.appendChild(sectionInput);
   const recoilArrowG = main.querySelector(".recoilArrowG");
   recoilArrowG.addEventListener("click", () => {
     navigateTo("/home", {});

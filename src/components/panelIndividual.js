@@ -15,23 +15,16 @@ export const panelIndividual = (pokemon) => {
   const chatTitle = document.createElement("div");
   sectionTyping.id = "section-typing";
   panel.id = "panel-chatIndividual";
-  // inputChat.id = "chat-input";
-  // buttonChat.id = "send-message";
+
   sectionDiv.setAttribute("id", "individual-chat");
   sectionInput.setAttribute("class","section-input")
   panel.setAttribute("class", "panelPersonal");
   chat.setAttribute("class", "imageChat");
   chatTitle.setAttribute("class", "chatTitle");
   sectionName.setAttribute("class", "nameSection");
-  // inputChat.setAttribute("class", "inputChat");
-  // inputChat.setAttribute("type", "text");
-  // inputChat.setAttribute("placeholder", "Escribe tu mensaje");
-  // buttonChat.setAttribute("type", "submit");
-  // buttonChat.addEventListener('click', ()=>{
-  //   console.log(inputChat.value);
-  // })
+  
   const getName = data.find((item) => item.name === pokemon.name);
-  console.log(getName.type.typeName[0]);
+  
   if (getName.type.typeName.length === 1) {
     typeName = getName.type.typeName[0];
   } else {
@@ -40,14 +33,13 @@ export const panelIndividual = (pokemon) => {
     typeName = `${type1} y ${type2}`;
   }
 
-  // buttonChat.innerHTML = '<ion-icon name="send"></ion-icon>';
+  
   chatTitle.innerHTML = `<h2>${getName.name}</h2>
                             <span>Tipo ${typeName}</span>`;
   chat.innerHTML = '<i class="fa-solid fa-xmark"></i>';
   sectionName.append(chatTitle, chat);
   sectionInput.append(InputChat());
-  // panel.append(sectionName, sectionDiv, sectionInput);
-  // sectionTyping.appendChild(TypingBubble(pokemon.name));
+ 
   panel.append(sectionName, sectionDiv,sectionTyping, sectionInput);
 
   const styleInput = panel.querySelector(".inputChat");
@@ -63,8 +55,6 @@ export const panelIndividual = (pokemon) => {
   styleButton.style.bottom = "33px";
 
   buttonSend.addEventListener("click", () => {
-    // console.log(input.value);
-    // input.value="";
     if (input.value) {
       sectionTyping.appendChild(TypingBubble(pokemon.name));
       communicateWithOpenAI(pokemon.name, input.value)
@@ -76,7 +66,6 @@ export const panelIndividual = (pokemon) => {
             typingBubble.remove();
           }
   
-          // console.log(input.value, data.choices[0].message.content);
           sectionDiv.appendChild(
             BubblesChat(pokemon, input.value, data.choices[0].message.content)
           );

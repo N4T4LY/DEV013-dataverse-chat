@@ -4,7 +4,6 @@ import { modalApi } from "../components/ModalApi.js";
 import { getApiKey, setApiKey } from "../lib/apiKey.js";
 import { panelIndividual } from "../components/panelIndividual.js";
 export const DetailCard = (pokemon) => {
-  // console.log("detalle", pokemon);
   let weaknesses = "";
   let evolutions = "";
   const main = document.createElement("main");
@@ -102,7 +101,6 @@ export const DetailCard = (pokemon) => {
   );
 
   const chatModal = main.querySelector(".chatPersonal");
-  // const recoilArrow = main.querySelector(".recoilArrow");
   const baseStats = main.querySelector(".baseStatsChart");
 
   chatModal.addEventListener("click", () => {
@@ -110,7 +108,7 @@ export const DetailCard = (pokemon) => {
       main.appendChild(modalApi());
       const modalKey = main.querySelector(".modalKey");
       const closeModal = main.querySelector(".cancel");
-      // const closeChat = main.querySelector(".imageChat");
+  
       closeModal.addEventListener("click", () => {
         modalKey.remove();
         overlayDetails.classList.toggle("overlay-active");
@@ -118,7 +116,7 @@ export const DetailCard = (pokemon) => {
       modalKey.addEventListener("submit", (e) => {
         e.preventDefault();
         const sendApi = main.querySelector("input[type ='password']").value;
-        // localStorage.setItem("sendApi",sendApi)
+       
         if (sendApi) {
           setApiKey(sendApi);
           main.appendChild(panelIndividual(pokemon));
@@ -142,7 +140,6 @@ export const DetailCard = (pokemon) => {
       });
       overlayDetails.classList.toggle("overlay-active");
     }
-    // overlayDetails.classList.toggle("overlay-active");
   });
 
   recoilArrow.addEventListener("click", () => {
@@ -155,8 +152,6 @@ export const DetailCard = (pokemon) => {
     const titleBase = document.createElement("h2");
     const canvasBase = document.createElement("canvas");
     const close = document.createElement("div");
-    // const overlayDetails = document.createElement("div");
-    // overlayDetails.classList.add("overlay");
     overlayDetails.classList.toggle("overlay-active");
     canvasBase.setAttribute("name", "myChartBase");
     close.setAttribute("class", "closeEstadistic");

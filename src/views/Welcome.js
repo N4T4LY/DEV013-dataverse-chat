@@ -28,7 +28,6 @@ export const Welcome = () => {
   
 
   //containerLeft
-  // containerLeft.appendChild(polygon);
   containerLeft.appendChild(img);
 
   //containerRight
@@ -46,8 +45,6 @@ export const Welcome = () => {
       main.appendChild(modalApi());
       const modalKey = main.querySelector(".modalKey");
       const closeModal = main.querySelector(".cancel");
-      // const acceptModal = main.querySelector(".accept");
-      // const closeChat = main.querySelector(".imageChat");
       closeModal.addEventListener("click", () => {
         modalKey.remove();
         overlayDetails.classList.toggle("overlay-active");
@@ -56,10 +53,8 @@ export const Welcome = () => {
       modalKey.addEventListener("submit", (e) => {
         e.preventDefault();
         const sendApi = main.querySelector("input[type ='password']").value;
-        // localStorage.setItem("sendApi",sendApi)
         if (sendApi) {
           setApiKey(sendApi);
-          // main.appendChild(panelIndividual(pokemon));
           navigateTo("/home", {});
           modalKey.remove();
         }

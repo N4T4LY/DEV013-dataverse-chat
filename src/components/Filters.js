@@ -48,7 +48,6 @@ export const Filters = () => {
   modal.innerHTML = `<i class="fa-solid fa-xmark"></i>
     <h2>Estadisticas Por Tipo</h2>
     <canvas id="myChart" name="myChart"></canvas>`;
-  // overlay.innerHTML=``;
 
   form.appendChild(search);
   form.appendChild(filters);
