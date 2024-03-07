@@ -5,7 +5,7 @@ import { Filters } from "../components/Filters.js";
 import { Footer } from "../components/Footer.js";
 import { sortData, filterData, computeStats } from "../lib/dataFunctions.js";
 import { navigateTo } from "../router.js";
-import { setApiKey, getApiKey} from "../lib/apiKey.js";
+import { setApiKey, getApiKey } from "../lib/apiKey.js";
 import { modalApi } from "../components/ModalApi.js";
 
 export const Home = () => {
@@ -16,6 +16,27 @@ export const Home = () => {
   newContainer.appendChild(Filters());
   newContainer.appendChild(Cards(data));
   newContainer.appendChild(Footer());
+
+  //change key
+  const changeApi = newContainer.querySelector(".changeApi");
+  changeApi.addEventListener("click", () => {
+    newContainer.appendChild(modalApi());
+    const modalKey = newContainer.querySelector(".modalKey");
+    const closeModal = newContainer.querySelector(".cancel");
+    closeModal.addEventListener("click", () => {
+      modalKey.remove();
+      overlay.classList.toggle("overlay-active");
+    });
+    modalKey.addEventListener("submit", () => {
+      const sendApi = newContainer.querySelector(
+        "input[type ='password']"
+      ).value;
+      setApiKey(sendApi);
+      modalKey.remove();
+      overlay.classList.toggle("overlay-active");
+    });
+    overlay.classList.toggle("overlay-active");
+  });
 
   //button chat
   const buttonChat = document.createElement("section");
@@ -34,7 +55,7 @@ export const Home = () => {
   const close = newContainer.querySelector(".fa-xmark");
 
   buttonChat.addEventListener("click", () => {
-    if(!getApiKey()){
+    if (!getApiKey()) {
       newContainer.appendChild(modalApi());
       const modalKey = newContainer.querySelector(".modalKey");
       const closeModal = newContainer.querySelector(".cancel");
@@ -52,7 +73,7 @@ export const Home = () => {
         }
       });
       overlay.classList.toggle("overlay-active");
-    }else{
+    } else {
       navigateTo("/grupalChat", {});
     }
   });
